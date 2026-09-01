@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EmotionEgoXmlRoot>
+  
+  <EmotionEgo ID="1">
+  
+    <Sephirah>None</Sephirah>
+	
+    <Card>1</Card>
+	
+	<Gift>1</Gift>
+	
+  </EmotionEgo>
+  
+</EmotionEgoXmlRoot>

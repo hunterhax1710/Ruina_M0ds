@@ -1,0 +1,770 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TimelineUtil</name>
+    </assembly>
+    <members>
+        <member name="T:TimelineUtil.TimelineConditionBase">
+            <summary>
+            A script class for handling complex stage unlock conditions (loaded according to StageModTimelineInfo.xml).
+            </summary>
+        </member>
+        <member name="M:TimelineUtil.TimelineConditionBase.IsUnlocked">
+            <summary>
+            The check that is performed to test whether a stage should be unlocked.
+            Such checks DON'T override normal scriptless checks listed in the condition (such as "clear stage X"), but are checked alongside them!
+            </summary>
+            <returns><see langword="false"/> if stages to which this condition is attached should be locked; otherwise <see langword="true"/>.</returns>
+        </member>
+        <member name="T:TimelineUtil.TimelineEventListenerBase">
+            <summary>
+            A script class for reacting to certain events in a possibly overlapping manner (loaded according to StageModTimelineInfo.xml).
+            </summary>
+        </member>
+        <member name="M:TimelineUtil.TimelineEventListenerBase.OnClearStage(LorId)">
+            <summary>
+            Is called after a stage is cleared.
+            </summary>
+            <param name="stageId">The <see cref="T:LorId"/> of the stage that was cleared.</param>
+        </member>
+        <member name="M:TimelineUtil.TimelineEventListenerBase.OnBonusRewardPopup(LorId)">
+            <summary>
+            Is called when bonus rewards (like Book of Distortion or Searing Sword/Feather Shield) are being processed.
+            </summary>
+            <param name="stageId">The <see cref="T:LorId"/> of the stage that was cleared.</param>
+            <returns>If the popup should be displayed, a list of lines that should be added to the bonus reward popup; otherwise <see langword="null"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineEventListenerBase.OnLoadLibraryFromSave(GameSave.SaveData)">
+            <summary>
+            Is called after a game save is loaded.
+            </summary>
+            <param name="save">The <see cref="T:GameSave.SaveData"/> that was loaded.</param>
+        </member>
+        <member name="M:TimelineUtil.TimelineEventListenerBase.OnSaveLibrary(GameSave.SaveData)">
+            <summary>
+            Is called after the current game state is saved.
+            </summary>
+            <param name="save">The <see cref="T:GameSave.SaveData"/> that will be saved to the save file.</param>
+        </member>
+        <member name="T:TimelineUtil.TimelineSpecialStoryBase">
+            <summary>
+            A script class for handling invitation map icon slots and invitation menus with unusual behaviour and appearance
+            (loaded according to StageModTimelineInfo.xml and used depending on storyType of involved stages).
+            </summary>
+        </member>
+        <member name="M:TimelineUtil.TimelineSpecialStoryBase.OnClickMainIconInSlot(UI.UIStoryProgressIconSlot)">
+            <summary>
+            Is called when an invitation map icon slot with a given storyType is clicked.
+            The default behaviour is to open the invitation panels immediately (without opening the list of substages like regular invitations do).
+            </summary>
+            <param name="slot">The invitation map icon slot that was clicked on.</param>
+            <returns><see langword="true"/> if the normal click handler should still be used; otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineSpecialStoryBase.OnPointerEnterInSlot(UI.UIStoryProgressIconSlot)">
+            <summary>
+            Is called when an invitation map icon slot with a given storyType is hovered over.
+            </summary>
+            <param name="slot">The invitation map icon slot that is hovered over.</param>
+            <returns><see langword="true"/> if the normal pointer enter handler should still be used; otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineSpecialStoryBase.OnPointerExitInSlot(UI.UIStoryProgressIconSlot)">
+            <summary>
+            Is called when an invitation map icon slot with a given storyType stops being hovered over.
+            </summary>
+            <param name="slot">The invitation map icon slot that stopped being hovered over.</param>
+            <returns><see langword="true"/> if the normal pointer exit handler should still be used; otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineSpecialStoryBase.OnSetDataInSlot(UI.UIStoryProgressIconSlot)">
+            <summary>
+            Is called after an invitation map icon slot has its icon and associated data set.
+            </summary>
+            <param name="slot">The invitation map icon slot that had its data set.</param>
+        </member>
+        <member name="M:TimelineUtil.TimelineSpecialStoryBase.OnSetEnemyWave(UI.UIEnemyCharacterListPanel)">
+            <summary>
+            Is called after <see cref="M:UI.UIEnemyCharacterListPanel.SetEnemyWave(System.Int32)"/>.
+            </summary>
+            <param name="panel">The <see cref="T:UI.UIEnemyCharacterListPanel"/> that is being configured.</param>
+        </member>
+        <member name="M:TimelineUtil.TimelineSpecialStoryBase.OnSetInvitationInfoShowState(UI.UIInvitationInfoPanel,UI.UIStoryLine)">
+            <summary>
+            Is called after <see cref="M:UI.UIInvitationInfoPanel.SetShowState(UI.UIInvShowInfoState,UnitDataModel,UnityEngine.Texture)"/>.
+            </summary>
+            <param name="panel">The <see cref="T:UI.UIInvitationInfoPanel"/> that is being configured.</param>
+            <param name="story">The <see cref="T:UI.UIStoryLine"/> of the current stage (provided as the corresponding enum value for simplicity).</param>
+        </member>
+        <member name="M:TimelineUtil.TimelineSpecialStoryBase.OnClickSendButtonForBlue(UI.UIInvitationRightMainPanel)">
+            <summary>
+            Is called after <see cref="M:UI.UIInvitationRightMainPanel.OnClickSendButtonForBlue"/>.
+            </summary>
+            <param name="panel">The <see cref="T:UI.UIInvitationRightMainPanel"/> that is handling the click.</param>
+        </member>
+        <member name="M:TimelineUtil.TimelineSpecialStoryBase.OnSetInvBookApplyState(UI.UIInvitationRightMainPanel)">
+            <summary>
+            Is called after <see cref="M:UI.UIInvitationRightMainPanel.SetInvBookApplyState(UI.InvitationApply_State)"/>.
+            </summary>
+            <param name="panel">The <see cref="T:UI.UIInvitationRightMainPanel"/> that is being configured.</param>
+        </member>
+        <member name="M:TimelineUtil.TimelineSpecialStoryBase.OnSetInvitationStageInfoData(UI.UIInvitationStageInfoPanel,StageClassInfo,UI.UIStoryLine)">
+            <summary>
+            Is called from <see cref="M:UI.UIInvitationStageInfoPanel.SetData(StageClassInfo,UI.UIStoryLine)"/> 
+            (in the <see cref="T:UI.UIStoryLine"/> switch block).
+            </summary>
+            <param name="panel">The <see cref="T:UI.UIInvitationStageInfoPanel"/> that is being configured.</param>
+            <param name="stage">The <see cref="T:StageClassInfo"/> for which the panel is being configured.</param>
+            <param name="story">The <see cref="T:UI.UIStoryLine"/> for which the panel is being configured.</param>
+        </member>
+        <member name="M:TimelineUtil.TimelineSpecialStoryBase.OnSetShowEnemyInfoData(UI.UIShowEnemyInfoPanel,StageClassInfo,System.String,UnityEngine.Color@)">
+            <summary>
+            Is called from <see cref="M:UI.UIShowEnemyInfoPanel.SetData(UnitDataModel,UnityEngine.Texture)"/> 
+            (from inside the block that checks for special <see cref="T:UI.UIStoryLine"/> values,
+            just before the stage name text color is set).
+            </summary>
+            <param name="panel">The <see cref="T:UI.UIShowEnemyInfoPanel"/> that is being configured.</param>
+            <param name="stage">The <see cref="T:StageClassInfo"/> for which the panel is being configured.</param>
+            <param name="stageName">The name of the stage.</param>
+            <param name="stageNameColor">The color that the stage name display will be set to.</param>
+        </member>
+        <member name="P:TimelineUtil.TimelineSpecialStoryBase.EnemyFrameColor">
+            <summary>
+            Is used for enemy frame and text elements in left invitation UI panels.
+            </summary>
+        </member>
+        <member name="P:TimelineUtil.TimelineSpecialStoryBase.EnemyUnderlayColor">
+            <summary>
+            Is used for enemy underlay UI elements in left invitation UI panels.
+            </summary>
+        </member>
+        <member name="P:TimelineUtil.TimelineSpecialStoryBase.EnableLeftBlueEffect">
+            <summary>
+            Determines whether the "afterimage" effect (used by Reverberation Ensemble) 
+            is used in left invitation UI panels.
+            </summary>
+        </member>
+        <member name="P:TimelineUtil.TimelineSpecialStoryBase.BlueRightPanelInfo">
+            <summary>
+            Used as a source of data for rendering <see cref="T:UI.UIInvitationRightMainPanel"/>.
+            </summary>
+        </member>
+        <member name="T:TimelineUtil.LibrarianLockContext">
+            <summary>
+            Enumerates various game functions that can be locked for librarians.
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.LibrarianLockContext.BookEquip">
+            <summary>
+            Equipping and unequipping Key Pages
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.LibrarianLockContext.PassiveEdit">
+            <summary>
+            Editing passives (attribution)
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.LibrarianLockContext.DeckEdit">
+            <summary>
+            Editing decks
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.LibrarianLockContext.Customize">
+            <summary>
+            Customizing appearance and Battle Symbols
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.LibrarianLockContext.BookEquipInBattle">
+            <summary>
+            Equipping and unequipping Key Pages from pre-battle menu
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.LibrarianLockContext.DeckEditInBattle">
+            <summary>
+            Editing decks from pre-battle menu
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.LibrarianLockContext.CharacterList">
+            <summary>
+            Being listed as available in left/right character lists
+            </summary>
+        </member>
+        <member name="T:TimelineUtil.TimelineEndContentsBase">
+            <summary>
+            A script class for handling unusual "library states" (e.g. Reverberation Ensemble), loaded according to StageModTimelineInfo.xml.
+            Only one can be fully active at a time, depending on which script returns <see langword="true"/> from <see cref="M:TimelineUtil.TimelineEndContentsBase.IsSpecialEndContents"/> first.
+            </summary>
+        </member>
+        <member name="M:TimelineUtil.TimelineEndContentsBase.IsSpecialEndContents">
+            <summary>
+            Determines the activation state of the script.
+            </summary>
+            <returns><see langword="true"/> if the Library should be in the special state handled by this script;
+            otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineEndContentsBase.LockLibrarianInContext(UnitDataModel,TimelineUtil.LibrarianLockContext)">
+            <summary>
+            Controls whether specific game functions should be locked for librarians.
+            </summary>
+            <param name="librarian">The librarian in question.</param>
+            <param name="context">The context of the game function being locked.</param>
+            <returns><see langword="true"/> if the game function should be locked, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineEndContentsBase.LockBookEdit(BookModel,UnityEngine.Sprite@)">
+            <summary>
+            Controls whether editing a Key Page from "Key Page list" menus should be locked.
+            This includes equipping/unequipping, editing/reverting attribution, favoriting/unfavoriting, and emptying decks.
+            </summary>
+            <param name="book">The Key Page in question.</param>
+            <param name="blockSprite">The sprite that will be displayed on the block panel if <see langword="true"/> is returned
+            (if this parameter is <see langword="null"/>, defaults to the floor icon of the Key Page's current owner).</param>
+            <returns><see langword="true"/> if editing <paramref name="book"/> from list menus should be locked, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineEndContentsBase.LockBookDeckEdit(BookModel)">
+            <summary>
+            Controls whether editing a Key Page's deck(s) should be locked.
+            </summary>
+            <param name="book">The Key Page in question.</param>
+            <returns><see langword="true"/> if editing <paramref name="book"/>'s deck(s) should be locked, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineEndContentsBase.OnInitLibrarianList(UI.UICharacterList,System.Collections.Generic.List{UnitDataModel},SephirahType)">
+            <summary>
+            Is called after <see cref="M:UI.UICharacterList.InitLibrarianList(System.Collections.Generic.List{UnitDataModel},SephirahType,System.Boolean)"/>
+            </summary>
+            <param name="characterList">The <see cref="T:UI.UICharacterList"/> that is being configured.</param>
+            <param name="unitList">The list of librarian <see cref="T:UnitDataModel"/>s.</param>
+            <param name="sephirah">The current <see cref="T:SephirahType"/>.</param>
+        </member>
+        <member name="M:TimelineUtil.TimelineEndContentsBase.OnCallUIPhase(UI.UIController,UI.UIPhase)">
+            <summary>
+            Is called after <see cref="M:UI.UIController.CallUIPhase(UI.UIPhase)"/>.
+            </summary>
+            <param name="controller">The <see cref="T:UI.UIController"/>.</param>
+            <param name="phase">The <see cref="T:UI.UIPhase"/> being called.</param>
+        </member>
+        <member name="M:TimelineUtil.TimelineEndContentsBase.OnUpdateFloorPanel(UI.UIFloorPanel)">
+            <summary>
+            Is called after <see cref="M:UI.UIFloorPanel.OnUpdatePhase"/>.
+            </summary>
+            <param name="panel">The <see cref="T:UI.UIFloorPanel"/> being configured.</param>
+        </member>
+        <member name="M:TimelineUtil.TimelineEndContentsBase.OnEndBattleInBlueButton(UI.UIFloorPanel)">
+            <summary>
+            Is called before <see cref="M:UI.UIFloorPanel.EndBattleInBlueButton"/>.
+            </summary>
+            <param name="panel">The <see cref="T:UI.UIFloorPanel"/> being configured.</param>
+            <returns><see langword="true"/> if the regular handler should still be used, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineEndContentsBase.OnInitSephirahSelectionButtons(UI.UILibrarianCharacterListPanel,System.Collections.Generic.List{StageLibraryFloorModel})">
+            <summary>
+            Is called after <see cref="M:UI.UILibrarianCharacterListPanel.InitSephirahSelectionButtons"/> and <see cref="M:UI.UILibrarianCharacterListPanel.InitSephirahSelectionButtonsInBattle(System.Collections.Generic.List{StageLibraryFloorModel})"/>.
+            </summary>
+            <param name="panel">The <see cref="T:UI.UILibrarianCharacterListPanel"/> that is being configured.</param>
+            <param name="floorsInBattle">If called in battle, the list of currently existing floors in battle; otherwise <see langword="null"/>.</param>
+        </member>
+        <member name="M:TimelineUtil.TimelineEndContentsBase.OnInitSephirahList(UI.UIMainPanel)">
+            <summary>
+            Is called from <see cref="M:UI.UIMainPanel.InitSephirahList"/> (just before TheBlue/EndContents checks).
+            </summary>
+            <param name="panel">The <see cref="T:UI.UIMainPanel"/> that is being configured.</param>
+            <returns><see langword="true"/> if the normal sephirah list initialization code should still be used; otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineEndContentsBase.OnResetUISephirahFloor(UI.UISephirahFloor)">
+            <summary>
+            Is called before <see cref="M:UI.UISephirahFloor.Init"/>.
+            Unlike most other methods in <see cref="T:TimelineUtil.TimelineEndContentsBase"/>, this method is called on ALL
+            loaded scripts, not just the active one, to ensure that any possibly made modifications can be reset safely.
+            </summary>
+            <param name="floor">The <see cref="T:UI.UISephirahFloor"/> that is being configured.</param>
+        </member>
+        <member name="M:TimelineUtil.TimelineEndContentsBase.GetUISephirahFloorState(UI.UISephirahFloor)">
+            <summary>
+            Is called from <see cref="M:UI.UISephirahFloor.Init"/> (from the end of the <see cref="T:UIEndContentsState"/> block),
+            to determine the state that the floor should be displayed in.
+            
+            Mind the compatibility with modded floors - 
+            check SephirahType.ToString() when handling values outside of the original range!
+            </summary>
+            <param name="floor">The <see cref="T:UI.UISephirahFloor"/> that is being configured.</param>
+            <returns>The <see cref="T:UI.UISephirahFloor.SephirahState"/> that the floor should be set to.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineEndContentsBase.OnInitUISephirahFloor(UI.UISephirahFloor)">
+            <summary>
+            Is called after <see cref="M:UI.UISephirahFloor.Init"/>.
+            </summary>
+            <param name="floor">The <see cref="T:UI.UISephirahFloor"/> that is being configured.</param>
+        </member>
+        <member name="M:TimelineUtil.TimelineEndContentsBase.OnInitUISephirahFloorInNormalContents(UI.UISephirahFloor)">
+            <summary>
+            Is called after <see cref="M:UI.UISephirahFloor.Init"/> if the library is not in an "end contents" state.
+            Unlike most other methods in <see cref="T:TimelineUtil.TimelineEndContentsBase"/>, this method is called on ALL
+            loaded scripts, not just the active one - remember to check current floor state before editing it, and set it after!
+            </summary>
+            <param name="floor">The <see cref="T:UI.UISephirahFloor"/> that is being configured.</param>
+        </member>
+        <member name="M:TimelineUtil.TimelineEndContentsBase.SetCustomFloorEventButton(UI.UISephirahFloor,UnityEngine.Color,UnityEngine.Events.UnityAction)">
+            <summary>
+            Creates a custom "floor event" button (similar to abnormality battle/side story/Blue Reverberation/Black Silence buttons) and enables it.
+            The button will be given the specified color and specified "on click" action.
+            If such a button has already been created by the given script for the given floor, it will be reconfigured instead of created anew (and then enabled).
+            If the given floor has two variants (like Keter), buttons will be created for both.
+            </summary>
+            <param name="floor">The floor object for which the custom button should be created.</param>
+            <param name="buttonColor">The color that the button should have.</param>
+            <param name="buttonClickedAction">The action that should be performed when the button is clicked.</param>
+            <returns>An object containing references</returns>
+        </member>
+        <member name="T:TimelineUtil.TimelineBattleStoryBase">
+            <summary>
+            A script class for handling unusual behaviour during and after battle
+            (loaded according to StageModTimelineInfo.xml and used depending on <see cref="T:LorId"/> of involved stages).
+            </summary>
+        </member>
+        <member name="M:TimelineUtil.TimelineBattleStoryBase.OnEndBattlePhase_creature(StageModel,System.Boolean)">
+            <summary>
+            Is called from <see cref="M:StageController.EndBattlePhase_creature"/> upon winning or losing (just after the "is win" flag is acquired).
+            </summary>
+            <param name="stage">The current <see cref="T:StageModel"/>.</param>
+            <param name="isWin"><see langword="true"/> if the battle was won (if the enemy has no more waves available);
+            otherwise (if the Library has no more floors available), <see langword="false"/>.</param>
+            <returns><see langword="true"/> if the rest of the regular handler should still be used, 
+            otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineBattleStoryBase.OnEndBattlePhase_invitation(StageModel,System.Boolean)">
+            <summary>
+            Is called from <see cref="M:StageController.EndBattlePhase_invitation"/> upon winning or losing (just after the "is win" flag is acquired).
+            
+            The default implementation here uses the "Reverberation Ensemble" logic of reward distribution (RewardItems),
+            instead of the regular "only book drops" logic.
+            </summary>
+            <param name="stage">The current <see cref="T:StageModel"/>.</param>
+            <param name="isWin"><see langword="true"/> if the battle was won (if the enemy has no more waves available);
+            otherwise (if the Library has no more floors available), <see langword="false"/>.</param>
+            <returns><see langword="true"/> if the rest of the regular handler should still be used, 
+            otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineBattleStoryBase.OnClickGameEnd(StageModel,UI.TestBattleResultData)">
+            <summary>
+            Is called before <see cref="M:UI.UIController.OnClickGameEnd"/>.
+            </summary>
+            <param name="stage">The current <see cref="T:StageModel"/>.</param>
+            <param name="resultData">The <see cref="T:UI.TestBattleResultData"/> of the battle.</param>
+            <returns><see langword="true"/> if the regular handler should still be used, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineBattleStoryBase.OnCheckStoryBeforeBattle(StageModel,BattleStoryUI.OnEndStoryFunc)">
+            <summary>
+            Is called before <see cref="M:StageController.CheckStoryBeforeBattle"/>.
+            </summary>
+            <param name="stage">The current <see cref="T:StageModel"/>.</param>
+            <param name="continueFunc">Action that will continue stage operations (for delayed usage in case of returning <see langword="false"/>).</param>
+            <returns><see langword="true"/> if the regular handler should still be used, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineBattleStoryBase.OnCheckStoryAfterBattle(StageModel,BattleStoryUI.OnEndStoryFunc)">
+            <summary>
+            Is called before <see cref="M:StageController.CheckStoryAfterBattle(System.Boolean)"/>.
+            </summary>
+            <param name="stage">The current <see cref="T:StageModel"/>.</param>
+            <param name="continueFunc">Action that will continue stage operations (for delayed usage in case of returning <see langword="false"/>).</param>
+            <returns><see langword="true"/> if the regular handler should still be used, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineBattleStoryBase.OnEnterBattleSetting(StageModel,UI.UIBattleSettingPanel)">
+            <summary>
+            Is called after <see cref="M:UI.UIBattleSettingPanel.OnUIPhaseEnter(UI.UIPhase)"/> (if the phase is <see cref="F:UI.UIPhase.BattleSetting"/>).
+            </summary>
+            <param name="stage">The current <see cref="T:StageModel"/>.</param>
+            <param name="panel">The <see cref="T:UI.UIBattleSettingPanel"/> being configured.</param>
+        </member>
+        <member name="M:TimelineUtil.TimelineBattleStoryBase.IsLockUnit(StageModel,UnitDataModel)">
+            <summary>
+            Allows specific units to be locked in specific stages.
+            </summary>
+            <param name="stage">The current <see cref="T:StageModel"/>.</param>
+            <param name="unit">The unit in question.</param>
+            <returns><see langword="true"/> if the unit should be locked, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineBattleStoryBase.OnInitUnitList(StageModel,LibraryFloorModel,StageLibraryFloorModel)">
+            <summary>
+            Is called before <see cref="M:StageLibraryFloorModel.InitUnitList(StageModel,LibraryFloorModel)"/>.
+            Meant to be used for creating custom/altered lists of player units for special stages.
+            </summary>
+            <param name="stage">The current <see cref="T:StageModel"/>.</param>
+            <param name="floor">The <see cref="T:LibraryFloorModel"/> according to which the unit list is being formed.</param>
+            <param name="stageFloor">The <see cref="T:StageLibraryFloorModel"/> that will contain the formed list of units.</param>
+            <returns><see langword="true"/> if the regular unit creation code should still be used, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineBattleStoryBase.OnInitSephirahSelectionButtonsInBattle(StageModel,UI.UILibrarianCharacterListPanel,System.Collections.Generic.List{StageLibraryFloorModel})">
+            <summary>
+            Is called after <see cref="M:UI.UILibrarianCharacterListPanel.InitSephirahSelectionButtonsInBattle(System.Collections.Generic.List{StageLibraryFloorModel})"/> (and after <see cref="M:TimelineUtil.TimelineEndContentsBase.OnInitSephirahSelectionButtons(UI.UILibrarianCharacterListPanel,System.Collections.Generic.List{StageLibraryFloorModel})"/>, if such a valid script is present).
+            </summary>
+            <param name="stage">The current <see cref="T:StageModel"/>.</param>
+            <param name="panel">The <see cref="T:UI.UILibrarianCharacterListPanel"/> that is being configured.</param>
+            <param name="floorsInBattle">The list of currently existing floors in battle.</param>
+        </member>
+        <member name="T:TimelineUtil.TimelineStoryBranchBase">
+            <summary>
+            A script class for handling story branch events (loaded according to StageModTimelineInfo.xml 
+            and used depending on storyBranch of the current loaded story effect - 
+            a patch that loads custom values from &lt;StoryBranch&gt; instead is also included!).
+            </summary>
+        </member>
+        <member name="M:TimelineUtil.TimelineStoryBranchBase.OnSetBranchData(StorySelectOptionPopup,System.Boolean)">
+            <summary>
+            Is called before <see cref="M:StorySelectOptionPopup.SetData(StoryBranch,System.Boolean)"/>.
+            </summary>
+            <param name="optionPopup">The <see cref="T:StorySelectOptionPopup"/> being configured.</param>
+            <param name="isjustread">Same parameter from <see cref="M:StorySelectOptionPopup.SetData(StoryBranch,System.Boolean)"/>.</param>
+        </member>
+        <member name="T:TimelineUtil.TimelineSpriteManager">
+            <summary>
+            The class handling the loading of custom sprites.
+            </summary>
+        </member>
+        <member name="M:TimelineUtil.TimelineSpriteManager.LoadSpriteFromStream(System.IO.Stream,System.String,UnityEngine.Sprite@)">
+            <summary>
+            Tries to load the given byte stream as an image into a <see cref="T:UnityEngine.Texture"/> and then use it to create a <see cref="T:UnityEngine.Sprite"/> with a given name.
+            </summary>
+            <param name="byteStream">The byte stream from which the image should be loaded.</param>
+            <param name="name">The name that the sprite should have.</param>
+            <param name="sprite">If the loading was successful, the loaded <see cref="T:UnityEngine.Sprite"/>; otherwise, <see langword="null"/>.</param>
+            <returns><see langword="true"/> if the loading was successful, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineSpriteManager.LoadSpriteFromStream(System.IO.Stream,System.String,UnityEngine.Vector2,UnityEngine.Sprite@)">
+            <summary>
+            Tries to load the given byte stream as an image into a <see cref="T:UnityEngine.Texture"/> and then use it to create a <see cref="T:UnityEngine.Sprite"/> with a given name and pivot.
+            </summary>
+            <param name="byteStream">The byte stream from which the image should be loaded.</param>
+            <param name="name">The name that the sprite should have.</param>
+            <param name="pivot">The pivot that the sprite should have.</param>
+            <param name="sprite">If the loading was successful, the loaded <see cref="T:UnityEngine.Sprite"/>; otherwise, <see langword="null"/>.</param>
+            <returns><see langword="true"/> if the loading was successful, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineSpriteManager.LoadSpriteFromPath(System.String,System.String,UnityEngine.Sprite@)">
+            <summary>
+            Tries to load the file at a given path as an image into a <see cref="T:UnityEngine.Texture"/> and then use it to create a <see cref="T:UnityEngine.Sprite"/> with a given name.
+            </summary>
+            <param name="path">The path to the file from which the image should be loaded (extensions of .png and .jpg may be omitted).</param>
+            <param name="name">The name that the sprite should have.</param>
+            <param name="sprite">If the loading was successful, the loaded <see cref="T:UnityEngine.Sprite"/>; otherwise, <see langword="null"/>.</param>
+            <returns><see langword="true"/> if the loading was successful, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineSpriteManager.LoadSpriteFromPath(System.String,System.String,UnityEngine.Vector2,UnityEngine.Sprite@)">
+            <summary>
+            Tries to load the file at a given path as an image into a <see cref="T:UnityEngine.Texture"/> and then use it to create a <see cref="T:UnityEngine.Sprite"/> with a given name and pivot.
+            </summary>
+            <param name="path">The path to the file from which the image should be loaded (extensions of .png and .jpg may be omitted).</param>
+            <param name="name">The name that the sprite should have.</param>
+            <param name="pivot">The pivot that the sprite should have.</param>
+            <param name="sprite">If the loading was successful, the loaded <see cref="T:UnityEngine.Sprite"/>; otherwise, <see langword="null"/>.</param>
+            <returns><see langword="true"/> if the loading was successful, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineSpriteManager.TryGetStoryIcons(System.String,UI.UIIconManager.IconSet@)">
+            <summary>
+            Tries to find a story <see cref="T:UI.UIIconManager.IconSet"/> with a given name.
+            This checks icon sets loaded through TimelineUtil before the rest.
+            </summary>
+            <param name="name">The name of the icon set to get.</param>
+            <param name="iconSet">The found <see cref="T:UI.UIIconManager.IconSet"/>, if any; otherwise, <see langword="null"/>.</param>
+            <returns><see langword="true"/> if a story icon set with the given name was found, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineSpriteManager.GetSpecialSprite(System.String)">
+            <summary>
+            Retrieves the loaded "special story sprite" with the given name (for information on setting the loading of such sprites up, see SpecialStoryPath in the example configuration xml.
+            </summary>
+            <param name="name">The name of the sprite to get (extension not included).</param>
+            <returns>The special sprite with the given name (or <see langword="null"/> if no sprite with the given name was loaded).</returns>
+        </member>
+        <member name="T:TimelineUtil.TimelineUIBuilder">
+            <summary>
+            A class responsible for creating new invitation map elements.
+            </summary>
+        </member>
+        <member name="M:TimelineUtil.TimelineUIBuilder.InstantiateStorySlot(UI.UIStoryLine,Grade,UnityEngine.Transform)">
+            <summary>
+            Instantiates an invitation map icon slot, set to the given storyline and grade, with a given parent.
+            Note that this does NOT automatically fill in its <see cref="F:UI.UIStoryProgressIconSlot.storyData"/> !
+            </summary>
+            <param name="story">The <see cref="T:UI.UIStoryLine"/> the slot will have.</param>
+            <param name="grade">The <see cref="T:Grade"/> the slot will have.</param>
+            <param name="parent">The parent the slot object will be attached to.</param>
+            <returns>The created <see cref="T:UI.UIStoryProgressIconSlot"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineUIBuilder.InstantiateLargeChapterSlot(Grade,UnityEngine.Transform,UI.UIStoryLine)">
+            <summary>
+            Instantiates a "large" invitation map chapter slot (with 4 premade story slots like original Canard),
+            set to the given grade (and storyline if provided), with a given parent.
+            Note that this does NOT automatically fill in its <see cref="F:UI.UIStoryProgressIconSlot.storyData"/> !
+            </summary>
+            <param name="grade">The <see cref="T:Grade"/> the slot will have.</param>
+            <param name="parent">The parent the slot object will be attached to.</param>
+            <param name="story">The <see cref="T:UI.UIStoryLine"/> the slot will have.</param>
+            <returns>The created <see cref="T:TimelineUtil.UIStoryProgressChapterSlot"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineUIBuilder.InstantiateSimpleChapterSlot(Grade,UnityEngine.Transform,UI.UIStoryLine)">
+            <summary>
+            Instantiates a "simple" invitation map chapter slot (with one big story button like all original chapters EXCEPT Canard),
+            set to the given grade (and storyline if provided), with a given parent.
+            Note that this does NOT automatically fill in its <see cref="F:UI.UIStoryProgressIconSlot.storyData"/> !
+            </summary>
+            <param name="grade">The <see cref="T:Grade"/> the slot will have.</param>
+            <param name="parent">The parent the slot object will be attached to.</param>
+            <param name="story">The <see cref="T:UI.UIStoryLine"/> the slot will have.</param>
+            <returns>The created <see cref="T:TimelineUtil.UIStoryProgressChapterSlot"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineUIBuilder.InstantiateConnectingLine(System.Boolean,UnityEngine.Transform)">
+            <summary>
+            Creates an invitation map connecting line with a given parent.
+            </summary>
+            <param name="corner"><see langword="true"/> if the line should be a corner line (Yan/RRR to Hana), <see langword="false"/> otherwise.</param>
+            <param name="parent">The <see cref="T:UnityEngine.Transform"/> to which the line object should be parented.</param>
+            <returns>The connecting line <see cref="T:UnityEngine.GameObject"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineUIBuilder.CreateConnectingLine(TimelineUtil.ConnectingLineInfo.ConnectingLineRenderData,UnityEngine.Transform)">
+            <summary>
+            Creates an invitation map connecting line with a given parent and given displaye parameters.
+            </summary>
+            <param name="data">The parameters controlling how the line should appear.</param>
+            <param name="parent">The <see cref="T:UnityEngine.Transform"/> to which the line object should be parented.</param>
+            <returns>The connecting line <see cref="T:UnityEngine.GameObject"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineUIBuilder.GetFilterType(UI.UIStoryGradeFilter)">
+            <summary>
+            Identifies the type of a <see cref="T:UI.UIStoryGradeFilter"/> (that is, the kind of panel it is being used in).
+            </summary>
+            <param name="filter">The <see cref="T:UI.UIStoryGradeFilter"/> to identify.</param>
+            <returns>The <see cref="T:TimelineUtil.StoryGradeFilterType"/> representing the type of the identified filter.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineUIBuilder.ExtendIconsetLevels(UI.UIStoryProgressIconSlot,System.Int32)">
+            <summary>
+            Extends the number of available sublevel icons in an invitation map icon slot (adjusting the bounding sizes accordingly).
+            </summary>
+            <param name="slot">The <see cref="T:TimelineUtil.UIStoryProgressChapterSlot"/> to extend the list of sublevels of.</param>
+            <param name="count">The desired number of sublevels (if it is less than the number of sublevels the slot already has, nothing is changed).</param>
+        </member>
+        <member name="T:TimelineUtil.TimelineTools">
+            <summary>
+            The class containing various extension methods.
+            </summary>
+        </member>
+        <member name="M:TimelineUtil.TimelineTools.SetAlarmTextForBlueCustom(UI.UIAlarmPopup,UI.ConfirmEvent,System.String,TimelineUtil.BlueAlarmDisplayInfo)">
+            <summary>
+            An analog of <see cref="M:UI.UIAlarmPopup.SetAlarmTextForBlue(UI.UIAlarmType,UI.ConfirmEvent,System.String,UI.UIStoryLine)"/> that provides a finer level of control over specific elements of the popup.
+            </summary>
+            <param name="popup">The popup that should be configured.</param>
+            <param name="confirmFunc">The callback that will be called when any of the popup buttons are pressed (with <see langword="true"/> for the "yes" button, and <see langword="false"/> for the "no" button).</param>
+            <param name="text">The text the popup will display.</param>
+            <param name="displayInfo">The parameters that control how the popup will look.</param>
+        </member>
+        <member name="M:TimelineUtil.TimelineTools.SetEndContentsFrameCustom(UI.UIInvitationRightMainPanel,UI.EndContentsFrame_Invitation)">
+            <summary>
+            Sets the "end contents frame" of a <see cref="T:UI.UIInvitationRightMainPanel"/> to the given set of sprites.
+            Note that despite being called "end contents frame", this is normally not connected to the EndContents system, just to the storyType of the current stage! 
+            </summary>
+            <param name="panel">The panel that should be configured.</param>
+            <param name="frame">The sprites that should be used.</param>
+        </member>
+        <member name="M:TimelineUtil.TimelineTools.SetActiveEndEffectCustom(UI.UIInvitationRightMainPanel,System.Boolean,TimelineUtil.BlueRightMainPanelDisplayInfo)">
+            <summary>
+            Configures the "end effects" of a <see cref="T:UI.UIInvitationRightMainPanel"/>.
+            </summary>
+            <param name="panel">The panel that should be configured.</param>
+            <param name="on">Whether the effects should be turned on or off.</param>
+            <param name="displayInfo">The configuration data.</param>
+        </member>
+        <member name="T:TimelineUtil.TimelineDataManager">
+            <summary>
+            The class handling most of timeline-related data.
+            </summary>
+        </member>
+        <member name="M:TimelineUtil.TimelineDataManager.GetGlobalGrade(System.String)">
+            <summary>
+            Retrieves the global configuration data for the grade with a given name.
+            </summary>
+            <param name="name">The name of the global grade to get.</param>
+            <returns>The <see cref="T:TimelineUtil.GradeInfo"/> with the given name (or <see langword="null"/> if one does not exist).</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineDataManager.GetTimeline(System.String)">
+            <summary>
+            Retrieves the configuration data for the timeline with a given name.
+            </summary>
+            <param name="name">The name of the timeline to get.</param>
+            <returns>The <see cref="T:TimelineUtil.TimelineInfo"/> with the given name (or <see langword="null"/> if one does not exist).</returns>
+        </member>
+        <member name="F:TimelineUtil.TimelineDataManager.currentClearModStoryId">
+            <summary>
+            The <see cref="T:LorId"/> of the last cleared mod stage, 
+            or <see cref="F:LorId.None"/> if the last cleared stage was not a mod stage.
+            Used for determining the invitation map icon slot that should be focused on when reopening the map.
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.TimelineDataManager.lastSeenModStartStoryId">
+            <summary>
+            The <see cref="T:LorId"/> of the last cleared mod stage with a start story, 
+            or <see cref="F:LorId.None"/> if the last cleared stage with a start story was not a mod stage.
+            Used for determining the CG displayed on the initial loading screen.
+            </summary>
+        </member>
+        <member name="M:TimelineUtil.TimelineDataManager.SaveLatestData">
+            <summary>
+            Saves <see cref="F:TimelineUtil.TimelineDataManager.lastSeenModStartStoryId"/>.
+            </summary>
+        </member>
+        <member name="M:TimelineUtil.TimelineDataManager.LoadLatestData">
+            <summary>
+            Tries to reload <see cref="F:TimelineUtil.TimelineDataManager.lastSeenModStartStoryId"/> from save.
+            </summary>
+            <returns><see langword="true"/> if the loading is successful, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TimelineUtil.TimelineDataManager.SetStageTargetAlias(LorId,LorId)">
+            <summary>
+            A public handle for altering stage map target redirects.
+            </summary>
+            <param name="alias">The <see cref="T:LorId"/> of the stage that should (or should not) be redirected to another.</param>
+            <param name="source">The <see cref="T:LorId"/> of the stage that should be redirected to, if any; otherwise, <see langword="null"/>.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="alias"/> is <see langword="null"/>.</exception>
+        </member>
+        <member name="T:TimelineUtil.TimelineInfo">
+            <summary>
+            Contains data regarding one timeline, and provides some events for subscribing to map rendering steps.
+            </summary>
+        </member>
+        <member name="T:TimelineUtil.TimelineInfo.FilterSlotEventArgs">
+            <summary>
+            Contains arguments for events concerning timeline filter slots.
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.TimelineInfo.FilterSlotEventArgs.filterSlot">
+            <summary>
+            The timeline filter slot that the event is being called for.
+            </summary>
+        </member>
+        <member name="E:TimelineUtil.TimelineInfo.OnVisibilityCheck">
+            <summary>
+            An event that is called after timeline filter slot visibility is checked.
+            
+            The preceding default visibility check sets custom timelines with any active icon/chapter slots to active, 
+            and all other custom timelines to inactive; the main LibraryOfRuina timeline is not affected.
+            </summary>
+        </member>
+        <member name="T:TimelineUtil.TimelineInfo.PanelSlotEventArgs">
+            <summary>
+            Contains arguments for events concerning timeline panel slots (that is, the switchable "timeline maps" themselves).
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.TimelineInfo.PanelSlotEventArgs.panelSlot">
+            <summary>
+            The timeline panel slot that the event is being called for.
+            </summary>
+        </member>
+        <member name="E:TimelineUtil.TimelineInfo.OnOpenInit">
+            <summary>
+            An event that is called each time the invitation map is opened (not necessarily with the current timeline active).
+            </summary>
+        </member>
+        <member name="E:TimelineUtil.TimelineInfo.OnCreate">
+            <summary>
+            An event that is called once after the timeline panel slot (including all icon/chapter slots on it) is created.
+            </summary>
+        </member>
+        <member name="T:TimelineUtil.TimelineInfo.PanelSlotChangeEventArgs">
+            <summary>
+            Contains arguments for events involved in changing between timeline panel slots (that is, the switchable "timeline maps" themselves).
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.TimelineInfo.PanelSlotChangeEventArgs.oldSlot">
+            <summary>
+            The panel slot that is/was being switched from.
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.TimelineInfo.PanelSlotChangeEventArgs.newSlot">
+            <summary>
+            The panel slot that is/was being switched to.
+            </summary>
+        </member>
+        <member name="E:TimelineUtil.TimelineInfo.BeforeChange">
+            <summary>
+            An event that is called (on the old slot) before switching the current panel slot.
+            </summary>
+        </member>
+        <member name="E:TimelineUtil.TimelineInfo.AfterChange">
+            <summary>
+            An event that is called (on the new slot) after switching the current panel slot.
+            </summary>
+        </member>
+        <member name="E:TimelineUtil.TimelineInfo.BeforeChangeCoroutine">
+            <summary>
+            A coroutine event that is called (on the old slot) before switching the current panel slot.
+            All coroutines subscribing to the event are launched in parallel.
+            </summary>
+        </member>
+        <member name="E:TimelineUtil.TimelineInfo.AfterChangeCoroutine">
+            <summary>
+            A coroutine event that is called (on the new slot) after switching the current panel slot.
+            All coroutines subscribing to the event are launched in parallel.
+            </summary>
+        </member>
+        <member name="M:TimelineUtil.TimelineInfo.GetLocalGrade(System.String)">
+            <summary>
+            Retrieves the configuration data for the local (timeline-specific) grade with a given name.
+            </summary>
+            <param name="name">The name of the grade to get.</param>
+            <returns>The <see cref="T:TimelineUtil.LocalGradeInfo"/> with the given name (or <see langword="null"/> if one does not exist).</returns>
+        </member>
+        <member name="T:TimelineUtil.GradeInfo">
+            <summary>
+            Contains data regarding one story grade (global or timeline-specific), and provides some events for subscribing to map rendering steps.
+            </summary>
+        </member>
+        <member name="T:TimelineUtil.GradeInfo.VisibilityEventArgs">
+            <summary>
+            Contains arguments for events concerning grade filter slot visibility.
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.GradeInfo.VisibilityEventArgs.filterSlot">
+            <summary>
+            The grade filter slot that the event is being called for.
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.GradeInfo.VisibilityEventArgs.filterType">
+            <summary>
+            The type of the filter panel that the filter slot is being used in.
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.GradeInfo.VisibilityEventArgs.timeline">
+            <summary>
+            The name of the current timeline (if the filter is used on an invitation map; otherwise, <see langword="null"/>).
+            </summary>
+        </member>
+        <member name="E:TimelineUtil.GradeInfo.OnVisibilityCheck">
+            <summary>
+            An event that is called after default grade filter slot visibility is checked.
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.CustomFloorEventButton.animator">
+            <summary>
+            Button animator/main object.
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.CustomFloorEventButton.button">
+            <summary>
+            Button itself.
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.CustomFloorEventButton.eventTrigger">
+            <summary>
+            Event trigger (normally handling over/unover events).
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.CustomFloorEventButton.animatorLeft">
+            <summary>
+            Button animator/main object (for the flipped floor version, if present).
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.CustomFloorEventButton.buttonLeft">
+            <summary>
+            Button itself (for the flipped floor version, if present).
+            </summary>
+        </member>
+        <member name="F:TimelineUtil.CustomFloorEventButton.eventTriggerLeft">
+            <summary>
+            Event trigger (normally handling over/unover events) (for the flipped floor version, if present).
+            </summary>
+        </member>
+    </members>
+</doc>

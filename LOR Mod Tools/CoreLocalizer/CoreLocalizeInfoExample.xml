@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoreLocalizeList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CoreLocalize>
+	<!-- code that will be used for your language (vanilla uses "kr", "en", "jp", "cn" and "trcn") -->
+	<Language>cll</Language>
+	<!-- name that will be used for your language in the options menu -->
+	<LanguageName>Cool Language</LanguageName>
+	<!-- "secondary" language code -->
+	<!-- will not be used in game, but will be used to load files if ones under primary code are missing -->
+	<!-- optional feature, omit if unused-->
+	<SharedLanguage>cool</SharedLanguage>
+	<!-- path to the "head" font (vanilla EN uses Arita Buri Medium) -->
+	<!-- semi-optional - if omitted, vanilla EN font (WITH LIMITED GLYPHS) is reused -->
+	<HeadFont>Resource/Fonts/HeadFont</HeadFont>
+	<!-- path to the "body" font (vanilla EN uses Seoul Namsan) -->
+	<!-- semi-optional - if omitted, vanilla EN font (WITH LIMITED GLYPHS) is reused -->
+	<BodyFont>Resource/Fonts/BodyFont</BodyFont>
+	<!-- path to the "language settings" font (vanilla uses Noto Sans) -->
+	<!-- semi-optional - if omitted, vanilla font (WITH LIMITED GLYPHS) is reused -->
+	<OptionFont>Resource/Fonts/OptionFont</OptionFont>
+	<!-- path to the "library/floor level" font (vanilla uses Railway) -->
+	<!-- semi-optional - if omitted (and if level texts are not omitted), vanilla font (WITH LIMITED GLYPHS) is reused -->
+	<LevelFont>Resource/Fonts/LevelFont</LevelFont>
+<!--<StoryFont>Resource/Fonts/StoryFont</StoryFont> - alternative to the next element: -->
+	<!-- whether the "head" font should also be used to replace the "story" font -->
+	<!-- if not true and StoryFont is not set, vanilla EN font (with notably more glyphs, but still limited) is reused -->
+	<HeadIsStory>true</HeadIsStory>
+	<!-- path to localization files -->
+	<!-- replaces Xml/ while loading game localization -->
+	<!-- yes, Localize/LANG/LANG_file and similar structures are non-negotiable -->
+	<DataPath>Data</DataPath>
+	<!-- path to localization resources (sprites) -->
+	<!-- optional - vanilla does not localize these AT ALL -->
+	<!-- refer to README for the list of supported sprite replacements -->
+	<ResourcePath>Resource</ResourcePath>
+	<!-- period of time before story scene prints the next character (in percents of default) -->
+	<!-- EN uses 50, KR/JP/CN/TRCN use 100; if omitted, default is 50 -->
+	<StoryWaitTimePercent>50</StoryWaitTimePercent>
+  </CoreLocalize>
+  <!-- and yes, you can include multiple <CoreLocalize> here (that's why <SharedLanguage> exists at all) -->
+</CoreLocalizeList>

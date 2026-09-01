@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AbnormalityCardsRoot>
+  <Sephirah>
+    <AbnormalityCard ID="CustomEmotionCardDescId">
+      <Abnormality>Abnormality name</Abnormality>
+      <CardName>Card name</CardName>
+      <AbilityDesc>[Single Ally]/[All Allies]/[All Units]
+Ability description (can span multiple lines)</AbilityDesc>
+      <FlaborText>Flavor text to be displayed on the side of the card.</FlaborText>
+      <Dialogues>
+        <Dialogue ID="1">A choice of lines that will be said by units who gain the card.</Dialogue>
+        <Dialogue ID="2">At least one line should be present for things to not break! The line can be empty though.</Dialogue>
+      </Dialogues>
+    </AbnormalityCard>
+  </Sephirah>
+</AbnormalityCardsRoot>

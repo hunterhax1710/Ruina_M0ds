@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EmotionCardXmlRoot>
+  <EmotionCard ID="1">
+    <Name>CustomEmotionCardDescId</Name>
+    <State>Negative</State>
+    <Sephirah>ETC</Sephirah>
+    <Level>0</Level>
+    <EmotionLevel>0</EmotionLevel>
+    <EmotionRate>0</EmotionRate>
+    <Artwork>CombatPageArtwork</Artwork>
+    <TargetType>SelectOne</TargetType>
+    <Script>Custom, MyAssembly</Script>
+	<Gift>1</Gift>
+  </EmotionCard>
+</EmotionCardXmlRoot>

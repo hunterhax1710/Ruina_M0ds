@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BattleCardEnhancedView</name>
+    </assembly>
+    <members>
+        <member name="T:BattleCardEnhancedView.CardViewControls">
+            <summary>
+            A class for controlling some functions of Enhanced View.
+            </summary>
+        </member>
+        <member name="M:BattleCardEnhancedView.CardViewControls.AddIgnoredCard(BattleDiceCardUI)">
+            <summary>
+            Prevents a specific card from claiming the "zoomed card" role when opened (which also causes the previous zoomed card, if any, to reset its scale).
+            </summary>
+            <param name="card">A card that should ignored by the zooming function.</param>
+        </member>
+        <member name="M:BattleCardEnhancedView.CardViewControls.RemoveIgnoredCard(BattleDiceCardUI)">
+            <summary>
+            Enables a specific card to claim the "zoomed card" role when opened (which also causes the previous zoomed card, if any, to reset its scale).
+            This only has any effect if the card was previously set to be ignored with <see cref="M:BattleCardEnhancedView.CardViewControls.AddIgnoredCard(BattleDiceCardUI)"/> - the default setting for an unspecified card is "do not ignore"!
+            </summary>
+            <param name="card">A card that should no longer be ignored by the zooming function.</param>
+        </member>
+        <member name="M:BattleCardEnhancedView.CardViewControls.BlockCardZoom(System.Object)">
+            <summary>
+            Temporarily disables scroll-zooming.
+            For compatibility with other simultaneous consumers, this requires an "anchor" object that will keep scrolling disabled.
+            Scroll-zoooming will be disabled as long as at least one "anchor" remains in use. To remove an "anchor", use <see cref="M:BattleCardEnhancedView.CardViewControls.UnblockCardZoom(System.Object)"/>.
+            (Note that an anchor that gets garbage-collected is no longer considered in use!)
+            </summary>
+            <param name="anchor">An object that will prevent scroll-zooming until it is removed with <see cref="M:BattleCardEnhancedView.CardViewControls.UnblockCardZoom(System.Object)"/> or garbage-collected.</param>
+        </member>
+        <member name="M:BattleCardEnhancedView.CardViewControls.UnblockCardZoom(System.Object)">
+            <summary>
+            Removes an object from the set of "anchors" blocking scroll-zooming (see <see cref="M:BattleCardEnhancedView.CardViewControls.BlockCardZoom(System.Object)"/>.
+            </summary>
+            <param name="anchor">An object to be removed from "anchors".</param>
+        </member>
+    </members>
+</doc>

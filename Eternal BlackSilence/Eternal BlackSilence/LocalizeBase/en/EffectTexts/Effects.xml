@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <effectTextList>
+  	<BattleEffectText ID="Returner">
+      <Name>Returner</Name>
+      <Desc>Returned {0} times
+Speed dice +{0}
+Each scene draw {0} pages and restore {0} extra light
+All dice power +{0}
+Damage taken -{0}
+Reduces all pages cost by 1 for each returns after 5
+Gradually increase your resistance according to the number of returns</Desc>
+   </BattleEffectText>
+	<BattleEffectText ID="Returner_Keyword">
+      <Name>Returner X</Name>
+      <Desc>Returned X times
+Speed dice +X
+Each scene draw X pages and restore X extra light
+All dice power +X
+Damage taken -X
+Reduces all pages cost by 1 for each returns after 5
+Gradually increase your resistance according to the number of returns</Desc>   	
+	</BattleEffectText>
+	<BattleEffectText ID="Returner2">
+      <Name>Eternity</Name>
+      <Desc>When the amount of this status is 9, reduce 1 stack of Returner at the end of the scene</Desc>
+    </BattleEffectText>
+	<BattleEffectText ID="Returner2_Keyword">
+      <Name>Eternity X</Name>
+      <Desc>When the amount of this status is 9, reduce 1 stack of Returner at the end of the scene</Desc>
+    </BattleEffectText>	    
+	<BattleEffectText ID="Distorted">
+      <Name>Distorted</Name>
+      <Desc>Unaffected by Power-related effects. 
+All dice power -{0}	
+Discard {0} cards 
+Types of dice on {0} Combat Pages will be change randomly. 
+Changed dice loses its original effects.
+Changed dice deals 4 damage to self on clash lose.
+If this stack reaches 7. Die at the end of the scene.</Desc>
+    </BattleEffectText>	
+<BattleEffectText ID="Distorted_Keyword">
+      <Name>Distorted X</Name>
+      <Desc>Unaffected by Power-related effects. 
+All dice power -X	
+Discard X cards 
+Types of dice on X Combat Page will be change randomly
+Changed dice loses its original effects.
+Changed dice deals 4 damage to self on clash lose.
+If this stack reaches 7. Die at the end of the scene.</Desc>
+    </BattleEffectText>			   
+	<BattleEffectText ID="CursedWound">
+      <Name>Cursed Wound</Name>
+      <Desc>Take 50% more damage and stagger damage. Cannot recover HP or Stagger Resist for {0} Scenes.</Desc>
+    </BattleEffectText>
+	<BattleEffectText ID="CursedWound_Keyword">
+      <Name>Cursed Wound X</Name>
+      <Desc>Take 50% more damage and stagger damage. Cannot recover HP or Stagger Resist for X Scenes.</Desc>
+    </BattleEffectText>
+	<BattleEffectText ID="breakDice">
+      <Name>Dice Break</Name>
+      <Desc>{0} Speed dice become unusable. Leftmost dice is sealed first. (Does not decrease if staggered)</Desc>
+    </BattleEffectText>
+	<BattleEffectText ID="breakDice_Keyword">
+      <Name>Dice Break X</Name>
+      <Desc>X Speed dice become unusable. Leftmost dice is sealed first. (Does not decrease if staggered)</Desc>
+    </BattleEffectText>
+	<BattleEffectText ID="Concussion">
+      <Name>Concussion</Name>
+      <Desc>For {0} Scenes, Upon a successful attack or taking a hit, 50% chance to destroy next die of self. (Does not decrease if staggered)</Desc>
+    </BattleEffectText>	
+	<BattleEffectText ID="Concussion_Keyword">
+      <Name>Concussion X</Name>
+      <Desc>For X Scenes, Upon a successful attack or taking a hit, 50% chance to destroy next die of self. (Does not decrease if staggered)</Desc>
+    </BattleEffectText>
+	<BattleEffectText ID="strongBleed">
+      <Name>Lethal Bleed</Name>
+      <Desc>Take {0}% max HP as damage and subtract 1 stack of Lethal Bleed (Max. 20 stacks) every time the character rolls an Offensive die. (Rounds up)</Desc>
+    </BattleEffectText>	
+	<BattleEffectText ID="strongBleed_Keyword">
+      <Name>Lethal Bleed X</Name>
+      <Desc>Take X% max HP as damage and subtract 1 stack of Lethal Bleed (Max. 20 stacks) every time the character rolls an Offensive die. (Rounds up)</Desc>
+    </BattleEffectText>
+	
+	
+	
+	
+	<BattleEffectText ID="ComboCardCount">
+      <Name>Combo</Name>
+      <Desc>When the amount of this status is 5, all dice on the next played Combat Page will gain +5 Power.</Desc>
+    </BattleEffectText>
+	<BattleEffectText ID="Stability">
+      <Name>Stability</Name>
+      <Desc>Not affected by status ailments this scene</Desc>
+    </BattleEffectText>
+    <BattleEffectText ID="Uncontrollable">
+      <Name>Uncontrollable</Name>
+      <Desc>Cannot be controlled. Randomly attacks allies. (Does not decrease if staggered)</Desc>
+    </BattleEffectText>	
+    <BattleEffectText ID="Fatal">
+      <Name>Silenced</Name>
+      <Desc>All resistance change to "Fatal" for this Scene. Cannot gain any positive buffs.</Desc>
+    </BattleEffectText>	
+</effectTextList>
+</BattleEffectTextRoot>

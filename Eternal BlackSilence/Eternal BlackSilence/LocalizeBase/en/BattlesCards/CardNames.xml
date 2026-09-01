@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <cardDescList>   
+	<BattleCardDesc ID="1000">                      <!-- CounterDice -->
+      <LocalizedName>Retaliate</LocalizedName>
+    </BattleCardDesc>
+	
+	
+	<BattleCardDesc ID="1001">                       <!-- Cards -->
+      <LocalizedName>Wheels Industry</LocalizedName>
+    </BattleCardDesc>
+	<BattleCardDesc ID="1002">
+      <LocalizedName>Zelkova Workshop</LocalizedName>
+    </BattleCardDesc>	
+	<BattleCardDesc ID="1004">
+      <LocalizedName>Mook Workshop</LocalizedName>
+    </BattleCardDesc>
+	<BattleCardDesc ID="1005">
+      <LocalizedName>Allas Workshop</LocalizedName>
+    </BattleCardDesc>
+	<BattleCardDesc ID="1006">
+      <LocalizedName>Crystal Atelier</LocalizedName>
+    </BattleCardDesc>
+	<BattleCardDesc ID="1007">
+      <LocalizedName>Atelier Logic</LocalizedName>
+    </BattleCardDesc>
+	<BattleCardDesc ID="1008">
+      <LocalizedName>Old Boys Workshop</LocalizedName>
+    </BattleCardDesc>
+	<BattleCardDesc ID="1010">
+      <LocalizedName>Durandal</LocalizedName>
+    </BattleCardDesc>
+	<BattleCardDesc ID="1011">
+      <LocalizedName>Ranga Workshop</LocalizedName>
+    </BattleCardDesc>
+	
+	
+	<BattleCardDesc ID="1003">                     <!-- EGO -->
+      <LocalizedName>The Darkness Within</LocalizedName>
+    </BattleCardDesc>
+	<BattleCardDesc ID="1009">                     
+      <LocalizedName>Eternal Silence</LocalizedName>
+    </BattleCardDesc>
+	<BattleCardDesc ID="1012">                     
+      <LocalizedName>Furioso</LocalizedName>
+    </BattleCardDesc>
+	<BattleCardDesc ID="1013">                     
+      <LocalizedName>Silence over Reverberate</LocalizedName>
+    </BattleCardDesc>
+		
+		
+	<BattleCardDesc ID="10031">                 <!-- Enemy -->
+      <LocalizedName>The Darkness Within</LocalizedName>
+    </BattleCardDesc>
+	<BattleCardDesc ID="10121">                     
+      <LocalizedName>Furioso</LocalizedName>
+    </BattleCardDesc>
+	<BattleCardDesc ID="10131">                     
+      <LocalizedName>Silence over Reverberate</LocalizedName>
+    </BattleCardDesc>
+  
+  </cardDescList>
+</BattleCardDescRoot>

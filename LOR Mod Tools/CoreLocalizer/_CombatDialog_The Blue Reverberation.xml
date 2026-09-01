@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GroupName>BlueReverberation1</GroupName>
+  <Character ID="Argalia_nomal">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">Is it not time yet… for the splendid curtain to rise?</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">The stage calls for us. We should gladly play along.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">Let’s not play too rough. Neither you nor I can reach it just yet…</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">Until next time. We’ll meet again soon.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">The answer seems to be here… But the fruit isn’t sweet enough just yet.</BattleDialog>
+      <BattleDialog ID="DEATH_1">…I’ll pay you another visit once it’s more ripe.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">Simply returned to where they belong.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">I’m sure Eileen will be overjoyed to know how helpful you were.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">Yes… You were easily broken because you were imperfect.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">No need to bother about the inevitable.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">As I thought… It’s still incomplete.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">You’re still too fragile. How pitiful…</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">Did you really think you were ready to invite me?</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">What a pity. I was looking forward to this occasion.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">I was wondering how long your… little lungs could keep breathing.</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Argalia_MeetGebura">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">What’s this…? Haha… I was wondering where the Red Mist could’ve disappeared to…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">Wouldn’t it be hilarious if the public learned that you’re stuck as a servant in some odd place now?</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">This fight had much room for improvement.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="SPECIAL_EVENT_0">Still entertaining… Although, I’ve yet to see exactly what I want here.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">Simply returned to where they belong.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">I’m sure Eileen will be overjoyed to know how helpful you were.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">Yes… You were easily broken because you were imperfect.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">No need to bother about the inevitable.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">As I thought… It’s still incomplete.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">You’re still too fragile. How pitiful…</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">Did you really think you were ready to invite me?</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">What a pity. I was looking forward to this occasion.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">I was wondering how long your… little lungs could keep breathing.</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">This was not the Red Mist I was hoping to see.</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Argalia_MeetRoland">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">I was wondering where you’d run off to after you’d gone mad… and here you are.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">Let’s pick up where we left off, shall we?</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">I’ll put these books to good use.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">Let’s meet again after you’ve prepared yourselves more… thoroughly.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">Simply returned to where they belong.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">I’m sure Eileen will be overjoyed to know how helpful you were.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">Yes… You were easily broken because you were imperfect.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">No need to bother about the inevitable.</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">As I thought… It’s still incomplete.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">You’re still too fragile. How pitiful…</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">Did you really think you were ready to invite me?</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">What a pity. I was looking forward to this occasion.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_4">I was wondering how long your… little lungs could keep breathing.</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">Haha… I seriously can’t believe I let her love this man.</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Gebura_MeetArgalia">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">…Private talk is unnecessary. We’re in battle.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">Shut it. Both of us have goals to achieve.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">…That wasn’t a satisfying conclusion.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">This is frustrating… But I’ve got to accept it.</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">Even if others face an unfortunate fate, I can’t stop here.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">You don’t want their sacrifice to be in vain, do you?</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">Don’t be afraid. We have to trust ourselves to win this.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_3">There’s no reason we can’t emerge victorious. Stay calm, everyone.</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">Sigh… You damn coward.</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Roland_MeetArgalia">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">You don’t say, Blue Sicko.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">I don’t think I have anything to say to you.</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">Feels as if I didn’t get to finish the job properly…</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">Dammit… I can’t let it end like this…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">…Stay calm.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">Don’t panic.</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">I’ll have to try harder to make up for them…</BattleDialog>
+    </Type>
+    <Type ID="SPECIAL_EVENT">
+      <BattleDialog ID="SPECIAL_EVENT_0">Seriously? …You’re gonna wimp out like that?</BattleDialog>
+    </Type>
+  </Character>
+  <Character ID="Gears">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">As the… gear guides…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">Tell me how… to move next…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">Show me the path for me to walk…!</BattleDialog>
+      <BattleDialog ID="START_BATTLE_3">Walk the path given to us… and we shall win for certain…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_4">Open thy head and listen to the sound…</BattleDialog>
+      <BattleDialog ID="START_BATTLE_5">I am prepared to go into battle…</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">We’re always led to the right path…</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">Finished the battle… I will return now…</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_2">Truly… You are essential to us…</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">Why… have you brought me here…</BattleDialog>
+      <BattleDialog ID="DEATH_1">I’m not sure what should I do anymore… Please brighten the path ahead…</BattleDialog>
+      <BattleDialog ID="DEATH_2">Why… can’t I hear the sound…? Why is it so dim…</BattleDialog>
+      <BattleDialog ID="DEATH_3">…Can the gears… make faulty… judgement…?</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">The gears shall… guide the rest of us to safety… There is nothing to worry about…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">This must be… the will of the person…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">Maybe that person’s gear was rusted…</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">A wise… choice…</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">See… The choices… cannot… be wrong…</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">This rotation… is the only thing that protects me…</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_3">At least… while I’m being shown my way… I have my own life…</BattleDialog>
+    </Type>
+  </Character>
+</BattleDialogRoot>

@@ -1,0 +1,359 @@
+<ModInfo extended="true"> 
+<!-- extended="true" is the basic marker required for extended loader to postprocess the xml -->
+<!-- some of the following features will probably not be needed for you - feel free to remove those -->
+  <FaceInfo>
+    <!-- all content here will read at its original size -->
+    <Front_FrontHair>Front_FrontHair</Front_FrontHair>
+    <Front_RearHair>Front_RearHair</Front_RearHair>
+    <Front_Mouth_Normal>Front_Mouth_Normal</Front_Mouth_Normal>
+    <Front_Mouth_Attack>Front_Mouth_Attack</Front_Mouth_Attack>
+    <Front_Mouth_Hit>Front_Mouth_Hit</Front_Mouth_Hit>
+    <Front_Brow_Normal>Front_Brow_Normal</Front_Brow_Normal>
+    <Front_Brow_Attack>Front_Brow_Attack</Front_Brow_Attack>
+    <Front_Brow_Hit>Front_Brow_Hit</Front_Brow_Hit>
+    <Side_FrontHair>Side_FrontHair</Side_FrontHair>
+    <Side_RearHair_Front>Side_RearHair</Side_RearHair_Front>
+    <Side_RearHair_Rear>Side_RearHair</Side_RearHair_Rear>
+    <Front_Eye>Front_Eye</Front_Eye>
+    <Side_Eye>Side_Eye</Side_Eye>
+  </FaceInfo>
+  <!-- if character using this skin has IsCustomizable == false (for enemies that means RandomFace == false), load this customization data instead -->
+  <ExtendedFaceInfo>
+    <!-- if you want to reuse the same hair/eye/etc for multiple enemies, put files and names into one xml, then just same names into another -->
+    <!-- you can also use numbers here, if you want to load vanilla customs (0-42 front hair, 0-22 back hair, 0-31 eye, 0-13 brow, 0-13 mouth)-->
+    <FrontHair>modid_mycustom</FrontHair>
+    <RearHair>modid_mycustom</RearHair>
+    <Eye>modid_mycustom</Eye>
+    <Brow>modid_mycustom</Brow>
+    <Mouth>modid_mycustom</Mouth>
+    <!-- this is just for customization data to load -->
+    <!-- for supported color formats see ColorUtility.TryParseHtmlString -->
+    <HairColor>cyan</HairColor>
+    <EyeColor>black</EyeColor>
+    <SkinColor>#97BBB1</SkinColor>
+    <!-- you can add custom gifts using <Gift[GiftPosition]> -->
+    <!-- this will be given with SetTemporaryGift(ResName, Position), so most vanilla gifts will not work -->
+    <!-- but custom gifts made with Basemod/ExtraBridge or similar custom resource parsers will -->
+    <GiftEye>Gift_Custom_SomeName</GiftEye> <!-- for basemod resname -->
+	<GiftNose>Gift_ExtraBridge_SomeName</GiftNose> <!-- for extrabridge resname -->
+	<!-- for any other custom gift loaders configure this according to their resname parsing logic -->
+  </ExtendedFaceInfo>
+  <ClothInfo>
+    <Name>MySkin</Name>
+    <!-- Fill in the size (resolution) and quality (pixels per game world distance unit) you want your character image to be scaled to -->
+    <!-- if not filled in, default size is 512x512 (can be changed to native image size for all motions by putting size_dynamic="true" into ClothInfo) -->
+    <!-- if not filled in, default quality is 50 (can be changed to same value for all motions by putting quality into ClothInfo) -->
+    <!-- note that quality influences the scale of character images -->
+    <!-- the following skin layers (file names) are supported: 
+        Motion                  (or Motion_mid)                    -  default layer - under head but over rear hair
+        Motion_skin             (or Motion_mid_skin)               -  just over default layer (but still under head), will be colored or disabled according to customization
+        Motion_front                                               -  default front layer - over head
+        Motion_front_skin                                          -  just over default front layer, will be colored or disabled according to customization
+        Motion_rear             (or Motion if Motion_mid exists)   -  new rearmost layer - under rear hair
+        Motion_rear_skin   (or Motion_skin if Motion_mid exists)   -  over rearmost layer (but still under rear hair), will be colored or disabled according to customization
+        Motion_effect                                              -  set to Effect layer (over the rest of the skin)
+    -->
+    <Default size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+      <!-- if head enabled, can also use complex format (see below) -->
+      
+      <!-- the following will be stored in additionalPivotList in CharacterMotion, to be used by custom scripts if needed -->
+      <!-- see e.g. Distorted Yan's chain attachment points -->
+      <AdditionalPivot x="80" y="200" rotation="30" /> <!-- simple format -->
+      <AdditionalPivot>
+        <!-- complex format (note that position in complex format is 1/100 of simple format) -->
+        <localPosition x="0.8" y="2" z="0"/> <!-- Position -->
+        <localScale x="1" y="1" z="1"/> <!-- Scale -->
+        <localEulerAngles x="0" y="0" z="30"/> <!-- Rotation -->
+      </AdditionalPivot>
+    </Default>
+    <Guard size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Guard>
+    <Evade size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Evade>
+    <Damaged size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Damaged>
+    <Slash size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Slash>
+    <Slash2 size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Slash2>
+    <Penetrate size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Penetrate>
+    <Penetrate2 size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Penetrate2>
+    <Hit size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Hit>
+    <Hit2 size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Hit2>
+    <Move size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Move>
+    <NONE size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </NONE>
+    <Fire size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Fire>
+    <Aim size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Aim>
+    <Special size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Special>
+    <S1 size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </S1>
+    <S2 size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="-6.899994" head_y="312.8" rotation="0" head_enable="False" />
+    </S2>
+    <S3 size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </S3>
+    <S4 size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </S4>
+    <S5 size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </S5>
+    <S6 size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </S6>
+    <S7 size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </S7>
+    <S8 size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </S8>
+    <S9 size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </S9>
+    <S10 size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </S10>
+    <S11 size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </S11>
+    <S12 size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </S12>
+    <S13 size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </S13>
+    <S14 size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </S14>
+    <S15 size_x="1330" size_y="1330" quality="50">
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-34.58" pivot_y="-619.78" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </S15>
+    <!-- If you want your MotionSound to follow the skin and not the key page (including when the skin is projected), configure it like this -->
+    <!-- External true means that you need to place the ogg file or wav file to read -->
+    <!-- Put the files in ThisSkinFolder/MotionSound/, or in Resource/MotionSound/ if you want to reuse the same sounds for multiple skins -->
+    <!-- if External false, it will read the original sound effect -->
+    <SoundList>
+        <SoundInfo Motion="E" WinExternal="true" Win="Evasion.wav" LoseExternal="false" Lose=""/>
+        <SoundInfo Motion="G" WinExternal="true" Win="Guard.wav" LoseExternal="false" Lose=""/>
+        <SoundInfo Motion="H" WinExternal="true" Win="Hit.wav" LoseExternal="false" Lose=""/>
+        <SoundInfo Motion="J" WinExternal="true" Win="Slash.wav" LoseExternal="false" Lose=""/>
+        <SoundInfo Motion="Z" WinExternal="true" Win="Penetrate.wav" LoseExternal="false" Lose=""/>
+        <SoundInfo Motion="F" WinExternal="true" Win="Gun.wav" LoseExternal="false" Lose=""/>
+        <SoundInfo Motion="S1" WinExternal="true" Win="Gun.wav" LoseExternal="false" Lose=""/>
+        <SoundInfo Motion="S2" WinExternal="true" Win="S2.wav" LoseExternal="false" Lose=""/>
+        <SoundInfo Motion="S3" WinExternal="true" Win="S3.wav" LoseExternal="false" Lose=""/>
+        <SoundInfo Motion="S4" WinExternal="true" Win="S4.wav" LoseExternal="false" Lose=""/>
+        <SoundInfo Motion="S5" WinExternal="true" Win="S5.wav" LoseExternal="false" Lose=""/>
+        <SoundInfo Motion="S6" WinExternal="true" Win="S6.wav" LoseExternal="false" Lose=""/>
+        <SoundInfo Motion="S7" WinExternal="true" Win="S7.wav" LoseExternal="false" Lose=""/>
+        <SoundInfo Motion="S8" WinExternal="true" Win="S8.wav" LoseExternal="false" Lose=""/>
+        <SoundInfo Motion="S9" WinExternal="true" Win="S9.wav" LoseExternal="false" Lose=""/>
+        <SoundInfo Motion="S10" WinExternal="true" Win="S10.wav" LoseExternal="false" Lose=""/>
+        <SoundInfo Motion="S11" WinExternal="true" Win="Guard.wav" LoseExternal="false" Lose=""/>
+        <SoundInfo Motion="S12" WinExternal="true" Win="S12.wav" LoseExternal="false" Lose=""/>
+        <SoundInfo Motion="S13" WinExternal="true" Win="S12.wav" LoseExternal="false" Lose=""/>
+    </SoundList>
+    <AtkEffectPivotInfo>
+    <!-- Used to indicate where the visual attack effect is attached to, which makes it more appropriate for characters to use vanilla cards -->
+      <atkEffectRoot>
+        <localPosition x="0" y="1.94" z="0"/><!-- Position -->
+        <localScale x="1" y="1" z="1"/><!-- Scale -->
+        <localEulerAngles x="0" y="0" z="0"/><!-- Rotation -->
+      </atkEffectRoot>
+      <!-- supports simple format too -->
+      <atkEffectPivot_H x="150" y="230" rotation="0" />
+      <!-- normally atkEffectPivots are created as children of atkEffectRoot (inheriting its transform), but you can use nested="false" to create them independently -->
+      <!-- you can also put nested="false" in atkEffectRoot itself, to create all atkEffectPivots independently -->
+      <atkEffectPivot_J nested="false">
+        <localPosition x="-2" y="-0.8" z="0"/>
+        <localScale x="1" y="1" z="1"/>
+        <localEulerAngles x="0" y="0" z="0"/>
+      </atkEffectPivot_J>
+      <atkEffectPivot_Z>
+        <localPosition x="-6.4" y="0.8" z="0"/>
+        <localScale x="1" y="1" z="1"/>
+        <localEulerAngles x="0" y="0" z="0"/>
+      </atkEffectPivot_Z>
+      <atkEffectPivot_G>
+        <localPosition x="-2.8" y="-0.1" z="0"/>
+        <localScale x="1" y="1" z="1"/>
+        <localEulerAngles x="0" y="0" z="0"/>
+      </atkEffectPivot_G>
+      <atkEffectPivot_E>
+        <localPosition x="0" y="0" z="0"/>
+        <localScale x="1" y="1" z="1"/>
+        <localEulerAngles x="0" y="0" z="0"/>
+      </atkEffectPivot_E>
+      <atkEffectPivot_S>
+        <localPosition x="0" y="0" z="0"/>
+        <localScale x="1" y="1" z="1"/>
+        <localEulerAngles x="0" y="0" z="0"/>
+      </atkEffectPivot_S>
+      <atkEffectPivot_F>
+        <localPosition x="0" y="0" z="0"/>
+        <localScale x="1" y="1" z="1"/>
+        <localEulerAngles x="0" y="0" z="0"/>
+      </atkEffectPivot_F>
+    </AtkEffectPivotInfo>
+    <SpecialMotionPivotInfo>
+    <!-- The same as AtkEffectPivotInfo (supports simple format too)-->
+      <S1>
+        <localPosition x="0" y="0" z="0"/>
+        <localScale x="1" y="1" z="1"/>
+        <localEulerAngles x="0" y="0" z="0"/>
+      </S1>
+      <S2 x="0" y="0" rotation="0" />
+      <S3>
+        <localPosition x="0" y="0" z="0"/>
+        <localScale x="1" y="1" z="1"/>
+        <localEulerAngles x="0" y="0" z="0"/>
+      </S3>
+      <S4>
+        <localPosition x="0" y="0" z="0"/>
+        <localScale x="1" y="1" z="1"/>
+        <localEulerAngles x="0" y="0" z="0"/>
+      </S4>
+      <S5>
+        <localPosition x="2.5" y="1.1" z="0"/>
+        <localScale x="1" y="1" z="1"/>
+        <localEulerAngles x="0" y="0" z="0"/>
+      </S5>
+      <S6>
+        <localPosition x="0.9" y="1.17" z="0"/>
+        <localScale x="1" y="1" z="1"/>
+        <localEulerAngles x="0" y="0" z="0"/>
+      </S6>
+      <S7>
+        <localPosition x="12" y="-0.6" z="0"/>
+        <localScale x="1" y="1" z="1"/>
+        <localEulerAngles x="0" y="0" z="0"/>
+      </S7>
+      <S8>
+        <localPosition x="-4" y="-0.9" z="0"/>
+        <localScale x="1" y="1" z="1"/>
+        <localEulerAngles x="0" y="0" z="0"/>
+      </S8>
+      <S9>
+        <localPosition x="1.2" y="-3.3" z="0"/>
+        <localScale x="1" y="1" z="1"/>
+        <localEulerAngles x="0" y="0" z="0"/>
+      </S9>
+      <S10>
+        <localPosition x="-0.2" y="-0.1" z="0"/>
+        <localScale x="1" y="1" z="1"/>
+        <localEulerAngles x="0" y="0" z="0"/>
+      </S10>
+      <S11>
+        <localPosition x="0" y="0" z="0"/>
+        <localScale x="1" y="1" z="1"/>
+        <localEulerAngles x="0" y="0" z="0"/>
+      </S11>
+      <S12>
+        <localPosition x="-1.4" y="2.5" z="0"/>
+        <localScale x="1" y="1" z="1"/>
+        <localEulerAngles x="0" y="0" z="0"/>
+      </S12>
+      <S13>
+        <localPosition x="-0.74" y="1.71" z="0"/>
+        <localScale x="1" y="1" z="1"/>
+        <localEulerAngles x="0" y="0" z="0"/>
+      </S13>
+      <S14>
+        <localPosition x="0" y="0" z="0"/>
+        <localScale x="1" y="1" z="1"/>
+        <localEulerAngles x="0" y="0" z="0"/>
+      </S14>
+      <S15>
+        <localPosition x="0" y="0" z="0"/>
+        <localScale x="1" y="1" z="1"/>
+        <localEulerAngles x="0" y="0" z="0"/>
+      </S15>
+    </SpecialMotionPivotInfo>
+  </ClothInfo>
+</ModInfo>

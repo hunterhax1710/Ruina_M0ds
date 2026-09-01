@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<localize xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- all texts in this file are optional -->
+	<!-- if omitted, original ones (provided here as examples of what they replace) are used -->
+	<text id="ui_search_coreloc">Search...</text>
+	<text id="ui_enter_text_coreloc">Enter text...</text>
+	<text id="ui_skip_story_coreloc">SKIP</text>
+	<text id="ui_library_level_max_coreloc">MAX</text>
+	<text id="ui_library_level_coreloc">Lv</text>
+	<text id="ui_floor_level_coreloc">Lv.</text>
+	<text id="ui_autoplay_on_coreloc"> : ON</text>
+	<text id="ui_autoplay_off_coreloc"> : OFF</text>
+	<!-- the following is for gift name formatting ({0} and {1} are prefix and suffix) -->
+	<!-- if omitted, the default ({0} {1}) will be used -->
+	<text id="ui_gift_format_coreloc">{0} {1}</text>
+	<!-- the following two are SPECIFICALLY for the versions in the attribution search menu -->
+	<!-- if omitted, full versions are used -->
+	<text id="ui_corepage_coreloc_short">Key Pages</text>
+	<text id="ui_ability_passive_coreloc_short">Passives</text>
+	<text id="ui_passivesuccession_costtitle_coreloc_short">Cost</text>
+</localize>

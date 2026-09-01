@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ExtraBridgeLoader</name>
+    </assembly>
+    <members>
+        <member name="T:ExtraBridgeLoader.ExtraBridgeUtils">
+            <summary>
+            The class containing methods for controlling the operation of Extra Bridge Loader.
+            </summary>
+        </member>
+        <member name="M:ExtraBridgeLoader.ExtraBridgeUtils.AddOnCompleteBridgesAction(System.Action)">
+            <summary>
+            Adds an action to be called when bridge processing is complete.
+            (that is, when all bridge-integrated entities have their custom data loaded and their int ids prepared for access by original code).
+            </summary>
+            <param name="action">The action to be performed once all bridges report completion.</param>
+        </member>
+        <member name="F:ExtraBridgeLoader.ExtraBridgeUtils.customGiftGenerators">
+            <summary>
+            A <see cref="T:BaseBridge.GeneratorList`3"/> checked for creation of special Extra Bridge gift appearances not fitting within the simple sprite model (e.g. auras).
+            The first generator argument is the gift's resource name (after the "ExtraBridge_" prefix), the second is the parent transform,
+            and the output should be the created custom gift appearance (NOT uninstantiated prefab!).
+            </summary>
+        </member>
+        <member name="P:ExtraBridgeLoader.ExtraBridgeUtils.ShowGiftPassives">
+            <summary>
+            Controls whether gift passives handled by Extra Bridge Loader should be properly displayed in the passive list UI in combat. The default value is <see langword="false"/>.
+            If Basemod for Workshop is detected, this is set to <see langword="true"/> automatically.
+            </summary>
+        </member>
+    </members>
+</doc>

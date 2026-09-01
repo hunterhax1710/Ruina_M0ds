@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtraBridgeInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Gift Exist="true">
+		<Path>\Data\GiftInfo.xml</Path>
+	</Gift>
+	<Formation Exist="false">
+		<Path>\Data\FormationInfo.xml</Path>
+	</Formation>
+	<EmotionCard Exist="true">
+		<Path>\Data\EmotionCard.xml</Path>
+	</EmotionCard>
+	<EmotionEgo Exist="false">
+		<Path>\Data\EmotionEgo.xml</Path>
+	</EmotionEgo>
+	<GiftArtwork Exist="true">
+		<Path>\Resource\GiftArtwork</Path>
+	</GiftArtwork>
+	
+	<HasCustomOnlyCard>true</HasCustomOnlyCard>
+	<HasCustomEquipData>true</HasCustomEquipData>
+		
+</ExtraBridgeInfo>

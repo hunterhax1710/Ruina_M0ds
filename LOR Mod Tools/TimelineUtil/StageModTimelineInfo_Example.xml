@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TimelineXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<!-- no, the actual config file must NOT have _Example in its name, just StageModTimelineInfo -->
+
+  <IconPath>Resource\StoryIcons</IconPath> <!-- this is where the story icons will be loaded from 
+    (if you are using Localization Manager alongside this, feel free to set <StoryIconInfo Enable="false"/>
+    in your LocManager config to not load them twice and bloat memory) -->
+  <IconPostfix>_Default</IconPostfix> <!-- postfix for icon names (excluding file extension), same as LocManager -->
+  <IconPostfixGlow>_Glow</IconPostfixGlow> <!-- postfix for iconGlow names (excluding file extension), same as LocManager -->
+  
+  <Timeline> <!-- every timeline effectively forms a new map coexisting with the default - can be multiple -->
+    <Name>MyCustomTimelineName</Name> <!-- timeline name - use original ones to add new ones, or LibraryOfRuina to add icons to the default timeline; 
+      for custom ones, the name is also used to select the icon -->
+    
+    <ProgressIcon> <!-- this is one icon slot in a timeline map -->
+      <StoryType>MyCustomSlotStory</StoryType> <!-- used to select the icon, 
+        and if StageOverride is not present, the list of stages available from the map slot 
+        (all stages with matching StoryType, in load order) - MUST BE A VALID ENUM NAME, also must be unique -->
+      
+      <!-- note that if a slot with a given StoryType already exists, 
+        loading additional slots in the same timeline with the same StoryType will "fuse" the slots - 
+        add the connecting lines to the already loaded one, 
+        add position if it's missing, 
+        and set stageoverride if it's missing; 
+        this can be used to add connecting lines to vanilla icons or icons of other mods using TimelineUtil - 
+        just don't include the Position or StageOverride tags -->
+      
+      <!-- <StageOverride>100</StageOverride><StageOverride>101</StageOverride> - 
+        if you don't want ALL stages with the given StoryType to be filled into the slot, 
+        use StageOverride to specify a list of stages; this can take Pid, default is the including mod -->
+      
+      <Position x="0" y="4384"/> <!-- position of the slot -->
+      <ConnectingLine> <!-- lines that appear when the slot is active - can be multiple -->
+      
+        <Start x="0" y="4320"/> <!-- starting anchor (in the same coordinate system as the icons) - 
+          for aligning, note that the center of reception slots is about (0, 145) away from their position! -->
+        
+        <!-- <StartOffset>0</StartOffset> - distance between starting anchor and the real starting point 
+          (measured in the direction from the ending anchor, or from the corner if it's present) - 
+          the default is 3.5, which is half the width of visible line, so that orthogonal lines can connect perfectly easily -->
+        
+        <End x="0" y="4440"/> <!-- ending anchor (in the same coordinate system as the icons too) -->
+        
+        <!-- <EndOffset>0</EndOffset> - same as StartOffset 
+          (measured in the direction from the starting anchor, or from the corner if it's present) - the default is 3.5 too -->
+        
+        <!-- <StartToCorner x="0" y="4400"/> - for corner lines, this is a point on a line from the starting anchor to the corner 
+          (shouldn't be <1 distance from either point, also the corner must be at least 140 away from both real endpoints, 
+          otherwise the corner can't be rendered and the line will just default to straight instead) -->
+        
+      </ConnectingLine>
+    </ProgressIcon>
+    
+    <ProgressIcon> <!-- this is another slot, but... -->
+      <ChapterType>Simple</ChapterType> <!-- setting this makes a chapter slot (these long black bars that stretch across the map) instead of a reception slot! 
+        Large makes a slot with 4 buttons (like Canard), while Simple makes a slot with 1 button (like everything else) -->
+      
+      <Grade>grade5</Grade> <!-- this specifies the grade of the chapter slot 
+        (it will be used for deciding which vanilla story to show if stages aren't filled in via StoryType or StageOverride); 
+        also for resolving chapter slot fusions for chapter slots in the same timeline (alongside StoryType) -->
+      
+      <!-- <StoryType>MyCustomChapterStory</StoryType> - if a chapter slot gets stages filled into it by StoryType or StageOverride (see above),
+        the first stage determines the icon (if one exists) and title text of the "blocked" part 
+        (the one that says "library level needs to reach level X" in vanilla), 
+        as well as whether the chapter slot appears at all (currentState Close - hide, anything else - show); 
+      
+        second stage determines the icon (if it exists) and title text of the proper chapter slot, 
+        as well as whether it appears and the "blocked" one hides (using the same logic), 
+        and also plays on pressing the first button in the slot (only button in Simple slots); 
+      
+        anything past the second stage (up to fifth) plays on pressing the X-1'th button (and hides it if state is Close) -->
+      
+      <Position x="0" y="4150"/>
+      
+      <!-- ConnectingLine's can be here too, of course -->
+    </ProgressIcon>
+  </Timeline>
+  
+  <CustomStageCondition> <!-- can be multiple; this is for stage unlock conditions! 
+    you know, these pesky things that tell you "no guests available to invite" when you try to bruteforce something early - 
+    and also that determine whether an uncleared slot should start appearing on the main map! -->
+    <Id>2</Id> <!-- the stage that the condition will be replaced in -->
+    <StageCustom>1</StageCustom> <!-- optional/can be multiple; stage that needs to be cleared to unlock the Id stage; 
+      unlike the vanilla Stage tag, this can take Pid, and the default is the containing mod's -->
+    <SpecialCondition>MySpecialUnlockCondition</SpecialCondition> <!-- optional/can be multiple; 
+      this is for conditions with custom code that can't be easily simplified to "level reached" or "other stage cleared"; 
+      this will check for the class named DiceCardPriority_TimelineCondition_MySpecialUnlockCondition, 
+      derived from TimelineConditionBase (reference the util), and check its IsUnlocked override -->
+  </CustomStageCondition>
+  
+  <IconAlias> <!-- optional/can be multiple; this duplicates the icons loaded under "source" name to be usable under "alias" name too - 
+    so that you won't need to make duplicate files with different names and waste memory to make multiple slots with the same icons, like Index/Liu/RRR -->
+    <Alias>MyCustomSlotStoryPart2</Alias> <!-- can be multiple -->
+    <Source>MyCustomSlotStory</Source>
+  </IconAlias>
+  
+  <BookDefault>1</BookDefault> <!-- optional/can be multiple; these will be made to act like "book of something"
+    (always available for inviting in "infinite" quantity, but not for burning) - useful for kickstarting your reception chain -->
+
+  
+  <!-- NEW FEATURES (MOSTLY FOR UNINVITED RECEPTIONS) BELOW -->
+  
+  <SpecialStoryPath>Resource\StorySpecialSprite</SpecialStoryPath> <!-- this is where "Special" sprites will be loaded from 
+    (those sprites are not used somewhere automatically, but available from TimelineSpriteManager.GetSpecialSprite(name without extension) -->
+  
+  <EventListener>MyTimelineListener</EventListener> <!-- optional/can be multiple; provides global events 
+    (all are activated regardless of the current stage) such as OnClearStage, OnBonusRewardPopup, and OnLoadLibraryFromSave;
+    this will look for the class named DiceCardPriority_TimelineListener_MyTimelineListener, derived from TimelineListenerBase -->
+  
+  <SpecialStory> <!-- optional/can be multiple; handles map icons with unusual behaviour, as well as left/right invitation panels on the map -->
+    
+    <!-- note that for "uninvited" receptions to work correctly, 
+    the stages displayed on the map should be set to Combine="BookRecipe" ! -->
+    
+    <StoryType>MySpecialStory</StoryType> <!-- the storyType of reception icon slots for which the special behaviour should be used 
+      (detected based on the first story in the slot); MUST BE A VALID ENUM NAME! 
+      (and also must not be one of the original names in UIStoryLine, UIInvShowInfoState or InvitationApply_State)-->
+    <Script>MySpecialStory</Script> <!--  the script that should be used for determining special behaviour;
+      this will check for the class named DiceCardPriority_TimelineSpecialStory_MySpecialStory, derived from TimelineSpecialStoryBase; 
+      however, if it's not found, just the default TimelineSpecialStoryBase will be used;
+      the default renders the "blue reverberation" frame with empty "content" image and without the "afterimage" effects, 
+      and immediately sends an invitation upon clicking "greet uninvited guests" (no popup) -->
+  </SpecialStory>
+  
+  <BattleStory> <!-- optional/can be multiple; handles stages with unusual behaviour before/during/after combat -->
+    <Stage>1</Stage> <!-- stage id (can be multiple; accepts Pid, defaulting to the containing mod) -->
+    <Script>MyBattleStory</Script> <!-- the script that should be used for the listed stages;
+      this will check for the class named DiceCardPriority_TimelineBattleStory_MyBattleStory, derived from TimelineBattleStoryBase -->
+  </BattleStory>
+  
+  <StoryBranch> <!-- optional/can be multiple; handles story branching options (like Roland/Angela kill/forgive) -->
+    <BranchName>MyStoryBranch</BranchName> <!-- the name of the StoryBranch value (MUST BE A VALID ENUM NAME, obviously);
+      note that TimelineUtil includes a patch that allows reading custom StoryBranch values from story effect files automatically 
+      - just use StoryBranch as a tag instead of vanilla storyBranch (case sensitive)! -->
+    <Script>MyStoryBranch</Script> <!-- the script that should be used for the listed StoryBranch value;
+      this will check for the class named DiceCardPriority_TimelineStoryBranch_MyStoryBranch, derived from TimelineStoryBranchBase -->
+  </StoryBranch>
+  
+  <EndContents> <!-- optional/can be multiple; handles "special library states" like Ensemble -->
+    <EndContentsState>MyEndContents</EndContentsState> <!-- the name that will be used for the special state;
+      MUST BE A VALID ENUM NAME! (and also not be one of the original names in UIEndContentsState) -->
+    <Script>MyEndContents</Script>  <!-- the script that should be used for handling the specified state;
+      this will check for the class named DiceCardPriority_TimelineEndContents_MyEndContents, derived from TimelineEndContentsBase -->
+      
+      <!-- IMPORTANT! 
+      unlike SpecialStory, BattleStory and StoryBranch, which activate based on loaded data automatically, EndContents activate based on their SCRIPT! 
+      the first EndContent to return IsSpecialEndContents == true becomes the one to manipulate all related elements!
+      the only exceptions are OnResetSephirahFloor, which is called on all EndContents scripts regardless (to deactivate any added elements),
+      and OnInitUISephirahFloorInNormalContents, which is called on all EndContents scripts ONLY if the current EndContentsState is None -->
+  </EndContents>
+  
+  <StageTargetAlias> <!-- optional/can be multiple; handles the "replacement" of icons 
+    that will be focused on when the map is reopened; for example... -->
+    <Alias>2</Alias> <!-- if the last cleared stage was the reception with id 2... -->
+    <Source>1</Source> <!-- upon reopening the map, focus on the map icon containing reception 1 instead -->
+    
+    <!-- there can be multiple Alias tags for one Source, and both accept Pid (defaulting to the containing mod) -->
+  </StageTargetAlias>
+  
+  <LoadingCgAlias> <!-- analogous to StageTargetAlias in contents, but instead of handling focusing upon opening the invitation map,
+    this handles the starting CG that will be shown on the game's loading screen -->
+    <Alias>2</Alias>
+    <Source>1</Source>
+  </LoadingCgAlias>
+  
+</TimelineXmlRoot>

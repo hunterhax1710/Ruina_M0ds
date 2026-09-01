@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BookDescRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <bookDescList>
+    <BookDesc BookID="1">
+      <BookName>Eternal Black Silence's Page</BookName>
+      <TextList>
+        <Desc>"Angela, you have to feel the same sorrow as mine... No. You have to feel even worse than that. You took Angelica from me--she meant the world to me. I sat on my hands as I watched people I knew die, and I even killed my own best friend with these shadowed gloves, just for this moment. All for this moment... I've been suppressing my emotions, forcing this pained smile."</Desc>
+      </TextList>
+    </BookDesc>
+  </bookDescList>
+</BookDescRoot>

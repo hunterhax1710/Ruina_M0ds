@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1AE9DDE2-F70F-441B-B30D-EF949E26E531}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BlackSilence</RootNamespace>
+    <AssemblyName>BlackSilence</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>D:\SteamLibrary\steamapps\workshop\content\1256670\BlackSilence\Assemblies\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="10EnumExtender">
+      <HintPath>D:\SteamLibrary\steamapps\workshop\content\1256670\BlackSilence\Assemblies\1FrameworkAssemblies\10EnumExtender.dll</HintPath>
+    </Reference>
+    <Reference Include="1FrameworkLoader">
+      <HintPath>D:\SteamLibrary\steamapps\workshop\content\1256670\BlackSilence\Assemblies\1FrameworkLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-nstrip">
+      <HintPath>D:\Downloads\Game Utility [DnSpy, etc]\LOR Mod Tools\Assembly-CSharp-nstrip\Assembly-CSharp-nstrip.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoKeywordUtil">
+      <HintPath>D:\SteamLibrary\steamapps\workshop\content\1256670\BlackSilence\Assemblies\1FrameworkAssemblies\AutoKeywordUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="CustomMapUtility">
+      <HintPath>D:\SteamLibrary\steamapps\workshop\content\1256670\BlackSilence\Assemblies\CustomMapUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="LoRLocalizationManager">
+      <HintPath>D:\SteamLibrary\steamapps\workshop\content\1256670\BlackSilence\Assemblies\1FrameworkAssemblies\LoRLocalizationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TimelineUtil">
+      <HintPath>D:\SteamLibrary\steamapps\workshop\content\1256670\BlackSilence\Assemblies\1FrameworkAssemblies\TimelineUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlackSilence\Buffs\BattleUnitBuf_Stability.cs" />
+    <Compile Include="BlackSilence\Cards\DiceCardAbility_targetlose5power.cs" />
+    <Compile Include="BlackSilence\EGO Cards\DiceCardAbility_FatalHit.cs" />
+    <Compile Include="BlackSilence\EGO Cards\DiceCardSelfAbility_DestroyPageHit.cs" />
+    <Compile Include="BlackSilence\Cards\DiceCardAbility_CursedWound3.cs" />
+    <Compile Include="BlackSilence\Cards\DiceCardAbility_powerDownAll3.cs" />
+    <Compile Include="BlackSilence\Cards\DiceCardSelfAbility_nullifyAtkPower.cs" />
+    <Compile Include="BlackSilence\Cards\DiceCardAbility_quickness3atk.cs" />
+    <Compile Include="BlackSilence\Cards\DiceCardAbility_absorblight1.cs" />
+    <Compile Include="BlackSilence\Buffs\BattleUnitBuf_Concussion.cs" />
+    <Compile Include="BlackSilence\Cards\DiceCardAbility_Concussion2.cs" />
+    <Compile Include="BlackSilence\Cards\DiceCardAbility_Cur2Uncontrollable1.cs" />
+    <Compile Include="BlackSilence\Buffs\BattleUnitBuf_Uncontrollable.cs" />
+    <Compile Include="BlackSilence\EGO Cards\DiceCardSelfAbility_Emotion4Eternal.cs" />
+    <Compile Include="BlackSilence\EGO Cards\DiceCardSelfAbility_Emotion3Storm.cs" />
+    <Compile Include="BlackSilence\Cards\DiceCardSelfAbility_addDiceCon2.cs" />
+    <Compile Include="BlackSilence\Buffs\BattleUnitBuf_strongBleed.cs" />
+    <Compile Include="BlackSilence\Cards\DiceCardAbility_strongBleed3.cs" />
+    <Compile Include="BlackSilence\Cards\DiceCardAbility_strongBleed1.cs" />
+    <Compile Include="BlackSilence\EGO Cards\DiceCardSelfAbility_Emotion5Furioso.cs" />
+    <Compile Include="BlackSilence\EGO Cards\DiceCardAbility_destroyalldiceImmune.cs" />
+    <Compile Include="BlackSilence\EGO Cards\DiceCardSelfAbility_Emotion4Silence.cs" />
+    <Compile Include="BlackSilence\Buffs\BattleUnitBuf_Fatal.cs" />
+    <Compile Include="BlackSilence\Behaviour Scripts\Fresh - Copy %286%29 - Copy - Copy.cs" />
+    <Compile Include="BlackSilence\Fresh - Copy %286%29 - Copy - Copy %282%29.cs" />
+    <Compile Include="BlackSilence\Passives\PassiveAbility_Sealed.cs" />
+    <Compile Include="BlackSilence\Fresh - Copy %286%29 - Copy - Copy %284%29.cs" />
+    <Compile Include="BlackSilence\Fresh - Copy %286%29 - Copy - Copy %285%29.cs" />
+    <Compile Include="BlackSilence\Fresh - Copy %286%29 - Copy - Copy %286%29.cs" />
+    <Compile Include="BlackSilence\Fresh - Copy %286%29 - Copy - Copy.cs" />
+    <Compile Include="BlackSilence\Passives\PassiveAbility_Adrenaline.cs" />
+    <Compile Include="BlackSilence\Buffs\BattleUnitBuf_breakDice.cs" />
+    <Compile Include="BlackSilence\Cards\DiceCardAbility_destroyalldice2.cs" />
+    <Compile Include="BlackSilence\Cards\DiceCardAbility_breakDice1.cs" />
+    <Compile Include="BlackSilence\Passives\PassiveAbility_Eternity.cs" />
+    <Compile Include="BlackSilence\Cards\DiceCardSelfAbility_Lose3PowerGain3Power.cs" />
+    <Compile Include="BlackSilence\Passives\PassiveAbility_Shimmering.cs" />
+    <Compile Include="BlackSilence\Buffs\BattleUnitBuf_CursedWound.cs" />
+    <Compile Include="BlackSilence\Buffs\BattleUnitBuf_NoRange.cs" />
+    <Compile Include="BlackSilence\EGO Cards\DiceCardAbility_upgradeMaxLast150pw.cs" />
+    <Compile Include="BlackSilence\DiceAttackEffect\Fresh - Copy %286%29 - Copy %288%29.cs" />
+    <Compile Include="BlackSilence\Passives\PassiveAbility_Retaliate.cs" />
+    <Compile Include="BlackSilence\Cards\DiceCardSelfAbility_DeadUseAgainDestroyPage.cs" />
+    <Compile Include="BlackSilence\Cards\DiceCardAbility_upgradeMax10pw.cs" />
+    <Compile Include="BlackSilence\Cards\DiceCardAbility_destroyalldice.cs" />
+    <Compile Include="BlackSilence\Cards\DiceCardSelfAbility_unchangecoststr1.cs" />
+    <Compile Include="BlackSilence\Passives\PassiveAbility_BlackSilenceChange.cs" />
+    <Compile Include="BlackSilence\Buffs\BattleUnitBuf_Distorted.cs" />
+    <Compile Include="BlackSilence\EGO Cards\DiceCardAbility_DistortedHit.cs" />
+    <Compile Include="BlackSilence\Fresh - Copy %286%29 - Copy %289%29.cs" />
+    <Compile Include="BlackSilence\Passives\PassiveAbility_ReturnerEnemy.cs" />
+    <Compile Include="BlackSilence\StageManager\BlackSilence1MapManager.cs" />
+    <Compile Include="BlackSilence\StageManager\BlackSilence2MapManager.cs" />
+    <Compile Include="BlackSilence\Passives\PassiveAbility_BlackGloves.cs" />
+    <Compile Include="BlackSilence\Passives\PassiveAbility_Grudge.cs" />
+    <Compile Include="BlackSilence\Passives\PassiveAbility_Combo.cs" />
+    <Compile Include="BlackSilence\Fresh - Copy %286%29 - Copy.cs" />
+    <Compile Include="BlackSilence\Passives\PassiveAbility_Returner.cs" />
+    <Compile Include="BlackSilence\StageManager\EnemyTeamStageManager_BlackSilenceBGM.cs" />
+    <Compile Include="BlackSilence\Passives\PassiveAbility_BlackSilence.cs" />
+    <Compile Include="BlackSilence\Buffs\BattleUnitBuf_Returner.cs" />
+    <Compile Include="BlackSilence\Buffs\MyKeywords.cs" />
+    <Compile Include="BlackSilence\NewModInitializer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BlackSilence\Action Scripts\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

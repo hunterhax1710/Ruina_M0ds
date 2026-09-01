@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <BattleCardAbility ID="targetlose5power">
+    <Desc>[On Clash Win] All dice on target's page lose 5 Power</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="DeadUseAgainDestroyPage">
+    <Desc>[On Hit] Destroy a Combat Page set on another random Speed die of the target. If target is defeated or Staggered, gain 3 Strength and use this page again on a random enemy.</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="upgradeMax10pw">
+    <Desc>[On Clash Win] Boost next die's max value by +10</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="destroyalldice">
+    <Desc>[On Clash Win] Destroy all dice on target's page.</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="destroyalldice2">
+    <Desc>[On Clash Win] Destroy all dice on target's page.  [On Clash Lose] Boost next die's max value by +5</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="unchangecoststr1">
+    <Desc>The Cost of this page cannot be changed [On Use] Gain 1 Strength next Scene</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="DistortedHit">
+    <Desc>[On Hit] Inflict 1 Distorted</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="DestroyPageHit">
+    <Desc>[On Hit] Destroy a Combat Page set on another random Speed die of the target.</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="CursedWound3">
+    <Desc>[On Hit] Inflict 3 Cursed Wound. This die cannot be destroyed</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="Lose3PowerGain3Power">
+    <Desc>[Start of Clash] Reduce Power of all target's dice by 3. [On Use] If Speed is higher than the target's, all dice on this page gain +3 Power</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="nullifyAtkPower">
+    <Desc>Dice on this page and the page clashing with it are unaffected by Power gain or loss</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="powerDownAll3">
+    <Desc>[On Clash Win] Reduce Power of all opponent's die by 3</Desc>
+  </BattleCardAbility>
+  <BattleCardAbility ID="quickness3atk">
+    <Desc>[On Hit] Gain 3 Haste next Scene</Desc>
+  </BattleCardAbility>
+   <BattleCardAbility ID="absorblight1">
+    <Desc>[On Hit] Absorb 1 Light from Target. Target loses 1 Light next Scene</Desc>
+  </BattleCardAbility> 
+   <BattleCardAbility ID="Concussion2">
+    <Desc>[On Hit] Inflict 2 Concussion.</Desc>
+   </BattleCardAbility>
+   <BattleCardAbility ID="Cur2Uncontrollable1">
+    <Desc>[On Hit] Inflict 2 Cursed Wound with 30% chance to Inflict 1 Uncontrollable. This die cannot be destroyed</Desc>
+   </BattleCardAbility>
+   <BattleCardAbility ID="addDiceCon2">
+    <Desc>[On Use] If Speed is higher than the target's, add a Blunt die (6-11; [On Hit] Inflict 2 Concussion) to queue</Desc>
+   </BattleCardAbility>
+   <BattleCardAbility ID="breakDice1">
+    <Desc>[On Hit] Inflict 1 Break Dice next Scene</Desc>
+   </BattleCardAbility>
+   <BattleCardAbility ID="strongBleed1">
+    <Desc>[On Hit] Inflict 1 Lethal Bleed next Scene</Desc>
+   </BattleCardAbility>
+   <BattleCardAbility ID="strongBleed3">
+    <Desc>[On Hit] Inflict 3 Lethal Bleed next Scene</Desc>
+   </BattleCardAbility>
+   <BattleCardAbility ID="upgradeMaxLast150pw">
+    <Desc>[On Hit] Boost min-max roll value of last die by +150. This die cannot be destroyed</Desc>
+   </BattleCardAbility>
+   <BattleCardAbility ID="destroyalldiceImmune">
+    <Desc>[On Hit] Destroy all of opponent's dice. This die cannot be destroyed. (Ignores all resistances)</Desc>
+   </BattleCardAbility>
+   <BattleCardAbility ID="FatalHit">
+    <Desc>[On Hit] Inflict 1 Silenced next Scene</Desc>
+   </BattleCardAbility>
+   
+   
+   
+   
+   
+   
+   
+   <BattleCardAbility ID="Emotion4Eternal">
+    <Desc>[On Play] Awaken the Eternal Silence within. Every 10 Scenes reduce 1 stack of Returner. Can only be used at Emotion Level 4 and above and Returner stacks is 3 and above</Desc>
+   </BattleCardAbility>
+   <BattleCardAbility ID="Emotion3Storm">
+    <Desc>Can only be used at Emotion Level 3 and above.</Desc>
+   </BattleCardAbility>
+   <BattleCardAbility ID="Emotion5Furioso">
+    <Desc>[On Hit] Destroy every Combat Page set on the target Speed dice. Unaffected by Power gain or loss. Can only be used at Emotion Level 5 and above and Returner stacks is 3 and above</Desc>
+   </BattleCardAbility>
+   <BattleCardAbility ID="Emotion4Silence">
+    <Desc>Can only be used at Emotion Level 4 and above.</Desc>
+   </BattleCardAbility>
+</BattleCardAbilityDescRoot>

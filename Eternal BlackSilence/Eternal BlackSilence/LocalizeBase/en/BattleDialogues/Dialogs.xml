@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  	<Character ID="1">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="0">Bring it!</BattleDialog>
+      <BattleDialog ID="1">Show me your power!</BattleDialog>
+      <BattleDialog ID="2">Hello...and Goodbye!</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="0">Is that all?</BattleDialog>
+      <BattleDialog ID="1">Too easy!</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="0">I won't lose next time...</BattleDialog>
+      <BattleDialog ID="1">See you again...</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="0">WEAK!</BattleDialog>
+      <BattleDialog ID="1">Not bad...</BattleDialog>
+      <BattleDialog ID="2">You are good...</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="0">WEAK!</BattleDialog>
+      <BattleDialog ID="1">You are wasting my Time!</BattleDialog>
+      <BattleDialog ID="2">This is Disappointing...</BattleDialog>
+    </Type>
+  </Character>
+</BattleDialogRoot>

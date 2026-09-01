@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GiftXmlRoot>
+
+  <Gift ID="1">
+	<Name>CustomGiftNameId</Name>
+	<Count>1</Count>
+	<Resource>ExtraBridge_ResName</Resource>
+	<IsAuraPreview>false</IsAuraPreview>
+	<Position>Eye</Position>
+	<NoAppear>false</NoAppear>
+	<PriorityOrder>Guest</PriorityOrder>
+	<Passive>1</Passive>
+	<CustomPassive>CustomPassive</CustomPassive>
+	<Stat>
+      <HP>0</HP>
+      <Break>0</Break>
+    </Stat>
+  </Gift>
+  
+</GiftXmlRoot>
+
+
+

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GiftTextRoot>
+  <GiftText ID="CustomGiftNameId">
+    <Desc>Description of what the gift does</Desc>
+    <Prefix>TitlePrefix</Prefix>
+    <Postfix>TitlePostfix</Postfix>
+    <AcquireCondition>Do something {0} times.</AcquireCondition>
+  </GiftText>
+</GiftTextRoot>

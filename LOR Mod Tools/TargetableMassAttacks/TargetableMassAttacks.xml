@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TargetableMassAttacks</name>
+    </assembly>
+    <members>
+        <member name="T:TargetableMassAttacks.TargetableMassAttacksControls">
+            <summary>
+            A class for controlling mass-targeting settings.
+            </summary>
+        </member>
+        <member name="M:TargetableMassAttacks.TargetableMassAttacksControls.EnableMassTargetingFor(System.Predicate{BattlePlayingCardDataInUnitModel})">
+            <summary>
+            Specifically enables subtargeting for cards satifying the specified condition.
+            By default, subtargeting is enabled for cards of range FarArea or FarAreaEach if their affection is One, Team or All, and for cards of other ranges (excluding Instance) if their affection is TeamNear.
+            Specific enabling has precedence over disabling!
+            </summary>
+            <param name="condition">The condition on which to additionally enable subtargeting.</param>
+        </member>
+        <member name="M:TargetableMassAttacks.TargetableMassAttacksControls.DisableMassTargetingFor(System.Predicate{BattlePlayingCardDataInUnitModel})">
+            <summary>
+            Disables subtargeting for cards satifying the specified condition.
+            By default, subtargeting is enabled for cards of range FarArea or FarAreaEach if their affection is One, Team or All, and for cards of other ranges (excluding Instance) if their affection is TeamNear.
+            Specific enabling has precedence over disabling!
+            </summary>
+            <param name="condition">The condition on which to disable subtargeting.</param>
+        </member>
+        <member name="M:TargetableMassAttacks.TargetableMassAttacksControls.IsRespectBlockDice">
+            <summary>
+            Checks if mass attacks have been set to not target blocked speed dice (as per CheckBlockDice, including any patches to it).
+            </summary>
+            <returns><see langword="true"/> if mass attacks have been set to ignore blocked speed dice; otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TargetableMassAttacks.TargetableMassAttacksControls.SetRespectBlockDice">
+            <summary>
+            Sets mass attacks to not target blocked speed dice (as per CheckBlockDice, including any patches to it).
+            </summary>
+        </member>
+    </members>
+</doc>

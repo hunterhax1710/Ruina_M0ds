@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FormationXmlRoot>
+  <Formation ID="1">
+    <Name>my formation</Name>
+    <Position>
+      <Name>my position 1</Name>
+      <Vector x="12" y="0"/>
+    </Position>
+    <Position>
+      <Name>my position 2</Name>
+      <Vector x="6" y="-12"/>
+    </Position>
+    <Position>
+      <Name>my position 3</Name>
+      <Vector x="5" y="12"/>
+    </Position>
+    <Position>
+      <Name>my position 4</Name>
+      <Vector x="18" y="12"/>
+    </Position>
+    <Position>
+      <Name>my position 5</Name>
+      <Vector x="17" y="-12"/>
+    </Position>
+  </Formation>
+</FormationXmlRoot>

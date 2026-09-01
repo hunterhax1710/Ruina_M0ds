@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TimelineXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IconPath>Resource\StoryIcons</IconPath>
+  <IconPostfix>_Default</IconPostfix>
+  <IconPostfixGlow>_Glow</IconPostfixGlow>
+  <Timeline>
+    <Name>LibraryOfRuina</Name>
+    <ProgressIcon>
+      <ChapterType>Large</ChapterType>
+      <Grade>grade1</Grade>
+      <Position x="0" y="-100" />
+      <ConnectingLine>
+        <Start x="0" y="-100" />
+        <End x="0" y="-300" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <ChapterType>Simple</ChapterType>
+      <Grade>grade2</Grade>
+      <Position x="0" y="1430" />
+      <ConnectingLine>
+        <Start x="0" y="1430" />
+        <End x="0" y="1210" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <ChapterType>Simple</ChapterType>
+      <Grade>grade3</Grade>
+      <Position x="0" y="2400" />
+      <ConnectingLine>
+        <Start x="0" y="2400" />
+        <End x="0" y="2200" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <ChapterType>Simple</ChapterType>
+      <Grade>grade4</Grade>
+      <Position x="0" y="3170" />
+      <ConnectingLine>
+        <Start x="-250" y="3170" />
+        <End x="-250" y="2910" />
+      </ConnectingLine>
+      <ConnectingLine>
+        <Start x="650" y="3170" />
+        <End x="650" y="2950" />
+      </ConnectingLine>
+      <ConnectingLine>
+        <Start x="250" y="3170" />
+        <End x="250" y="2910" />
+      </ConnectingLine>
+      <ConnectingLine>
+        <Start x="-650" y="3170" />
+        <End x="-650" y="2950" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <ChapterType>Simple</ChapterType>
+      <Grade>grade5</Grade>
+      <Position x="0" y="4070" />
+      <ConnectingLine>
+        <Start x="-650" y="4070" />
+        <End x="-650" y="3960" />
+      </ConnectingLine>
+      <ConnectingLine>
+        <Start x="-250" y="4070" />
+        <End x="-250" y="3960" />
+      </ConnectingLine>
+      <ConnectingLine>
+        <Start x="650" y="4070" />
+        <End x="650" y="3960" />
+      </ConnectingLine>
+      <ConnectingLine>
+        <Start x="250" y="4070" />
+        <End x="250" y="3960" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <ChapterType>Simple</ChapterType>
+      <Grade>grade6</Grade>
+      <Position x="0" y="4970" />
+      <ConnectingLine>
+        <Start x="650" y="4970" />
+        <End x="650" y="4860" />
+      </ConnectingLine>
+      <ConnectingLine>
+        <Start x="250" y="4970" />
+        <End x="250" y="4860" />
+      </ConnectingLine>
+      <ConnectingLine>
+        <Start x="-650" y="4970" />
+        <End x="-650" y="4860" />
+      </ConnectingLine>
+      <ConnectingLine>
+        <Start x="-250" y="4970" />
+        <End x="-250" y="4860" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <ChapterType>Simple</ChapterType>
+      <Grade>grade7</Grade>
+      <Position x="0" y="6170" />
+      <ConnectingLine>
+        <Start x="-650" y="6170" />
+        <End x="-650" y="6040" />
+      </ConnectingLine>
+      <ConnectingLine>
+        <Start x="-250" y="6170" />
+        <End x="-250" y="6040" />
+      </ConnectingLine>
+      <ConnectingLine>
+        <Start x="650" y="6170" />
+        <End x="650" y="6040" />
+      </ConnectingLine>
+      <ConnectingLine>
+        <Start x="250" y="6170" />
+        <End x="250" y="6040" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>Rats</StoryType>
+      <Grade>grade1</Grade>
+      <Position x="0" y="250" />
+      <ConnectingLine>
+        <Start x="0" y="330" />
+        <End x="0" y="160" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>YunsOffice</StoryType>
+      <Grade>grade1</Grade>
+      <Position x="0" y="500" />
+      <ConnectingLine>
+        <Start x="0" y="580" />
+        <End x="0" y="460" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>TheBrotherhoodofIron</StoryType>
+      <Grade>grade1</Grade>
+      <Position x="0" y="750" />
+      <ConnectingLine>
+        <Start x="0" y="830" />
+        <End x="0" y="710" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>HookOffice</StoryType>
+      <Grade>grade1</Grade>
+      <Position x="0" y="1000" />
+      <ConnectingLine>
+        <Start x="0" y="1080" />
+        <End x="0" y="960" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>PierresMeatPies</StoryType>
+      <Grade>grade2</Grade>
+      <Position x="0" y="1750" />
+      <ConnectingLine>
+        <Start x="0" y="1830" />
+        <End x="0" y="1680" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>StreetlightOffice</StoryType>
+      <Grade>grade2</Grade>
+      <Position x="0" y="2000" />
+      <ConnectingLine>
+        <Start x="0" y="2080" />
+        <End x="0" y="1960" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>ZweiAssociation</StoryType>
+      <Grade>grade3</Grade>
+      <Position x="0" y="2750" />
+      <ConnectingLine>
+        <Start x="0" y="2830" />
+        <End x="0" y="2650" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>TheStrayDogs</StoryType>
+      <Grade>grade3</Grade>
+      <Position x="-650" y="2750" />
+      <ConnectingLine>
+        <Start x="-585" y="2895" />
+        <End x="-75" y="2895" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>MolarOffice</StoryType>
+      <Grade>grade3</Grade>
+      <Position x="650" y="2750" />
+      <ConnectingLine>
+        <Start x="75" y="2895" />
+        <End x="585" y="2895" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>TheCarnival</StoryType>
+      <Grade>grade4</Grade>
+      <Position x="-650" y="3485" />
+      <ConnectingLine>
+        <Start x="-650" y="3560" />
+        <End x="-650" y="3420" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>FullStopOffice</StoryType>
+      <Grade>grade4</Grade>
+      <Position x="-250" y="3485" />
+      <ConnectingLine>
+        <Start x="-250" y="3560" />
+        <End x="-250" y="3420" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>DawnOffice</StoryType>
+      <Grade>grade4</Grade>
+      <Position x="250" y="3485" />
+      <ConnectingLine>
+        <Start x="250" y="3560" />
+        <End x="250" y="3420" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>GazeOffice</StoryType>
+      <Grade>grade4</Grade>
+      <Position x="650" y="3485" />
+      <ConnectingLine>
+        <Start x="650" y="3560" />
+        <End x="650" y="3420" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>Tomerry</StoryType>
+      <Grade>grade4</Grade>
+      <Position x="650" y="3745" />
+      <ConnectingLine>
+        <Start x="650" y="3820" />
+        <End x="650" y="3700" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>KurokumoClan</StoryType>
+      <Grade>grade4</Grade>
+      <Position x="-650" y="3745" />
+      <ConnectingLine>
+        <Start x="-650" y="3820" />
+        <End x="-650" y="3700" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>TheMusiciansofBremen</StoryType>
+      <Grade>grade4</Grade>
+      <Position x="-250" y="3745" />
+      <ConnectingLine>
+        <Start x="-250" y="3820" />
+        <End x="-250" y="3700" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>WedgeOffice</StoryType>
+      <Grade>grade4</Grade>
+      <Position x="250" y="3745" />
+      <ConnectingLine>
+        <Start x="250" y="3820" />
+        <End x="250" y="3700" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>ShiAssociation</StoryType>
+      <Grade>grade5</Grade>
+      <Position x="-250" y="4385" />
+      <ConnectingLine>
+        <Start x="-250" y="4460" />
+        <End x="-250" y="4320" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>Puppeteer</StoryType>
+      <Grade>grade5</Grade>
+      <Position x="650" y="4385" />
+      <ConnectingLine>
+        <Start x="650" y="4460" />
+        <End x="650" y="4320" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>TheEightOClockCircus</StoryType>
+      <Grade>grade5</Grade>
+      <Position x="250" y="4385" />
+      <ConnectingLine>
+        <Start x="250" y="4460" />
+        <End x="250" y="4320" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>Sweepers</StoryType>
+      <Grade>grade5</Grade>
+      <Position x="-650" y="4385" />
+      <ConnectingLine>
+        <Start x="-650" y="4460" />
+        <End x="-650" y="4320" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>TheIndex</StoryType>
+      <Grade>grade5</Grade>
+      <Position x="-650" y="4645" />
+      <ConnectingLine>
+        <Start x="-650" y="4720" />
+        <End x="-650" y="4600" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>WarpCrew</StoryType>
+      <Grade>grade5</Grade>
+      <Position x="650" y="4645" />
+      <ConnectingLine>
+        <Start x="650" y="4720" />
+        <End x="650" y="4600" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>SmilingFaces</StoryType>
+      <Grade>grade5</Grade>
+      <Position x="-250" y="4645" />
+      <ConnectingLine>
+        <Start x="-250" y="4720" />
+        <End x="-250" y="4600" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>CryingChild</StoryType>
+      <Grade>grade5</Grade>
+      <Position x="250" y="4645" />
+      <ConnectingLine>
+        <Start x="250" y="4720" />
+        <End x="250" y="4600" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>LiuAssociation2</StoryType>
+      <Grade>grade6</Grade>
+      <Position x="250" y="5285" />
+      <ConnectingLine>
+        <Start x="250" y="5360" />
+        <End x="250" y="5220" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>TheThumb</StoryType>
+      <Grade>grade6</Grade>
+      <Position x="-650" y="5285" />
+      <ConnectingLine>
+        <Start x="-650" y="5360" />
+        <End x="-650" y="5220" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>CaneOffice</StoryType>
+      <Grade>grade6</Grade>
+      <Position x="650" y="5285" />
+      <ConnectingLine>
+        <Start x="650" y="5360" />
+        <End x="650" y="5220" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>TheBlueReverberation</StoryType>
+      <Grade>grade6</Grade>
+      <Position x="-250" y="5285" />
+      <ConnectingLine>
+        <Start x="-250" y="5360" />
+        <End x="-250" y="5220" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>TheIndex2</StoryType>
+      <Grade>grade6</Grade>
+      <Position x="-650" y="5555" />
+      <ConnectingLine>
+        <Start x="-650" y="5630" />
+        <End x="-650" y="5500" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>LiuAssociation1</StoryType>
+      <Grade>grade6</Grade>
+      <Position x="250" y="5555" />
+      <ConnectingLine>
+        <Start x="250" y="5630" />
+        <End x="250" y="5500" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>TheRedMist</StoryType>
+      <Grade>grade6</Grade>
+      <Position x="-250" y="5555" />
+      <ConnectingLine>
+        <Start x="-250" y="5630" />
+        <End x="-250" y="5500" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>RCorp1</StoryType>
+      <Grade>grade6</Grade>
+      <Position x="650" y="5555" />
+      <ConnectingLine>
+        <Start x="650" y="5630" />
+        <End x="650" y="5500" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>RCorp2</StoryType>
+      <Grade>grade6</Grade>
+      <Position x="650" y="5825" />
+      <ConnectingLine>
+        <Start x="650" y="5900" />
+        <End x="650" y="5770" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>ThePurpleTear</StoryType>
+      <Grade>grade6</Grade>
+      <Position x="-250" y="5825" />
+      <ConnectingLine>
+        <Start x="-250" y="5900" />
+        <End x="-250" y="5770" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>Shyao</StoryType>
+      <Grade>grade6</Grade>
+      <Position x="250" y="5825" />
+      <ConnectingLine>
+        <Start x="250" y="5900" />
+        <End x="250" y="5770" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>Yan</StoryType>
+      <Grade>grade6</Grade>
+      <Position x="-650" y="5825" />
+      <ConnectingLine>
+        <Start x="-650" y="5900" />
+        <End x="-650" y="5770" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>HanaAssociation</StoryType>
+      <Grade>grade7</Grade>
+      <Position x="0" y="6645" />
+      <ConnectingLine>
+        <Start x="-650" y="6420" />
+        <End x="-240" y="6580" />
+        <StartToCorner x="-650" y="6580" />
+      </ConnectingLine>
+      <ConnectingLine>
+        <Start x="-250" y="6580" />
+        <End x="-250" y="6420" />
+      </ConnectingLine>
+      <ConnectingLine>
+        <Start x="-260" y="6580" />
+        <End x="260" y="6580" />
+      </ConnectingLine>
+      <ConnectingLine>
+        <Start x="250" y="6580" />
+        <End x="250" y="6420" />
+      </ConnectingLine>
+      <ConnectingLine>
+        <Start x="650" y="6420" />
+        <End x="240" y="6580" />
+        <StartToCorner x="650" y="6580" />
+      </ConnectingLine>
+      <ConnectingLine>
+        <Start x="0" y="6725" />
+        <End x="0" y="6580" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>TheBlueReverberationPrimary</StoryType>
+      <Grade>grade7</Grade>
+      <Position x="0" y="6920" />
+      <ConnectingLine>
+        <Start x="0" y="7000" />
+        <End x="0" y="6855" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>BlackSilence</StoryType>
+      <Grade>grade7</Grade>
+      <Position x="0" y="7195" />
+      <ConnectingLine>
+        <Start x="0" y="7275" />
+        <End x="0" y="7130" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>TwistedBlue</StoryType>
+      <Grade>grade7</Grade>
+      <Position x="0" y="7470" />
+      <ConnectingLine>
+        <Start x="0" y="7550" />
+        <End x="0" y="7405" />
+      </ConnectingLine>
+    </ProgressIcon>
+    <ProgressIcon>
+      <StoryType>Final</StoryType>
+      <Grade>grade7</Grade>
+      <Position x="0" y="7745" />
+      <ConnectingLine>
+        <Start x="0" y="7825" />
+        <End x="0" y="7680" />
+      </ConnectingLine>
+    </ProgressIcon>
+  </Timeline>
+</TimelineXmlRoot>

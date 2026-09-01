@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>   
+  <Card ID="1000">                 <!-- Counter Dice -->
+    <Name>Retaliate</Name>
+	<TextId>-1</TextId>
+    <Artwork>Roland9</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Slash" Motion="S13" EffectRes="FX_PC_RolRang_Slash_UP" Script="targetlose5power" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="2000">                 <!-- Addition Dice -->
+    <Name>Shotgun</Name>
+	<TextId>-1</TextId>
+    <Artwork>Roland8</Artwork>
+    <Rarity>Common</Rarity>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="6" Dice="11" Type="Atk" Detail="Hit" Motion="S11" EffectRes="BlackSilence_Shotgun" ActionScript="" Script="Concussion2" Desc="" />
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+  
+  
+  <Card ID="1001">
+    <Name>Wheels Industry</Name>
+	<TextId>-1</TextId>
+    <Artwork>Roland2</Artwork>
+    <Rarity>Unique</Rarity>
+	<Option>OnlyPage</Option>
+    <Spec Range="Special" Cost="5" />
+    <Script>DeadUseAgainDestroyPage</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+	  <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="S13" EffectRes="FX_PC_RolRang_Slash_UP" Script="upgradeMax10pw" Desc="" />
+      <Behaviour Min="10" Dice="20" Type="Atk" Detail="Hit" Motion="S10" EffectRes="FX_PC_RolRang_Greatsword" Script="destroyalldice" Desc="" />	  
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1002">
+    <Name>Zelkova Workshop</Name>
+	<TextId>-1</TextId>
+    <Artwork>Roland3</Artwork>
+    <Rarity>Common</Rarity>
+	<Option>OnlyPage</Option>
+    <Spec Range="Near" Cost="0" />
+    <Script>unchangecoststr1</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+	  <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="S8" EffectRes="BlackSilence_Axe" Script="strongBleed1" Desc="" />
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="S9" EffectRes="BlackSilence_Mace" Script="strongBleed3" Desc="" />	  
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1004">
+    <Name>Mook Workshop</Name>
+	<TextId>-1</TextId>
+    <Artwork>Roland5</Artwork>
+    <Rarity>Uncommon</Rarity>
+	<Option>OnlyPage</Option>
+    <Spec Range="Near" Cost="2" />
+    <Script>energy3AndDraw1</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+	  <Behaviour Min="7" Dice="13" Type="Atk" Detail="Slash" Motion="S4" EffectRes="" ActionScript="BlackSilence_LongSword" Script="CursedWound3" Desc="" />          	  
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1005">
+    <Name>Allas Workshop</Name>
+	<TextId>-1</TextId>
+    <Artwork>Roland1</Artwork>
+    <Rarity>Uncommon</Rarity>
+	<Option>OnlyPage</Option>
+    <Spec Range="Near" Cost="2" />
+    <Script>Lose3PowerGain3Power</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList> 
+	  <Behaviour Min="5" Dice="8" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="BlackSilence_Z" ActionScript="" Script="" Desc="" />  
+      <Behaviour Min="5" Dice="7" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="BlackSilence_Z" ActionScript="" Script="" Desc="" />   	  
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1006">
+    <Name>Crystal Atelier</Name>
+	<TextId>-1</TextId>
+    <Artwork>Roland7</Artwork>
+    <Rarity>Rare</Rarity>
+	<Option>OnlyPage</Option>
+    <Spec Range="Near" Cost="3" />
+    <Script>nullifyAtkPower</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList> 
+	  <Behaviour Min="6" Dice="9" Type="Def" Detail="Evasion" Motion="E" EffectRes="" ActionScript="" Script="powerDownAll3" Desc="" />  
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Slash" Motion="Z" EffectRes="" ActionScript="BlackSilence_DualWield1" Script="quickness3atk" Desc="" />  
+      <Behaviour Min="6" Dice="10" Type="Atk" Detail="Slash" Motion="Z" EffectRes="" ActionScript="BlackSilence_DualWield2" Script="quickness3atk" Desc="" />  
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Slash" Motion="Z" EffectRes="" ActionScript="BlackSilence_DualWield1" Script="absorblight1" Desc="" /> 	  
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1007">
+    <Name>Atelier Logic</Name>
+	<TextId>-1</TextId>
+    <Artwork>Roland8</Artwork>
+    <Rarity>Uncommon</Rarity>
+	<Option>OnlyPage</Option>
+    <Spec Range="Far" Cost="3" />
+    <Script>addDiceCon2</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList> 
+	  <Behaviour Min="3" Dice="7" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="BlackSilence_Revolver" ActionScript="" Script="" Desc="" />  
+      <Behaviour Min="4" Dice="7" Type="Atk" Detail="Penetrate" Motion="S2" EffectRes="BlackSilence_Revolver" ActionScript="" Script="" Desc="" />   
+      <Behaviour Min="6" Dice="11" Type="Atk" Detail="Hit" Motion="S11" EffectRes="BlackSilence_Shotgun" ActionScript="" Script="Concussion2" Desc="" />	  
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1008">
+    <Name>Old Boys Workshop</Name>
+	<TextId>-1</TextId>
+    <Artwork>Roland4</Artwork>
+    <Rarity>Common</Rarity>
+	<Option>OnlyPage</Option>
+    <Spec Range="Near" Cost="1" />
+    <Script>energy3AndDraw1</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList> 
+	  <Behaviour Min="4" Dice="8" Type="Def" Detail="Guard" Motion="G" EffectRes="" ActionScript="" Script="upgradeMax10pw" Desc="" />  
+      <Behaviour Min="3" Dice="7" Type="Atk" Detail="Hit" Motion="H" EffectRes="BlackSilence_H" ActionScript="" Script="Cur2Uncontrollable1" Desc="" />        	  
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+   <Card ID="1010">
+    <Name>Durandal</Name>
+	<TextId>-1</TextId>
+    <Artwork>Roland9</Artwork>
+    <Rarity>Rare</Rarity>
+	<Option>OnlyPage</Option>
+    <Spec Range="Near" Cost="2" />
+    <Script></Script>	
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList> 
+	  <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="S12" EffectRes="FX_PC_RolRang_Slash_Down" ActionScript="" Script="destroyalldice2" Desc="" />  
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="S13" EffectRes="FX_PC_RolRang_Slash_UP" ActionScript="" Script="breakDice1" Desc="" />        	  
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1011">
+    <Name>Ranga Workshop</Name>
+	<TextId>-1</TextId>
+    <Artwork>Roland6</Artwork>
+    <Rarity>Common</Rarity>
+	<Option>OnlyPage</Option>
+    <Spec Range="Near" Cost="0" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList> 
+	  <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="S5" EffectRes="BlackSilence_Gauntlet1" ActionScript="" Script="strongBleed1" Desc="" />  
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Penetrate" Motion="S6" EffectRes="BlackSilence_Gauntlet2" ActionScript="" Script="strongBleed1" Desc="" />   
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="S7" EffectRes="" ActionScript="" Script="strongBleed3" Desc="" />	  
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+  
+  
+  
+  
+  
+  
+  
+  <Card ID="1003">                                 
+    <Name>The Darkness Within</Name>                      <!-- EGO Card -->
+	<TextId>-1</TextId> 
+    <Artwork>Roland3Phase_RolandFury</Artwork>
+    <Rarity>Unique</Rarity>
+	<Option>EgoPersonal</Option>
+    <Spec Range="FarAreaEach" Cost="5" Affection ="Team"/>
+    <Script>Emotion3Storm</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+	  <Behaviour Min="4" Dice="8" Type="Atk" Detail="Slash" Motion="S12" EffectRes="" ActionScript="BlackSilence_4th_Area" Script="upgradeMax10pw" Desc="" />
+      <Behaviour Min="10" Dice="20" Type="Atk" Detail="Slash" Motion="S13" EffectRes="" ActionScript="BlackSilence_4th_Area" Script="DistortedHit" Desc="" />	  
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1009">
+    <Name>Eternal Silence</Name>
+	<TextId>-1</TextId>
+    <Artwork>EternalSilence.png</Artwork>
+    <Rarity>Unique</Rarity>
+	<Option>EgoPersonal</Option>
+    <Spec Range="Instance" Cost="0" />
+    <Script>Emotion4Eternal</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList> 	          	  
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="1012">
+    <Name>Furioso</Name>
+	<TextId>-1</TextId>
+    <Artwork>Roland10</Artwork>
+    <Rarity>Unique</Rarity>
+	<Option>EgoPersonal</Option>
+    <Spec Range="Special" Cost="5"/>
+    <Script>Emotion5Furioso</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList> 
+	  <Behaviour Min="5" Dice="10" Type="Atk" Detail="Penetrate" Motion="S5" EffectRes="BlackSilence_Gauntlet1" ActionScript="BlackSilence_Gauntlet1" Script="upgradeMaxLast150pw" Desc="" />   
+      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Hit" Motion="S9" EffectRes="BlackSilence_Mace" ActionScript="" Script="upgradeMaxLast150pw" Desc="" />	
+	  <Behaviour Min="20" Dice="39" Type="Atk" Detail="Slash" Motion="S12" EffectRes="FX_PC_RolRang_Slash_Down" ActionScript="BlackSilence_SpecialDurandal" Script="destroyalldiceImmune" Desc="" />  	  
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>	
+  </Card>
+  <Card ID="1013">
+    <Name>Silence over Reverberate</Name>
+	<TextId>-1</TextId>
+    <Artwork>SilenceoverReverberate.png</Artwork>
+    <Rarity>Unique</Rarity>
+	<Option>EgoPersonal</Option>
+    <Spec Range="FarAreaEach" Cost="4" Affection ="Team"/>
+    <Script>Emotion4Silence</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList> 
+	  <Behaviour Min="3" Dice="7" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" ActionScript="argalia_area" Script="FatalHit" Desc="" />  
+      <Behaviour Min="3" Dice="9" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" ActionScript="argalia_area" Script="FatalHit" Desc="" />	  
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+  
+  
+  
+  
+  
+  
+  
+  <Card ID="10031">                                 <!-- Enemy only -->
+    <Name>The Darkness Within</Name>
+	<TextId>-1</TextId>
+    <Artwork>Roland3Phase_RolandFury</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="5" Affection ="Team"/>
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+	  <Behaviour Min="8" Dice="12" Type="Atk" Detail="Slash" Motion="S12" EffectRes="" ActionScript="BlackSilence_4th_Area" Script="upgradeMax10pw" Desc="" />
+      <Behaviour Min="14" Dice="24" Type="Atk" Detail="Slash" Motion="S13" EffectRes="" ActionScript="BlackSilence_4th_Area" Script="DistortedHit" Desc="" />	  
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="10121">
+    <Name>Furioso</Name>
+	<TextId>-1</TextId>
+    <Artwork>Roland10</Artwork>
+    <Rarity>Unique</Rarity>	
+    <Spec Range="Special" Cost="5" />
+    <Script>Emotion5Furioso</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList> 
+	  <Behaviour Min="5" Dice="10" Type="Atk" Detail="Penetrate" Motion="S5" EffectRes="BlackSilence_Gauntlet1" ActionScript="BlackSilence_Gauntlet1" Script="upgradeMaxLast150pw" Desc="" />   
+      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Slash" Motion="S9" EffectRes="BlackSilence_Mace" ActionScript="" Script="upgradeMaxLast150pw" Desc="" />		   
+	  <Behaviour Min="40" Dice="59" Type="Atk" Detail="Slash" Motion="S12" EffectRes="FX_PC_RolRang_Slash_Down" ActionScript="BlackSilence_SpecialDurandal" Script="destroyalldiceImmune" Desc="" />  	  
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="10131">
+    <Name>Silence over Reverberate</Name>
+	<TextId>-1</TextId>
+    <Artwork>SilenceoverReverberate.png</Artwork>
+    <Rarity>Unique</Rarity>	
+    <Spec Range="FarAreaEach" Cost="4" Affection ="Team"/>
+    <Script>Emotion4Silence</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList> 
+	  <Behaviour Min="3" Dice="9" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" ActionScript="argalia_area" Script="FatalHit" Desc="" />  
+      <Behaviour Min="7" Dice="11" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" ActionScript="argalia_area" Script="FatalHit" Desc="" />	  
+    </BehaviourList>
+    <Chapter>7</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+</DiceCardXmlRoot>

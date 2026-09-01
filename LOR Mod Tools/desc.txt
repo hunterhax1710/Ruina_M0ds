@@ -1,0 +1,32 @@
+Title:Cya's Toolbox
+Tag:Tools
+```
+A collection of modding utility dlls.
+
+[h1][b][i]THIS COLLECTION DOES NOT WORK AS A MOD BY ITSELF. IF YOU ARE A MOD USER, NOT A MOD MAKER - DO NOT DOWNLOAD THIS, IT WILL NOT DO ANYTHING FOR YOU.[/i][/b][/h1]
+
+Currently contains:
+[b]Enum Extender V2[/b] - utility for injecting value/name pairs into the shared enum-type cache; helpful for creating custom-named values for KeywordBuf, UIStoryLine and other enums without risking random coincidences with other mods (as long as unique names are used).
+[b]Error Log Cleaner[/b] - a simple utility for cleaning the pre-game loading log; mostly meant to remove "this assembly already exists" warnings. Optimized to only clean once before displaying if possible by patching.
+[b]Auto Keyword Util[/b] - utility for adding custom KeywordBuf -> Type mappings into the AddKeywordBuf system; also provides ways to automatically generate such KeywordBuf values and to check existing mappings.
+[b]Assorted Fixes[/b] - fixes a large number of bugs and oversights in base game (and a few very typical bugs/oversights in mods), check README for more details.
+[b]Better Filters[/b] - improves the Combat Page filtering system, adding more filters and extending existing ones; also provides support for adding custom keywords to the filter window (with the help of Enum Extender).
+[b]Enhanced Combat Page View[/b] - adds a zoom function to Combat Pages in battle and fixes the issue of only being able to see up to 10 pages in hand (while changing their default rotation due to counterintuitive overlapping at high hand sizes).
+[b]Optimization & Compatibility Kit[/b] - fixes problem-prone code in some third-party mods whose devs are unwilling or unable to fix them themselves.
+[b]Core Localizer[/b] - utility for dynamically adding custom languages (text files, fonts and some possible sprite replacements) into the game, configured with XML files.
+[b]Respectful Targeting[/b] - forces multiple targeting-related methods to properly conform to various targetability/untargetability conditions imposed by other method checks.
+[b]Targetable Mass Attacks[/b] - allows manually changing Speed Dice targeted by the additional arrows of Mass Attacks and other multi-target pages.
+[b]1Framework Loader[/b] - a utility for simplifying the versioning of reusable plugin DLLs.
+[b]1Framework Priority Loader[/b] - a plugin for the former that ensures that such plugin DLLs are loaded ahead of other mods (at least after a restart).
+[b]Special Range & Tutorial UX[/b] - adds a distinctive icon for the Special range of Combat pages, and adds a manual panel describing it; additionally, ensures that this panel, the Ranged manual panel, and the Counter manual panel are displayed once enemies can be seen using such pages, not just in specific stages. Also fixes some bugs affecting Speed sorting, both of Special pages and in general (formerly included in Special Range Priority Fix).
+[b]Timeline Util[/b] - utility for creating new icons on the invitation map, new invitation maps independent of the original, and for handling a multitude of matters involving unusual stage behaviour (mostly what was originally used for a limited set of "uninvited guests" stages only).
+[b]No Instance Deselect[/b] - simple portable mod that lets Instance (also known as "On Play" Range) pages be played without unslotting the page already slotted into the same Speed Die.
+[b]PlayPoint UI Plus[/b] - a plugin that allows arbitrarily high Light (aka PlayPoint) values to be displayed in the UI.
+[b]Base Directory Loader[/b] - allows default xml files (card, equip, stage, etc.) to be loaded from multiple files in specified directories, instead of having to be all clumped together into singular files.
+[b]Base Bridge[/b] - a proxy plugin that provides a way for other mods to integrate with more compatible indexing and accessing of entities (mostly LorIds for things that did not get them in official modding support, such as gifts (Battle Symbols) and emotion cards (Abnormality pages)), as well as handles saving and loading custom gifts (that are integrated with it).
+[b]Extra Bridge Loader[/b] - a BaseBridge-integrated plugin that provides a convenient way to load some normally unsupported data from XMLs (and also helps with some visuals for convenience). 
+[b]Extended Skin Loader[/b] - lets external skin xmls specify more details, such as effect attachment pivots, motion sounds, head scale, "skin" layers that change according to customization, etc.
+[b]Unit Render Utils[/b] - fixes some issues of vanilla character render system (appearance projections not working correctly on modded key pages, appearance-copying enemies breaking against librarians with modded skins, inability to view more than 5 units per wave, etc.), as well as provides some convenient methods for changing to modded skins and more.
+
+
+Thumbnail by [url=https://steamcommunity.com/id/GuardianZET/]Guardian ZET[/url].

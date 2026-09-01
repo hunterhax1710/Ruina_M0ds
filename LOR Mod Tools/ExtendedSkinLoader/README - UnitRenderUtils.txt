@@ -1,0 +1,11 @@
+THIS DLL IS PART OF >>>CYA'S TOOLBOX<<<. IF YOU'RE LOOKING TO INCLUDE IT IN YOUR MOD, GET THE NEWEST VERSION FROM THE MAIN UPLOAD.
+
+Unit Render Utils is a plugin that fixes some shortcomings and common issues of the vanilla skin system.
+
+Features:
+1) Adds support for rendering more than 5 waves per stage / more than 5 units per wave (note that this does NOT guarantee that any combat formation will have enough places for said units - use custom formations if you must!), as well as adds up to 9 unit sidebar slots on each side in battle (default value - can be increased further with ExtendedLoader.UnitUIUtils.SetBattleSidebarCount) and fixes some UI issues for units that do not have a sidebar.
+2) Provides optional preloading methods (under ExtendedLoader.SkinTools) - if reception is supposed to change skins later, these can be used at its start (from passive or from stage manager) to preload sprites in advance, so the game will not lag later during active gameplay instead.
+3) Adds support for changing to modded skins by either view.ChangeSkin("ModId:SkinName") or view.ChangeSkin(new LorName(ModId, SkinName)) (using an auxiliary LorName class from LorIdExtensions); see SkinTools/SkinExtensions documentation for more details.
+4) Adds support for A/B appearances in modded key pages (the skins themselves do not have to be extended, one of the variants just needs to have _M or _F added to its name, and the key page needs to have SkinGender set to M or F - note that the skin name itself as specified in the equip xml must NOT include the _M/_F suffix).
+5) Adds a "modded key page" appearance projection button in the appearance projection menu (bottom right) - not guaranteed to work with all modded skins (especially using other unconventional loading methods), but should work for most.
+6) Adds support for processing giftPivotList in CharacterMotion - each existing rootTransform will be used as the attachment point for the gifts of matching GiftPosition (instead of attaching to CustomizedAppearance, or when CustomizedAppearance does not exist) - and fixes said pivot lists for a number of original skins (Roland, Binah, BlackSilence, BlackSilenceMask).

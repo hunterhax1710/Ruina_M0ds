@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BaseBridge</name>
+    </assembly>
+    <members>
+        <member name="T:BaseBridge.BridgeManager">
+            <summary>
+            The main Base Bridge class that contains handlers for different types of entities and events.
+            </summary>
+        </member>
+        <member name="F:BaseBridge.BridgeManager.giftBridge">
+            <summary>
+            The bridge handler for gifts.
+            </summary>
+        </member>
+        <member name="F:BaseBridge.BridgeManager.formationBridge">
+            <summary>
+            The bridge handler for combat formations.
+            </summary>
+        </member>
+        <member name="F:BaseBridge.BridgeManager.emotionCardBridge">
+            <summary>
+            The bridge handler for emotion cards.
+            </summary>
+        </member>
+        <member name="F:BaseBridge.BridgeManager.emotionEgoBridge">
+            <summary>
+            The bridge handler for EGO.
+            </summary>
+        </member>
+        <member name="F:BaseBridge.BridgeManager.passiveToInnerTypeName">
+            <summary>
+            The generator for "named" passive innertypes.
+            </summary>
+        </member>
+        <member name="F:BaseBridge.BridgeManager.passiveToInnerTypeSource">
+            <summary>
+            The generator for "cloned" passive innertypes.
+            </summary>
+        </member>
+        <member name="F:BaseBridge.BridgeManager.emotionCardToGifts">
+            <summary>
+            The generator for matching emotion cards to gifts gained by using them.
+            </summary>
+        </member>
+        <member name="F:BaseBridge.BridgeManager.egoCardToGifts">
+            <summary>
+            The generator for matching EGO to gifts gained by using them.
+            </summary>
+        </member>
+        <member name="F:BaseBridge.BridgeManager.bridgeLoadHandler">
+            <summary>
+            The handler for bridge loading events.
+            </summary>
+        </member>
+        <member name="T:BaseBridge.EntityBridgeManager`2">
+            <summary>
+            The mediator class that maps arbitrary keys to entities and vice versa.
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <typeparam name="TKey"></typeparam>
+        </member>
+        <member name="M:BaseBridge.EntityBridgeManager`2.AddBridge(System.Func{`0,`1},System.Func{`1,`0})">
+            <summary>
+            Registers a new bridge for mapping keys to entities and vice versa.
+            </summary>
+            <param name="getKey">Identifier function mapping <typeparamref name="TEntity"/> to <typeparamref name="TKey"/>.
+            Important: if the <typeparamref name="TEntity"/> is not associated with the given bridge, the <typeparamref name="TKey"/> returned must be <see langword="null"/>!</param>
+            <param name="getEntity">Lookup function mapping <typeparamref name="TKey"/> to <typeparamref name="TEntity"/>.
+            Important: if the <typeparamref name="TKey"/> is not associated with the given bridge, the <typeparamref name="TEntity"/> returned must be <see langword="null"/>!</param>
+        </member>
+        <member name="M:BaseBridge.EntityBridgeManager`2.GetEntityByKey(`1)">
+            <summary>
+            Finds the entity associated with the given key.
+            </summary>
+            <param name="key">A <typeparamref name="TKey"/> for which a <typeparamref name="TEntity"/> should be looked up.</param>
+            <returns>The <typeparamref name="TEntity"/> associated with <paramref name="key"/>, or <see langword="null"/> if none of the registered bridges recognize <paramref name="key"/>.</returns>
+        </member>
+        <member name="M:BaseBridge.EntityBridgeManager`2.GetKeyFromEntity(`0)">
+            <summary>
+            Finds the key associated with the given entity.
+            </summary>
+            <param name="entity">A <typeparamref name="TEntity"/> for which a <typeparamref name="TKey"/> should be identified.</param>
+            <returns>The <typeparamref name="TKey"/> associated with <paramref name="entity"/>, or <see langword="null"/> if none of the registered bridges recognize <paramref name="entity"/>.</returns>
+        </member>
+        <member name="T:BaseBridge.SephirahEntityBridgeManager`2">
+            <summary>
+            The mediator class that maps arbitrary keys to entities and vice versa, disambiguated by <see cref="T:SephirahType"/>.
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <typeparam name="TKey"></typeparam>
+        </member>
+        <member name="M:BaseBridge.SephirahEntityBridgeManager`2.AddBridge(System.Func{`0,`1},System.Func{`1,SephirahType,`0})">
+            <summary>
+            Registers a new bridge for mapping keys to entities and vice versa.
+            </summary>
+            <param name="getKey">Identifier function mapping <typeparamref name="TEntity"/> to <typeparamref name="TKey"/>.
+            Important: if the <typeparamref name="TEntity"/> is not associated with the given bridge, the <typeparamref name="TKey"/> returned must be <see langword="null"/>!</param>
+            <param name="getEntity">Lookup function mapping <typeparamref name="TKey"/> (disambiguated by <see cref="T:SephirahType"/>) to <typeparamref name="TEntity"/>.
+            Important: if the <typeparamref name="TKey"/> (disambiguated by <see cref="T:SephirahType"/>) is not associated with the given bridge, the <typeparamref name="TEntity"/> returned must be <see langword="null"/>!</param>
+        </member>
+        <member name="M:BaseBridge.SephirahEntityBridgeManager`2.GetEntityByKey(`1,SephirahType)">
+            <summary>
+            Finds the entity associated with the given key.
+            </summary>
+            <param name="key">A <typeparamref name="TKey"/> for which a <typeparamref name="TEntity"/> should be looked up.</param>
+            <param name="specifier">A <see cref="T:SephirahType"/> disambiguating <paramref name="key"/>.</param>
+            <returns>The <typeparamref name="TEntity"/> associated with <paramref name="key"/> (disambiguated by <paramref name="specifier"/>), or <see langword="null"/> if none of the registered bridges recognize the combination of <paramref name="key"/> and <paramref name="specifier"/>.</returns>
+        </member>
+        <member name="M:BaseBridge.SephirahEntityBridgeManager`2.GetKeyFromEntity(`0)">
+            <summary>
+            Finds the key associated with the given entity.
+            </summary>
+            <param name="entity">A <typeparamref name="TEntity"/> for which a <typeparamref name="TKey"/> should be identified.</param>
+            <returns>The <typeparamref name="TKey"/> associated with <paramref name="entity"/>, or <see langword="null"/> if none of the registered bridges recognize <paramref name="entity"/>.</returns>
+        </member>
+        <member name="T:BaseBridge.GeneratorList`2">
+            <summary>
+            Class providing an event-like subscribable way to try and generate an output for a given input (one-to-one, first come first serve).
+            </summary>
+            <typeparam name="TInput">The input type for the generators.</typeparam>
+            <typeparam name="TOutput">The output type for the generators.</typeparam>
+        </member>
+        <member name="M:BaseBridge.GeneratorList`2.AddGenerator(System.Func{`0,`1})">
+            <summary>
+            Adds a generator to the list.
+            </summary>
+            <param name="mapper">A generator that returns <typeparamref name="TOutput"/> values for some <typeparamref name="TInput"/> values (and <see langword="null"/> for others).</param>
+        </member>
+        <member name="M:BaseBridge.GeneratorList`2.TryGenerateResult(`0)">
+            <summary>
+            Attempts to find a generator that accepts a given <typeparamref name="TInput"/> and generates a non-<see langword="null"/> <typeparamref name="TOutput"/> value for it.
+            </summary>
+            <param name="input">The <typeparamref name="TInput"/> for which a <typeparamref name="TOutput"/> should be generated.</param>
+            <returns>The <typeparamref name="TOutput"/> value returned by the first generator in the list to return a non-<see langword="null"/> value given <paramref name="input"/>, or <see langword="null"/> if all generators returned <see langword="null"/>.</returns>
+        </member>
+        <member name="T:BaseBridge.ListGenerator`2">
+            <summary>
+            Class providing an event-like subscribable way to try and generate an output for a given input (one-to-many, all outputs accounted for).
+            </summary>
+            <typeparam name="TInput">The input type for the generators.</typeparam>
+            <typeparam name="TOutput">The output type for the generators.</typeparam>
+        </member>
+        <member name="M:BaseBridge.ListGenerator`2.AddGenerator(System.Func{`0,System.Collections.Generic.IEnumerable{`1}})">
+            <summary>
+            Adds a generator to the list.
+            </summary>
+            <param name="mapper">A generator that returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <typeparamref name="TOutput"/> values for some <typeparamref name="TInput"/> values (and <see langword="null"/> for others).</param>
+        </member>
+        <member name="M:BaseBridge.ListGenerator`2.GenerateList(`0)">
+            <summary>
+            Finds all generators that accept a given <typeparamref name="TInput"/> and combines their outputs into a <see cref="T:System.Collections.Generic.List`1"/>>.
+            </summary>
+            <param name="input">The <typeparamref name="TInput"/> for which all associated <typeparamref name="TOutput"/> values should be generated.</param>
+            <returns>A list of all values returned by all generators that returned a non-<see langword="null"/> enumerable given <paramref name="input"/> (not checked for duplicates!).</returns>
+        </member>
+        <member name="T:BaseBridge.GeneratorList`3">
+            <summary>
+            Class providing an event-like subscribable way to try and generate an output for a pair of given inputs (one-to-one, first come first serve).
+            </summary>
+            <typeparam name="TInput1">The first input type for the generators.</typeparam>
+            <typeparam name="TInput2">The second input type for the generators.</typeparam>
+            <typeparam name="TOutput">The output type for the generators.</typeparam>
+        </member>
+        <member name="M:BaseBridge.GeneratorList`3.AddGenerator(System.Func{`0,`1,`2})">
+            <summary>
+            Adds a generator to the list.
+            </summary>
+            <param name="mapper">A generator that returns <typeparamref name="TOutput"/> values for some pairs of <typeparamref name="TInput1"/> and <typeparamref name="TInput2"/> values (and <see langword="null"/> for others).</param>
+        </member>
+        <member name="M:BaseBridge.GeneratorList`3.TryGenerateResult(`0,`1)">
+            <summary>
+            Attempts to find a generator that accepts a given pair of <typeparamref name="TInput1"/> and <typeparamref name="TInput2"/> and generates a non-<see langword="null"/> <typeparamref name="TOutput"/> value for it.
+            </summary>
+            <param name="input1">The <typeparamref name="TInput1"/> for the combination of which and <paramref name="input2"/> a <typeparamref name="TOutput"/> should be generated.</param>
+            <param name="input2">The <typeparamref name="TInput2"/> for the combination of which and <paramref name="input1"/> a <typeparamref name="TOutput"/> should be generated.</param>
+            <returns>The <typeparamref name="TOutput"/> value returned by the first generator in the list to return a non-<see langword="null"/> value given <paramref name="input1"/> and <paramref name="input2"/>, or <see langword="null"/> if all generators returned <see langword="null"/>.</returns>
+        </member>
+        <member name="T:BaseBridge.ListGenerator`3">
+            <summary>
+            Class providing an event-like subscribable way to try and generate an output for a pair of given inputs (one-to-many, all outputs accounted for).
+            </summary>
+            <typeparam name="TInput1">The first input type for the generators.</typeparam>
+            <typeparam name="TInput2">The second input type for the generators.</typeparam>
+            <typeparam name="TOutput">The output type for the generators.</typeparam>
+        </member>
+        <member name="M:BaseBridge.ListGenerator`3.AddGenerator(System.Func{`0,`1,System.Collections.Generic.IEnumerable{`2}})">
+            <summary>
+            Adds a generator to the list.
+            </summary>
+            <param name="mapper">A generator that returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> of <typeparamref name="TOutput"/> values for some pairs of <typeparamref name="TInput1"/> and <typeparamref name="TInput2"/> values (and <see langword="null"/> for others).</param>
+        </member>
+        <member name="M:BaseBridge.ListGenerator`3.GenerateList(`0,`1)">
+            <summary>
+            Finds all generators that accept a given pair of <typeparamref name="TInput1"/> and <typeparamref name="TInput2"/> and combines their outputs into a <see cref="T:System.Collections.Generic.List`1"/>>.
+            </summary>
+            <param name="input1">The <typeparamref name="TInput1"/> for the combination of which and <paramref name="input2"/> all associated <typeparamref name="TOutput"/> values should be generated.</param>
+            <param name="input2">The <typeparamref name="TInput2"/> for the combination of which and <paramref name="input1"/> all associated <typeparamref name="TOutput"/> values should be generated.</param>
+            <returns>A list of all values returned by all generators that returned a non-<see langword="null"/> enumerable given <paramref name="input1"/> and <paramref name="input2"/> (not checked for duplicates!).</returns>
+        </member>
+        <member name="T:BaseBridge.BridgeLoadHandler">
+            <summary>
+            The class handling bridge load events.
+            </summary>
+        </member>
+        <member name="M:BaseBridge.BridgeLoadHandler.RegisterBridge(System.String,System.Action,System.Action)">
+            <summary>
+            Registers a bridge, providing events for when all bridges report readiness and then completion.
+            Important - this is used for finalizing processing injected data!
+            </summary>
+            <param name="bridgeId">The name of the bridge (must be the same as the argument in the following call to <see cref="M:BaseBridge.BridgeLoadHandler.MarkBridgeReady(System.String)"/>!)</param>
+            <param name="onAllBridgesReady">The action to be performed once all bridges (including the registering one) report readiness.</param>
+            <param name="onAllBridgesProcessed">The action to be performed once all bridges (including the registering one) report completion.</param>
+        </member>
+        <member name="M:BaseBridge.BridgeLoadHandler.MarkBridgeReady(System.String)">
+            <summary>
+            Reports that a bridge has finished loading and its data (including both bridged and injected identifiers) is ready to be processed and used externally.
+            This should not be called before OnInitializeMod.
+            </summary>
+            <param name="bridgeId">The name of the bridge reporting completion (must be the same as the argument in the preceding call to <see cref="M:BaseBridge.BridgeLoadHandler.RegisterBridge(System.String,System.Action,System.Action)"/>!)</param>
+        </member>
+        <member name="T:BaseBridge.BridgeExtensions">
+            <summary>
+            The class containing extension methods for accessing entities with bridge-injected <see cref="T:LorId"/> identifiers alongside non-injected variants.
+            </summary>
+        </member>
+        <member name="M:BaseBridge.BridgeExtensions.RemoveGiftFromBridgeSave(GiftInventory,LorId)">
+            <summary>
+            Removes all instances of gift with the given <see cref="T:LorId"/> from the Base Bridge saving system of a specific <see cref="T:GiftInventory"/>.
+            </summary>
+            <param name="inventory">The <see cref="T:GiftInventory"/> from which the gift should be removed.</param>
+            <param name="id">The <see cref="T:LorId"/> of the (Base Bridge managed) gift to be removed.</param>
+        </member>
+    </members>
+</doc>

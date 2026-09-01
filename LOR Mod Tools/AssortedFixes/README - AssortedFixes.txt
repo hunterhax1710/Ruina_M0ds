@@ -1,0 +1,92 @@
+THIS DLL IS PART OF >>>CYA'S TOOLBOX<<<. IF YOU'RE LOOKING TO INCLUDE IT IN YOUR MOD, GET THE NEWEST VERSION FROM THE MAIN UPLOAD.
+
+Contains, well, assorted fixes for various issues of the base game (and some fixes for common mod issues).
+
+Cyaminthe.AssortedFixes contains fixes for:
+- Battle Symbol "Lifelong Companion" being unobtainable.
+- Rolling/destroying too many dice during a clash potentially causing a UI softlock.
+- Self-targeting with melee Combat Pages causing a softlock (partial fix, as some custom actionscripts may still cause softlocks).
+- Combat UI malfunctioning if a character has too many passives or status effects, or if a Combat Page has too many keywords defined via its XML.
+- Combat UI malfunctioning when trying to render too many targeting arrows at the same time.
+- Combat Pages "Stigmatize", "Inner Ardor" and "All-out War" (and possibly any modded Combat Pages using their self-scripts) only granting emotion points AFTER use (i.e. after rolling dice and clashing) instead of ON use (i.e. before rolling dice and clashing).
+- Inability to remove missing Combat Pages from decks.
+- Player-side autoplay ignoring IsCardChoosable.
+- DiceStatBonus.ignorePower making dice retain their previously rolled value (or 0 on the first roll) instead of making them ignore power gain or loss.
+- GetModPath always returning the path to the first mod with the given packageId, even when a different mod with the same packageId is activated instead.
+- Applying stat bonuses to librarian's current die from enemy's BeforeRollDice in a clash not working correctly.
+- Combat Page scripts being unable to access their owner or card itself in some cases.
+- SetCostToZero only setting the Combat Page's base cost to zero.
+- EGO and personal Combat Page scripts being unable to change their own cost with GetCostAdder and GetCostLast.
+- Mind Crush's actionscript softlocking the game if it has no living targets.
+- Recovering Stagger Resist of a character who has not used a Combat Page this Scene yet causing an error.
+- Recovered Stagger Resist amount being displayed incorrectly if maximum Stagger Resist was reached.
+- Being able to "recover" negative amounts of Stagger Resist.
+- Recovering 0 HP (or less) actually making characters recover 1.
+- DiscardACardRandomlyByAbility being able to "discard" the same Combat Page multiple times, and DiscardInHand not being able to discard more than half of Combat Pages in hand (rounded up).
+- Some mods breaking the ability to change equipped Key pages during reception preparation.
+- Prescripts that give status effects not specifying the user as the giver.
+- Only the last Abnormality page being able to affect damage taken (ChangeDamage).
+- DeselectAll resulting in an exception if the character has less Speed Dice than they had at some previous point in the Act.
+- Some mods with custom code for adjusting Credenza entries breaking if non-initialized Credenza entries exist.
+- Emotion Coins obtained during the last Scene of the previous Act not counting towards recharging floor EGO Combat Pages until the second Scene of the following Act.
+- Multiple attack effects of Der Freischutz shooting bullets in wrong directions if the user or the target is oriented in a specific way.
+- Information Assessment checking HP Resistance value when trying to affect Stagger Resistance (and being able to affect Stagger Resistances that are not Endured or Normal as a result).
+- Slashing/Blunting stances only giving damage/Stagger damage bonuses to dice of the corresponding types, instead of all attacks as stated.
+- Sound effects of the Abnormality page 'A Nostalgic Sound' stacking abnormally and persisting after the page owner's death.
+- Effect of SetBlocked persisting indefinitely, even if the die is reused or deals damage to another character (for example, in Mass Attacks).
+- Stagger Damage dealt by attacks appearing as an incorrect value (in BattleCardTotalResult and OnTakeBreakDamageByAttack) if the target has effects that modify incoming Stagger damage.
+- Eileen_FarArea_Second effect displaying an extra sprite.
+- Action range not being registered correctly for actionscripts in some cases.
+- Abnormality page text not being coloured/animated correctly after picking a Floor EGO page.
+- Abnormality page "Eternal Rest" checking for the lowest HP among allies instead of enemies.
+- Abnormality page "Home" not correctly resetting the counter at the start of a new Scene.
+- Damage dealt by the status effect "Sin" from the Abnormality page "Judgement" not being correctly typed.
+- Abnormality page "Time" displaying the timer incorrectly.
+- Speed Dice sealing effects of Funeral of the Dead Butterflies incorrectly calculating Speed Dice counts, resulting in destroying dice on less Combat Pages than expected but (for the Abnormality-only variant) staggering targets faster than expected.
+- Abnormality page "Apostles" not keeping its counter between acts of the same reception.
+- Abnormality page "Malice" determining its damage inconsistently and not in the way its description indicates.
+- Abnormality page "Torn Off Wisdom" treating having a page to discard as an additional condition to restore Light.
+- Abnormality page "Magical Girls" having an unlisted restriction of counting only one clash loss per Scene.
+- Abnormality page "Salvation" being able to apply its bonus power to dice in the counter/retain queue multiple times.
+- Abnormality page "Footfalls" basing its damage off of the owner's Max HP instead of the target's.
+- Empty droptables (not to be confused with nonexistent ones) softlocking the game.
+- Display resolution resetting to the full screen resolution if the game stutters while out of focus in fullscreen.
+- Achievement "Orlando Furioso" requiring only half of its listed conditions.
+- Reception of Blue Reverberation missing dialogue text in English localization.
+- Negative Max HP and Max Stagger Resist modifiers of different kinds being able to multiply into positive totals.
+- GetKewordBufStack and GetKewordBufAllStack returning incorrect values if a corresponding status effect was destroyed but not yet removed.
+- Inability to modify status effect lists from some status effect callbacks (OnStartOneSideAction, OnStartTargetedOneSide, OnStartParrying, BeforeTakeDamage, BeforeLoseHPNotDmg, OnLoseHp, OnBreakState).
+- RemoveBufAll not properly calling Destroy on status effects that are being removed.
+- The definition of "Combat Pages used" in Emotion Level 5 draw condition and some passives actually registering "card clashes/onesides started" (i.e. excluding Mass Attacks, but including responding to attacks with the retain/counter queue).
+- Combat Page "Shock Round" (and possibly any modded Combat Pages using its self-script) never checking the second discarded page for whether it is Ammunition.
+- Dead characters leaving their status UI on the battlefield in some cases.
+- Gaining/losing Speed after slotting Combat Pages not affecting the Speed values used for resolving the said pages.
+- Deflect damage dealt being recorded in history as double the actually dealt amount.
+- HP/Stagger Resist bars under characters not playing their animations correctly.
+
+Cyaminthe.AssortedFixesIntegrated contains fixes for:
+- Deselected Combat Pages staying above their neighbours in hand (also included in Enhanced Combat Page View)
+- OnApplyCard being called before OnReleaseCard when replacing a previously played Combat Page, causing some effects to be cancelled when a Combat Page was replacing itself due to switching redirects (also included in Targetable Mass Attacks)
+- Player characters only autotargeting the first Speed Die of enemies with a "last Speed Die is untargetable" passive (also included in Respectful Targeting)
+- Autoplay breaking as soon as one of player characters fails to find a target (also included in Respectful Targeting)
+- Both player- and enemy-side autoplays ignoring IsOnlyAllyUnit and IsValidTarget (also included in Respectful Targeting)
+- Both player- and enemy-side autoplays ignoring IsOnlyAllyUnit and IsValidTarget (also included in Respectful Targeting)
+- "Ignore untargetability" effects (NotTargetableRemoved/NullifyNotTargetable) affecting even characters that are removed from combat (IsExtinction) (also included in Respectful Targeting)
+- Modded Combat Page (not dice) abilities not displaying keywords (also included in Compatibility Kit and Better Filters)
+- Inability to play self-targeting pages when self is the only available target (also included in Trigrams Target Anything)
+- A wide variety of reception mods breaking start-of-chapter icons, making the corresponding scenes unrewatchable (also included in Timeline Util)
+- The Red Mist's Page always being displayed as equippable on Gebura, even if it should be unequippable due to being attributed or Gebura being locked (visual bug - the page would still fail to be equipped).
+- Custom skins only being able to load external sounds for Hit motion (also included in Unit Render Utils)
+- Appearance projection randomization being able to access incompatible appearances (also included in Unit Render Utils)
+- Appearance projection randomization being able to change the height of Patron Librarians if it landed on an uncustomizable appearance (also included in Unit Render Utils)
+- Appearance projection randomization not working with workshop skins (also included in Unit Render Utils)
+- Appearance creation failing on custom skins with disabled head customization (also included in Unit Render Utils)
+- Key page appearance projection not working when a modded Key page is equipped (also included in Unit Render Utils)
+- Some Key page appearance projections being incorrectly sorted into the Canard category (also included in Unit Render Utils)
+- Key page appearance projections not being sorted by compatibility with the currently equipped Key page (also included in Unit Render Utils)
+- Equipping a Hybrid Key page not resetting Melee/Ranged Key page appearance projections (also included in Unit Render Utils)
+- Some mods with custom localization code breaking if localization is changed after mod initialization (also included in CoreLocalizer)
+- Some battle dialogues not playing despite having data for them (also included in CoreLocalizer)
+- Errors in some story scene effect data (voice lines not playing, current speaker not being highlighted, etc.) (also included in CoreLocalizer)
+- Game failing to load if data for some saved Battle Symbols is missing or invalid (also included in BaseBridge)
+- Patron/Librarian Battle Symbols for floors from Natural Sciences to Religion being positioned at the very end of the Battle Symbol list, unlike their counterparts for other floors (also included in BaseBridge)

@@ -1,0 +1,72 @@
+<ModInfo>
+  <FaceInfo>
+    <Front_RearHair>Front_RearHair</Front_RearHair>
+    <Front_FrontHair>Front_FrontHair</Front_FrontHair>
+    <Front_Eye>Front_Eye</Front_Eye>
+    <Side_FrontHair>Side_FrontHair</Side_FrontHair>
+    <Side_Eye>Side_Eye</Side_Eye>
+    <Side_RearHair_Front>Side_RearHair_Front</Side_RearHair_Front>
+    <Side_RearHair_Rear>Side_RearHair_Rear</Side_RearHair_Rear>
+    <Front_Brow_Normal>Front_Brow_Normal</Front_Brow_Normal>
+    <Front_Brow_Attack>Front_Brow_Attack</Front_Brow_Attack>
+    <Front_Brow_Hit>Front_Brow_Hit</Front_Brow_Hit>
+    <Front_Mouth_Normal>Front_Mouth_Normal</Front_Mouth_Normal>
+    <Front_Mouth_Attack>Front_Mouth_Attack</Front_Mouth_Attack>
+    <Front_Mouth_Hit>Front_Mouth_Hit</Front_Mouth_Hit>
+    <Side_Brow>Side_Brow</Side_Brow>
+    <Side_Mouth>Side_Mouth</Side_Mouth>
+  </FaceInfo>
+  <ClothInfo>
+    <Name>skadi</Name>
+    <Default>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-36.8" pivot_y="-255.1001" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Default>
+    <Guard>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="13.8" pivot_y="-374.7" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Guard>
+    <Evade>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="103.5" pivot_y="-243.6" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Evade>
+    <Damaged>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="64.4" pivot_y="-232.1001" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Damaged>
+    <Slash>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="170.2001" pivot_y="-220.6" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Slash>
+    <Penetrate>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="331.2" pivot_y="-266.6" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Penetrate>
+    <Hit>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-115" pivot_y="-413.8" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Hit>
+    <Move>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-220.8001" pivot_y="-218.3" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Move>
+    <Fire>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="-112.7" pivot_y="-411.5" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Fire>
+    <Aim>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="32.2" pivot_y="-376.9999" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Aim>
+  </ClothInfo>
+</ModInfo>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BookXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>
+  <Book ID="1">
+    <Name>Roland</Name>
+    <TextId>1</TextId>
+    <BookIcon>BS</BookIcon>
+    <EquipEffect>
+	  <EmotionLevel>5</EmotionLevel>
+      <HpReduction>0</HpReduction>
+      <HP>80</HP>
+      <DeadLine>0</DeadLine>
+      <Break>60</Break>
+      <SpeedMin>4</SpeedMin>
+      <Speed>8</Speed>
+      <SpeedDiceNum>2</SpeedDiceNum>
+      <SResist>Endure</SResist>
+      <PResist>Normal</PResist>
+      <HResist>Normal</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Endure</PBResist>
+      <HBResist>Normal</HBResist>
+      <MaxPlayPoint>5</MaxPlayPoint>
+      <StartPlayPoint>5</StartPlayPoint>
+      <AddedStartDraw>0</AddedStartDraw>
+	  
+	  <Passive>1</Passive>
+      <Passive>211</Passive>
+	  <Passive>2111</Passive>	  
+	  <Passive>3</Passive>	  
+	  <Passive>5</Passive> 
+	  <Passive>6</Passive> 
+	  <Passive>8</Passive>
+	  	 
+      <CustomOnlyCard>1001</CustomOnlyCard>    
+      <CustomOnlyCard>1002</CustomOnlyCard>    
+      <CustomOnlyCard>1004</CustomOnlyCard>    
+      <CustomOnlyCard>1005</CustomOnlyCard>    
+      <CustomOnlyCard>1006</CustomOnlyCard>    
+      <CustomOnlyCard>1007</CustomOnlyCard> 
+      <CustomOnlyCard>1008</CustomOnlyCard>
+      <CustomOnlyCard>1010</CustomOnlyCard>	  
+      <CustomOnlyCard>1011</CustomOnlyCard>
+		 
+    </EquipEffect>
+    <Rarity>Unique</Rarity>
+    <CharacterSkin>BlackSilence</CharacterSkin>
+    <CharacterSkinType>Lor</CharacterSkinType>
+    <SkinGender>N</SkinGender>
+    <Chapter>7</Chapter>
+    <Episode>1</Episode>
+    <RangeType>Hybrid</RangeType>
+    <NotEquip>false</NotEquip>
+    <RandomFace>false</RandomFace>
+    <SpeedDiceNum>2</SpeedDiceNum>
+    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
+  </Book>
+</BookXmlRoot>

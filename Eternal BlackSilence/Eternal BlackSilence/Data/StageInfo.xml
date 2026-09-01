@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StageXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>
+  <Stage id="1">
+    <Name>The Black Silence</Name>
+    <Wave>
+      <Unit>1</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>5</AvailableUnit>
+	  <ManagerScript>BlackSilenceBGM</ManagerScript>               <!--Enemy Team Manager-->
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>4</FloorNum>
+    <Chapter>7</Chapter>
+    <Invitation Combine="BookRecipe">
+      <Book>3</Book>    <!-- Book of Silence -->	  
+	  <Value>0</Value>                                    <!-- Important to add this  -->
+      <Num>0</Num> 
+    </Invitation>
+	<StoryType>BS</StoryType>               <!-- Stage Icon -->
+	<MapInfo>BlackSilenceMap1</MapInfo> 	<!-- MapPicture EnforceMap(0) follows chronological order -->       
+	<MapInfo>BlackSilenceMap2</MapInfo>
+	<Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+  </Stage>
+</StageXmlRoot>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NormalInvitation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>
+  <Workshop>
+    <ID>LoR.StartUp.LocalizationManager</ID>
+    <Title>Localization Manager for Library of Ruina</Title>
+    <Description>Utility MOD to help localize texts in multiple languages.
+Do not copy the dll from this mod, copy the StageModLocalizeInfo.xml to your mod and edit it.</Description>
+  </Workshop>
+</NormalInvitation>

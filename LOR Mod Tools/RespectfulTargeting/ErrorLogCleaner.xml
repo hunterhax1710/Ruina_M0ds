@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ErrorLogCleaner</name>
+    </assembly>
+    <members>
+        <member name="T:ErrorLogCleaner.LogCleaner">
+            <summary>
+            The class providing the methods for pre-game log cleaning.
+            </summary>
+        </member>
+        <member name="M:ErrorLogCleaner.LogCleaner.CleanUp">
+            <summary>
+            Tries to patch the game to only clean the logs once before displaying them.
+            If the patching method fails for any reason (most likely due to harmony load order issues), cleans the logs immediately.
+            </summary>
+        </member>
+        <member name="M:ErrorLogCleaner.LogCleaner.AddCommonAssembly(System.String)">
+            <summary>
+            Adds a substring detector to the cleanup process.
+            This will make all subsequent calls to <see cref="M:ErrorLogCleaner.LogCleaner.CleanUp"/> remove any warnings (and only warnings) containing <paramref name="name"/> from the pre-game logs.
+            Intended to be used for removing "assembly already exists" warnings, but it is not an enforced restriction.
+            </summary>
+            <param name="name">A substring to be cleaned up.</param>
+        </member>
+        <member name="M:ErrorLogCleaner.LogCleaner.AddCommonAssembly(System.Reflection.Assembly)">
+            <summary>
+            Adds a substring detector for the name of <paramref name="assembly"/> to the cleanup process.
+            This will make all subsequent calls to <see cref="M:ErrorLogCleaner.LogCleaner.CleanUp"/> remove any warnings (and only warnings) containing the name of <paramref name="assembly"/> from the pre-game logs.
+            </summary>
+            <param name="assembly">An assembly to be cleaned up.</param>
+        </member>
+        <member name="M:ErrorLogCleaner.LogCleaner.AddCustomCheck(System.Predicate{System.String})">
+            <summary>
+            Adds a custom condition to the log cleanup.
+            This will make all subsequent calls to <see cref="M:ErrorLogCleaner.LogCleaner.CleanUp"/> remove any lines (not necessarily warnings) satisfying <paramref name="check"/> from the pre-game logs.
+            </summary>
+            <param name="check">A custom condition for log lines to be cleaned up.</param>
+        </member>
+    </members>
+</doc>

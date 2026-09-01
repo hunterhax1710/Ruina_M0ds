@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnitRenderUtils</name>
+    </assembly>
+    <members>
+        <member name="T:ExtendedLoader.SkinExtensions">
+            <summary>
+            The class providing extension methods for handling skins.
+            </summary>
+        </member>
+        <member name="T:ExtendedLoader.SkinExtensions.ModSkinInfo">
+            <summary>
+            A class for handling skin information with mod specification attached.
+            Mostly intended to be used for transferring skins between units or over time.
+            </summary>
+        </member>
+        <member name="F:ExtendedLoader.SkinExtensions.ModSkinInfo.packageId">
+            <summary>
+            The mod id the skin belongs to (empty if the skin is not external).
+            </summary>
+        </member>
+        <member name="P:ExtendedLoader.SkinExtensions.ModSkinInfo.lorName">
+            <summary>
+            The full identifier of the skin.
+            Can be used to change to the skin using ChangeSkin.
+            </summary>
+        </member>
+        <member name="M:ExtendedLoader.SkinExtensions.ModSkinInfo.Compress">
+            <summary>
+            "Compresses" the skin LorName to fit into a regular SkinInfo (see <see cref="M:LorIdExtensions.LorName.Compress"/>).
+            Note that if the state is Default, changing other units' skins by compressed info will not work!
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ExtendedLoader.SkinExtensions.ChangeSkin(BattleUnitView,LorIdExtensions.LorName)">
+            <summary>
+            A LorName equivalent of <see cref="M:BattleUnitView.ChangeSkin(System.String)"/>.
+            </summary>
+        </member>
+        <member name="M:ExtendedLoader.SkinExtensions.ChangeEgoSkin(BattleUnitView,LorIdExtensions.LorName,System.Boolean)">
+            <summary>
+            A LorName equivalent of <see cref="M:BattleUnitView.ChangeEgoSkin(System.String,System.Boolean)"/>.
+            </summary>
+        </member>
+        <member name="M:ExtendedLoader.SkinExtensions.ChangeCreatureSkin(BattleUnitView,LorIdExtensions.LorName)">
+            <summary>
+            A LorName equivalent of <see cref="M:BattleUnitView.ChangeCreatureSkin(System.String)"/>.
+            </summary>
+        </member>
+        <member name="M:ExtendedLoader.SkinExtensions.ChangeSkinByModSkinInfo(BattleUnitView,ExtendedLoader.SkinExtensions.ModSkinInfo,System.Boolean)">
+            <summary>
+            Mostly a ModSkinInfo equivalent of <see cref="M:BattleUnitView.ChangeSkinBySkinInfo(BattleUnitView.SkinInfo)"/>.
+            The additional parameter <paramref name="forceChange"/> is used to force the change to the given skin if state is <see cref="F:BattleUnitView.SkinState.Default"/>, instead of resetting to the unit's own default skin (useful for copying skins between different units).
+            </summary>
+        </member>
+        <member name="M:ExtendedLoader.SkinExtensions.GetCurrentModSkinInfo(BattleUnitView)">
+            <summary>
+            A ModSkinInfo equivalent of <see cref="M:BattleUnitView.GetCurrentSkinInfo"/>.
+            </summary>
+        </member>
+        <member name="M:ExtendedLoader.SkinExtensions.ChangeSkinWorkshop(BattleUnitView,System.String)">
+            <summary>
+            An equivalent of <see cref="M:BattleUnitView.ChangeSkin(System.String)"/>
+            </summary>
+        </member>
+        <member name="M:ExtendedLoader.SkinExtensions.ChangeEgoSkinWorkshop(BattleUnitView,System.String,System.Boolean)">
+            <summary>
+            An equivalent of <see cref="M:BattleUnitView.ChangeEgoSkin(System.String,System.Boolean)"/> for standalone external skins.
+            </summary>
+        </member>
+        <member name="M:ExtendedLoader.SkinExtensions.ChangeCreatureSkinWorkshop(BattleUnitView,System.String)">
+            <summary>
+            An equivalent of <see cref="M:BattleUnitView.ChangeCreatureSkin(System.String)"/> for standalone external skins.
+            </summary>
+        </member>
+        <member name="M:ExtendedLoader.SkinExtensions.SetAltSkin(BattleUnitView,LorIdExtensions.LorName)">
+            <summary>
+            A LorName equivalent of <see cref="M:BattleUnitView.SetAltSkin(System.String)"/>.
+            </summary>
+        </member>
+        <member name="M:ExtendedLoader.SkinExtensions.SetAltSkinWorkshop(BattleUnitView,System.String)">
+            <summary>
+            An equivalent of <see cref="M:BattleUnitView.SetAltSkin(System.String)"/> for standalone external skins.
+            </summary>
+        </member>
+        <member name="M:ExtendedLoader.SkinExtensions.ResetAltSkin(BattleUnitView)">
+            <summary>
+            Discards the currently set AltSkin (note that this WILL NOT cause a skin change by itself).
+            </summary>
+        </member>
+        <member name="M:ExtendedLoader.SkinExtensions.ResetAnySkin(BattleUnitView)">
+            <summary>
+            Fully resets the current view skin, also discarding AltSkin.
+            </summary>
+        </member>
+        <member name="M:ExtendedLoader.SkinExtensions.GetOriginalSkin(BattleUnitModel)">
+            <summary>
+            Tries to get a conclusive identifier of a unit's "original" skin (that is, the skin that the unit would start combat with).
+            This identifier can then be used to make other units "copy" the skin using ChangeSkin.
+            </summary>
+            <returns>The skin identifier.</returns>
+        </member>
+        <member name="M:ExtendedLoader.SkinExtensions.PreloadSkinSprites(Workshop.WorkshopSkinData)">
+            <summary>
+            Tries to preload all the sprites in an external skin.
+            </summary>
+        </member>
+        <member name="T:ExtendedLoader.SkinTools">
+            <summary>
+            The class providing tools for handling skins (that are not extension methods).
+            </summary>
+        </member>
+        <member name="M:ExtendedLoader.SkinTools.GetWorkshopBookSkinData(System.String,System.String,System.String)">
+            <summary>
+            Tries to find external skin data by mod id and skin name, specifying gender if possible.
+            Also tries to check standalone external skins with the given name if the given mod id does not contain the given skin name.
+            </summary>
+            <param name="id">The mod id.</param>
+            <param name="name">The skin name.</param>
+            <param name="gender">Gender specifier (will be added to the skin name if possible).</param>
+            <returns>The found skin data, or <see langword="null"/> if nothing was found.</returns>
+        </member>
+        <member name="M:ExtendedLoader.SkinTools.GetWorkshopBookSkinData(LorIdExtensions.LorName,System.String)">
+            <summary>
+            Tries to find external skin data by mod id and skin name, specifying gender if possible.
+            Also tries to check standalone external skins with the given name if the given mod id does not contain the given skin name.
+            </summary>
+            <param name="name">The full skin name, including mod id and internal name.</param>
+            <param name="gender">Gender specifier (will be added to the skin name if possible).</param>
+            <returns>The found skin data, or <see langword="null"/> if nothing was found.</returns>
+        </member>
+        <member name="M:ExtendedLoader.SkinTools.PreloadSkinSprites(System.String,System.String)">
+            <summary>
+            Tries to preload all the sprites in a given external skin from a given mod.
+            </summary>
+            <param name="id">The mod id.</param>
+            <param name="name">The mod-internal skin name.</param>
+        </member>
+        <member name="M:ExtendedLoader.SkinTools.PreloadSkinSprites(System.String)">
+            <summary>
+            Tries to preload all the sprites in a given standalone external skin (that is, a skin that is just ModInfo and not part of a StageModInfo mod).
+            </summary>
+            <param name="name">The skin name.</param>
+        </member>
+        <member name="M:ExtendedLoader.SkinTools.PreloadSkinSprites(Workshop.WorkshopSkinData)">
+            <summary>
+            Tries to preload all the sprites in an external skin given its data.
+            </summary>
+            <param name="data">The skin data.</param>
+        </member>
+    </members>
+</doc>

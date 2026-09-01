@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PassiveXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<Passive ID="1">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>9</Cost>
+    <Script>BlackSilence</Script>
+    <Name>The Black Silence</Name>
+    <Desc>Has unique EGO pages and BGM. (Untransferable)</Desc>
+  </Passive>  
+  <Passive ID="2">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>9</Cost>
+    <Script>Returner</Script>
+    <Name>The Returner</Name>
+    <Desc>Starts at Emotional Level 1. “Returner” triggers upon taking fatal damage, restores all HP and Stagger. “Returner” triggers up to the current emotion level. When “Returner” is triggered, max health value is increased by 20, max break value is increased by 10 and become invulnerable to status ailments. (Untransferable)</Desc>
+  </Passive>
+  <Passive ID="211">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>9</Cost>
+    <Script>ReturnerEnemy</Script>
+    <Name>The Returner</Name>
+    <Desc>Starts at Emotional Level 2. “Returner” triggers upon taking fatal damage, restores all HP and Stagger. “Returner” triggers up to the current emotion level. When “Returner” is triggered, max health value is increased by 50, max break value is increased by 30 and become invulnerable to status ailments. (Untransferable)</Desc>
+  </Passive>
+  <Passive ID="2111">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>9</Cost>
+    <Script>Shimmering</Script>
+    <Name>Shimmering</Name>
+    <Desc>At the start of each Scene, exhaust all pages in hand and deck; add new pages to hand. (Untransferable)</Desc>
+  </Passive>
+  <Passive ID="21">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>BlackSilenceChange</Script>
+    <Name>Perception-blocking Mask</Name>
+    <Desc>A Speed die with the lowest Speed becomes untargetable (untransferable)</Desc>
+  </Passive>
+  <Passive ID="21111">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>Eternity</Script>
+    <Name>Eternal Silence</Name>
+    <Desc>Every 10 Scenes. Reduce 1 stack of Returner (Untransferable)</Desc>
+  </Passive>
+  <Passive ID="3">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>9</Cost>
+    <Script>BlackGloves</Script>
+    <Name>Black Gloves</Name>
+    <Desc>All dice on the page selected in the 3rd Speed dice slot gain +3 Power. (untransferable)</Desc>
+  </Passive>
+  <Passive ID="4">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>Grudge</Script>
+    <Name>Relentless Grudge</Name>
+    <Desc>Recover 1-3 Stagger Resist or Recover 1-3 HP on hit (Untransferable)</Desc>
+  </Passive>
+  <Passive ID="5">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>9</Cost>
+    <Script>Combo</Script>
+    <Name>Combo</Name>
+    <Desc>All dice on every 5th Combat Page used gain +5 Power. (Untransferable)</Desc>
+  </Passive>
+  <Passive ID="6">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>9</Cost>
+    <Script>Retaliate</Script>
+    <Name>Revenge</Name>
+    <Desc>Gain a Counter Slash dice (4-8; [On Clash Win] All dice on target's page lose 5 Power) at combat start. (Untransferable)</Desc>
+  </Passive>
+  <Passive ID="7">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>Adrenaline</Script>
+    <Name>You Have to Try Harder than That!</Name>
+    <Desc>Choose the Speed dice with the lowest value; the Speed values of the dice change to the maximum possible value. Boost the *maximum* roll value of all dice by +3. (Untransferable)</Desc>
+  </Passive>
+  <Passive ID="8">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>Sealed</Script>
+    <Name>Unstable Shackle</Name>
+    <Desc>Take 1-3 extra Stagger Damage or Damage from all sources. Destroy this passive when Returner stacks is equal or above 3 (Untransferable)</Desc>
+  </Passive>
+  
+</PassiveXmlRoot>

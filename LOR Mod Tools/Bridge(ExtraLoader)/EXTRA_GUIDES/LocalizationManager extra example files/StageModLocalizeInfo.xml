@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LocalizationInfo>
+  <LocalizationFile>
+    <!-- keep other stuff and then add the following: -->
+    <AbnormalityCardInfo Exist="true">
+      <Path>\LocalizeBase\{0}\AbnormalityCards</Path>
+    </AbnormalityCardInfo>
+    <GiftTextInfo Exist="true">
+      <Path>\LocalizeBase\{0}\GiftTexts</Path>
+    </GiftTextInfo>
+  </LocalizationFile>
+</LocalizationInfo>

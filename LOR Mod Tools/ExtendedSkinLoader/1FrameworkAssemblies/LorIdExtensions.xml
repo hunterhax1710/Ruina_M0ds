@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LorIdExtensions</name>
+    </assembly>
+    <members>
+        <member name="T:LorIdExtensions.LorName">
+            <summary>
+            An equivalent of <see cref="T:LorId"/> for string names instead of int ids.
+            </summary>
+        </member>
+        <member name="M:LorIdExtensions.LorName.#ctor(System.String)">
+            <summary>
+            Creates a LorName given either a simple name (in which case the package id will be empty), or a compressed form of a LorName (in which case the package id will be recovered).
+            </summary>
+            <param name="name">The name to construct a LorName by.</param>
+        </member>
+        <member name="M:LorIdExtensions.LorName.#ctor(System.String,System.Boolean)">
+            <summary>
+            Creates a "generic custom" LorName for addressing modded entities that nevertheless do not belong to any mod that has a package id.
+            (most notably, standalone external skins)
+            </summary>
+            <param name="name">The name to construct a LorName by.</param>
+            <param name="isGenericCustom"><see langword="true"/> to construct a "generic custom" LorName (if <see langword="false"/>, the default constructor is used).</param>
+        </member>
+        <member name="M:LorIdExtensions.LorName.#ctor(System.String,System.String)">
+            <summary>
+            Creates a LorName given a package id and an internal name.
+            NOTE: if the given name is already a compressed form of a LorName, its package id will be recovered and used instead!
+            </summary>
+            <param name="packageId">The package id.</param>
+            <param name="name">The internal name.</param>
+        </member>
+        <member name="M:LorIdExtensions.LorName.Compress">
+            <summary>
+            Compresses a LorName into a single string of the form "packageId:internalName", or just the internal name if package id is empty.
+            </summary>
+            <returns>The compressed form of the LorName.</returns>
+        </member>
+        <member name="M:LorIdExtensions.LorName.IsCompressed(System.String)">
+            <summary>
+            Checks whether a given string is a valid compressed form of a LorName.
+            That is, whether it is not <see langword="null"/> and contains the separator character ":".
+            </summary>
+            <param name="name">The name to be checked.</param>
+            <returns><see langword="true"/> if the given name is a valid compressed form of a LorName, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:LorIdExtensions.LorName.IsWorkshopGeneric">
+            <summary>
+            Tests whether the LorName is a "generic custom" identifier (see <see cref="M:LorIdExtensions.LorName.#ctor(System.String,System.Boolean)"/>).
+            </summary>
+            <returns><see langword="true"/> if this LorName is a "generic custom" LorName, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:LorIdExtensions.LorName.IsWorkshopGenericId(System.String)">
+            <summary>
+            Tests whether the given package id corresponds to a "generic custom" identifier (see <see cref="M:LorIdExtensions.LorName.#ctor(System.String,System.Boolean)"/>).
+            </summary>
+            <returns><see langword="true"/> if the given package id corresponds to a "generic custom" identifier, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:LorIdExtensions.LorName.MakeLorNameLegacy(LorIdExtensions.LorNameXml,System.String)">
+            <summary>
+            Creates a LorName for "legacy" applications that need to default to empty package id on empty (instead of using the default id in that case).
+            Thus, instead of substituting the default package id for empty/missing xml package id (as <see cref="M:LorId.MakeLorId(ILorIdXml,System.String)"/>/<see cref="M:LorIdExtensions.LorName.MakeLorName(LorIdExtensions.LorNameXml,System.String)"/> do),
+            it is only substituted if the xml package id is "@this".
+            (see also: <seealso cref="M:LorIdExtensions.LorIdLegacy.MakeLorIdLegacy(ILorIdXml,System.String)"/>)
+            </summary>
+            <param name="src">The LorName xml from which to create a legacy LorName.</param>
+            <param name="defaultPid">The "default" package id.</param>
+            <returns>The created LorName.</returns>
+        </member>
+        <member name="M:LorIdExtensions.LorName.InitializeLorNamesLegacy(System.Collections.Generic.List{LorIdExtensions.LorNameXml},System.Collections.Generic.List{LorIdExtensions.LorName},System.String)">
+            <summary>
+            Initializes a list of LorName for "legacy" applications that need to default to empty package id on empty (instead of using the default id in that case).
+            Thus, instead of substituting the default package id for empty/missing xml package id (as <see cref="M:LorId.MakeLorId(ILorIdXml,System.String)"/>/<see cref="M:LorIdExtensions.LorName.MakeLorName(LorIdExtensions.LorNameXml,System.String)"/> do),
+            it is only substituted if the xml package id is "@this".
+            (see also: <seealso cref="M:LorIdExtensions.LorIdLegacy.InitializeLorIdsLegacy``1(System.Collections.Generic.List{``0},System.Collections.Generic.List{LorId},System.String)"/>)
+            </summary>
+            <param name="src">The list of LorName xmls from which to create legacy LorName values.</param>
+            <param name="dst">The list of LorName into which the results should be placed.</param>
+            <param name="defaultPid">The "default" package id.</param>
+        </member>
+        <member name="T:LorIdExtensions.LorIdLegacy">
+            <summary>
+            The class for handling "legacy" LorId xml fields that preserve empty package id.
+            </summary>
+        </member>
+        <member name="M:LorIdExtensions.LorIdLegacy.MakeLorIdLegacy(ILorIdXml,System.String)">
+            <summary>
+            Creates a LorId for "legacy" applications that need to default to empty package id on empty (instead of using the default id in that case).
+            Thus, instead of substituting the default package id for empty/missing xml package id (as <see cref="M:LorId.MakeLorId(ILorIdXml,System.String)"/> does),
+            it is only substituted if the xml package id is "@this".
+            </summary>
+            <param name="src">The LorId xml from which to create a legacy LorId.</param>
+            <param name="defaultPid">The "default" package id.</param>
+            <returns>The created LorId.</returns>
+        </member>
+        <member name="M:LorIdExtensions.LorIdLegacy.InitializeLorIdsLegacy``1(System.Collections.Generic.List{``0},System.Collections.Generic.List{LorId},System.String)">
+            <summary>
+            Initializes a list of LorId for "legacy" applications that need to default to empty package id on empty (instead of using the default id in that case).
+            Thus, instead of substituting the default package id for empty/missing xml package id (as <see cref="M:LorId.MakeLorId(ILorIdXml,System.String)"/> does),
+            it is only substituted if the xml package id is "@this".
+            </summary>
+            <param name="src">The list of LorId xmls from which to create legacy LorId values.</param>
+            <param name="dst">The list of LorId into which the results should be placed.</param>
+            <param name="defaultPid">The "default" package id.</param>
+        </member>
+    </members>
+</doc>
