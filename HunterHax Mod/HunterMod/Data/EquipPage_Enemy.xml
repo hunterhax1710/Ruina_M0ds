@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BookXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>
+  <Book ID="1">
+    <Name>Skadi</Name>
+    <TextId>-1</TextId>
+    <BookIcon>KnightSymbol</BookIcon>
+    <EquipEffect>
+      <HpReduction>0</HpReduction>
+      <HP>200</HP>
+      <DeadLine>0</DeadLine>
+      <Break>10</Break>
+      <SpeedMin>3</SpeedMin>
+      <Speed>10</Speed>
+      <SpeedDiceNum>2</SpeedDiceNum>
+      <SResist>Endure</SResist>
+      <PResist>Normal</PResist>
+      <HResist>Endure</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Endure</PBResist>
+      <HBResist>Normal</HBResist>
+      <MaxPlayPoint>5</MaxPlayPoint>
+      <StartPlayPoint>5</StartPlayPoint>
+      <AddedStartDraw>0</AddedStartDraw>
+	  <Passive>1</Passive>
+    </EquipEffect>
+     <Rarity>Unique</Rarity>
+    <CharacterSkin>skadi</CharacterSkin>
+    <CharacterSkinType>Custom</CharacterSkinType>
+    <SkinGender>N</SkinGender>
+    <Chapter>7</Chapter>
+    <Episode>2</Episode>
+    <RangeType>Hybrid</RangeType>
+    <NotEquip>false</NotEquip>
+    <RandomFace>false</RandomFace>
+    <SpeedDiceNum>2</SpeedDiceNum>
+    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
+  </Book>
+  <Book ID="2">
+    <Name>HunterHax</Name>
+    <TextId>-1</TextId>
+    <BookIcon>NewMod2</BookIcon>
+    <EquipEffect>
+	  <EmotionLevel>5</EmotionLevel>
+      <HpReduction>0</HpReduction>
+      <HP>100</HP>
+      <DeadLine>0</DeadLine>
+      <Break>60</Break>
+      <SpeedMin>1</SpeedMin>
+      <Speed>7</Speed>
+      <SpeedDiceNum>3</SpeedDiceNum>
+      <SResist>Endure</SResist>
+      <PResist>Normal</PResist>
+      <HResist>Endure</HResist>
+      <SBResist>Normal</SBResist>
+      <PBResist>Endure</PBResist>
+      <HBResist>Normal</HBResist>
+      <MaxPlayPoint>5</MaxPlayPoint>
+      <StartPlayPoint>5</StartPlayPoint>
+      <AddedStartDraw>0</AddedStartDraw>
+	  
+	  <Passive Pid="@origin">10008</Passive>
+      <Passive>20018</Passive>
+	  <Passive>20018111</Passive>
+	  <Passive>20022</Passive>
+	  <Passive>20023</Passive>
+      <Passive>20019</Passive>
+	  <Passive>20021</Passive>
+	  <Passive>20024</Passive>
+	  <Passive>20025</Passive>
+	  <Passive>20026</Passive>
+      <Passive Pid="@origin">250322</Passive>
+      <Passive Pid="@origin">1005014</Passive> 
+      <Passive Pid="@origin">240018</Passive>
+      <Passive Pid="@origin">243105</Passive>
+      <Passive Pid="@origin">230018</Passive>
+      <Passive Pid="@origin">250027</Passive>
+	  
+	  
+    </EquipEffect>
+    <Rarity>Unique</Rarity>
+    <CharacterSkin>BlackSilence</CharacterSkin>
+    <CharacterSkinType>Lor</CharacterSkinType>
+    <SkinGender>N</SkinGender>
+    <Chapter>1</Chapter>
+    <Episode>2</Episode>
+    <RangeType>Hybrid</RangeType>
+    <NotEquip>false</NotEquip>
+    <RandomFace>false</RandomFace>
+    <SpeedDiceNum>3</SpeedDiceNum>
+    <SuccessionPossibleNumber>9</SuccessionPossibleNumber>
+  </Book>
+</BookXmlRoot>

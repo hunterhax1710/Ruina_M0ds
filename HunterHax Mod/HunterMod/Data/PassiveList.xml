@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PassiveXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<Passive ID="1">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>true</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>VowMod_TrunkPassive</Script>
+    <Name>Speedy Delivery</Name>
+    <Desc>At the End of Scene. At 10+ Courier Trunk, gain 1 Haste. At 20+ Courier Trunk, gain 1 Strength and 2 Haste.
+At 30 Courier Trunk, gain 2 Strength and 2 Haste</Desc>
+  </Passive>
+  <Passive ID="20018">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>RestorationCore</Script>
+    <Name>Restoration Core</Name>
+    <Desc>Upon taking what would be a lethal blow, nullify all incoming damage including what activated this passive, 
+fully recover HP and move to next Phase (Max Phase: 3); at the end of the Scene this happens,
+fully restore Stagger Resist, Light and Draw 1 page. Unique BGM included.
+    </Desc>
+  </Passive>
+  <Passive ID="20018111">
+    <Negative>false</Negative>
+    <IsHide>true</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>HunterHaxPhases</Script>
+    <Name>Phases</Name>
+    <Desc>Phase 2 and Phase 3; 50% more Hp and Break. Has unique EGO pages and BGM.</Desc>
+  </Passive>
+  <Passive ID="20019">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>BlessingLight</Script>
+    <Name>Blessing of the Light</Name>
+    <Desc>At the start of each Scene, fully restore Light at a 50% chance</Desc>
+  </Passive>
+  <Passive ID="20021">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>FiredUp</Script>
+    <Name>Let's Get Fired Up</Name>
+    <Desc>After dealing 10 or higher total damage in a Scene, restore 3 Light.</Desc>
+  </Passive>
+  <Passive ID="20022">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>Static_Regeneration</Script>
+    <Name>Static Regeneration</Name>
+    <Desc>If the character was not hit by any attacks for a Scene, recover 30 HP, 30 Stagger Resist and gain 3 Strength.</Desc>
+  </Passive>
+  <Passive ID="20023">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>HunterHaxProwess</Script>
+    <Name>HunterHax’s Prowess</Name>
+    <Desc>When using a Combat Page, all dice on the page gain Power against targets with slower Speed.
+(+1 Power per 2 points of difference, up to 6)</Desc>
+  </Passive>
+  <Passive ID="20024">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>RangeReflection50</Script>
+    <Name>Barrier</Name>
+    <Desc>Takes 50% less damage from all Ranged attacks. Reflects all Ranged attacks</Desc>
+  </Passive>
+  <Passive ID="20025">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>CounterAttack</Script>
+    <Name>Counter Attack</Name>
+    <Desc>Gain a Counter die with [On Hit] 50% chance to inflict 1 Strong Seal (Slash, 4-8) at combat start.</Desc>
+  </Passive>
+  <Passive ID="20026">
+    <Negative>false</Negative>
+    <IsHide>false</IsHide>
+    <Rarity>Unique</Rarity>
+    <Lock>false</Lock>
+    <CanGivePassive>false</CanGivePassive>
+    <CanReceivePassive>false</CanReceivePassive>
+    <InnerType>-1</InnerType>
+    <Cost>0</Cost>
+    <Script>SoulHarvest25</Script>
+    <Name>Soul Harvester</Name>
+    <Desc>Recover 25% HP and Stagger Resist upon defeating an enemy.</Desc>
+  </Passive>
+  
+
+</PassiveXmlRoot>

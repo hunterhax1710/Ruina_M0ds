@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeckXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>
+  <Deck ID="1">
+    <Card>1</Card>
+    <Card>1</Card>
+    <Card>1</Card>
+    <Card>1</Card>
+    <Card>1</Card>
+    <Card>1</Card>
+    <Card>1</Card>
+    <Card>1</Card>
+    <Card>1</Card>
+  </Deck>
+  <Deck ID="2">
+   <Card>405523</Card>
+    <Card>405524</Card>
+    <Card>405517</Card>
+    <Card>405518</Card>
+    <Card>405519</Card>
+    <Card>405520</Card>
+    <Card>405521</Card>
+    <Card>405522</Card>
+  </Deck>
+</DeckXmlRoot>

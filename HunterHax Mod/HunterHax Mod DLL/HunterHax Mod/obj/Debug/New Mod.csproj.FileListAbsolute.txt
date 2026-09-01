@@ -1,0 +1,76 @@
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\New Mod.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\New Mod.pdb
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\10EnumExtender.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\Assembly-CSharp-nstrip.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\AutoKeywordUtil.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\LoRLocalizationManager.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\Unity.Mathematics.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\Unity.TextMeshPro.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.AnimationModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.AudioModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.CoreModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.ImageConversionModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.InputLegacyModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.UI.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.UIModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.UnityWebRequestAudioModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.UnityWebRequestModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.PhysicsModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.ParticleSystemModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.VideoModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.Physics2DModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.IMGUIModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.WindModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.AssetBundleModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.TextRenderingModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.SpriteMaskModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.TilemapModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.GridModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.TextCoreModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.DSPGraphModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.AndroidJNIModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.AccessibilityModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.UnityConnectModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.AIModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.UnityAnalyticsModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.PerformanceReportingModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.SharedInternalsModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.ClothModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.ClusterInputModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.ClusterRendererModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.CrashReportingModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.TerrainModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.VFXModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.VRModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.SubsystemsModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.JSONSerializeModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.LocalizationModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.UNETModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.UnityWebRequestAssetBundleModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.UnityWebRequestTextureModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.UnityWebRequestWWWModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.DirectorModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.ScreenCaptureModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.GameCenterModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.StreamingModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.TerrainPhysicsModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.SpriteShapeModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.UIElementsModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.VehiclesModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.ARModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.XRModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\UnityEngine.InputModule.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\10EnumExtender.xml
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\AutoKeywordUtil.xml
+C:\Visual Studios Codes\New Mod\New Mod\obj\Debug\New Mod.csproj.AssemblyReference.cache
+C:\Visual Studios Codes\New Mod\New Mod\obj\Debug\New Mod.csproj.CoreCompileInputs.cache
+C:\Visual Studios Codes\New Mod\New Mod\obj\Debug\New Mod.csproj.CopyComplete
+C:\Visual Studios Codes\New Mod\New Mod\obj\Debug\New Mod.dll
+C:\Visual Studios Codes\New Mod\New Mod\obj\Debug\New Mod.pdb
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\0Harmony.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\CustomMapUtility.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\1FrameworkLoader.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\BaseBridge.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\ExtraBridgeLoader.dll
+C:\Visual Studios Codes\New Mod\New Mod\bin\Debug\TimelineUtil.dll

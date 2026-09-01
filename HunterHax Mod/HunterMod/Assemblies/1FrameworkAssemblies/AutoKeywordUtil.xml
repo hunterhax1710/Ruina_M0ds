@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AutoKeywordUtil</name>
+    </assembly>
+    <members>
+        <member name="T:AutoKeywordUtil.IAutoKeywordBuf">
+            <summary>
+            An interface that both generates and stores custom keywords automatically.
+            Easier to implement, but more verbose to use afterwards.
+            To get the generated keyword, use <see cref="M:AutoKeywordUtil.AutoKeywordUtils.GetAutoKeyword(System.Type)"/> (and override <see cref="P:BattleUnitBuf.bufType"/> to return it too!).
+            </summary>
+        </member>
+        <member name="P:AutoKeywordUtil.IAutoKeywordBuf.KeywordBufName">
+            <summary>
+            The name that the generated <see cref="T:KeywordBuf"/> value will have.
+            If this is a buf unique to your mod, the name MUST ALSO BE UNIQUE!
+            "Basic" names are only acceptable in cases when they can have absolutely no alternative interpretations (e.g. AllPowerDown to mirror AllPowerUp).
+            </summary>
+        </member>
+        <member name="T:AutoKeywordUtil.IRefKeywordBuf">
+            <summary>
+            An interface that generates custom keywords automatically, but stores the generated values in the given location.
+            Takes slightly more effort to implement, but allows for less verbose gameplay code.
+            (still requires you to override <see cref="P:BattleUnitBuf.bufType"/> yourself)
+            </summary>
+        </member>
+        <member name="P:AutoKeywordUtil.IRefKeywordBuf.KeywordBuf">
+            <summary>
+            The location to store the generated <see cref="P:AutoKeywordUtil.IRefKeywordBuf.KeywordBuf"/> value.
+            </summary>
+        </member>
+        <member name="P:AutoKeywordUtil.IRefKeywordBuf.KeywordBufName">
+            <summary>
+            The name that the generated <see cref="P:AutoKeywordUtil.IRefKeywordBuf.KeywordBuf"/> value will have.
+            If this is a buf unique to your mod, the name MUST ALSO BE UNIQUE!
+            "Basic" names are only acceptable in cases when they can have absolutely no alternative interpretations (e.g. AllPowerDown to mirror AllPowerUp).
+            </summary>
+        </member>
+        <member name="T:AutoKeywordUtil.AutoKeywordUtils">
+            <summary>
+            Static class containing methods for working with KeywordBufs (auto or otherwise).
+            </summary>
+        </member>
+        <member name="M:AutoKeywordUtil.AutoKeywordUtils.GetAutoKeyword(System.Type)">
+            <summary>
+            Returns the value of the <see cref="T:KeywordBuf"/> generated for an <see cref="T:AutoKeywordUtil.IAutoKeywordBuf"/> implementation.
+            Note that automatic generation and registration of keywords is only performed automatically once on load (after loading all regular mod assemblies)! If you want to use AutoKeywordUtil for bufs in an assembly that is loaded later, call <see cref="M:AutoKeywordUtil.AutoKeywordUtils.RegisterKeywordsFromAssembly(System.Reflection.Assembly)"/> for such assemblies manually.
+            </summary>
+            <param name="type">A non-abstract type derived from <see cref="T:BattleUnitBuf"/> and implementing <see cref="T:AutoKeywordUtil.IAutoKeywordBuf"/>.</param>
+            <returns>The <see cref="T:KeywordBuf"/> value if one has been generated; <see cref="F:KeywordBuf.None"/> if not.</returns>
+        </member>
+        <member name="M:AutoKeywordUtil.AutoKeywordUtils.RegisterKeywordsFromAssembly(System.Reflection.Assembly)">
+            <summary>
+            Generates <see cref="T:KeywordBuf"/> values for all non-abstract <see cref="T:BattleUnitBuf"/> subclasses implementing <see cref="T:AutoKeywordUtil.IAutoKeywordBuf"/> or <see cref="T:AutoKeywordUtil.IRefKeywordBuf"/> in the given assembly.
+            This is called automatically for most regular mod assemblies; it is only exposed for rare cases where an assembly has to be loaded later than normal for any reason.
+            </summary>
+            <param name="assembly">The assembly to be checked for auto-generating keywords.</param>
+        </member>
+        <member name="M:AutoKeywordUtil.AutoKeywordUtils.RegisterKeywordBuf``1">
+            <summary>
+            Manually registers a <see cref="T:BattleUnitBuf"/> subclass in the AddKeywordBuf system.
+            It will be associated with the <see cref="T:KeywordBuf"/> that is returned by the <see cref="P:BattleUnitBuf.bufType"/> of an instance created by the parameterless constructor of the given class.
+            </summary>
+            <typeparam name="TBuf">The <see cref="T:BattleUnitBuf"/> subclass to be registered in the AddKeywordBuf system.</typeparam>
+        </member>
+        <member name="M:AutoKeywordUtil.AutoKeywordUtils.TryGetAssociatedBufType(KeywordBuf,System.Type@)">
+            <summary>
+            Checks if a given <see cref="T:KeywordBuf"/> value has an association for addition in the AddKeywordBuf system.
+            Note: this checks for ANY buf type associations - including those hardcoded in vanilla, those registered via KeywordUtil, and those possibly patched in by other means!
+            </summary>
+            <param name="keyword">The <see cref="T:KeywordBuf"/> value to check for being registered.</param>
+            <returns><see langword="true"/> if <paramref name="keyword"/> has been registered via KeywordUtil, and <see langword="false"/> otherwise.</returns>
+            <param name="type">When the method returns <see langword="true"/>, contains the <see cref="T:BattleUnitBuf"/> subclass associated with <paramref name="keyword"/>; contains <see langword="null"/> otherwise.</param>
+        </member>
+        <member name="M:AutoKeywordUtil.AutoKeywordUtils.CreateBufInstance(KeywordBuf)">
+            <summary>
+            Creates an instance of a buf that would be created through the AddKeywordBuf system (if any).
+            </summary>
+            <param name="keyword">The <see cref="T:KeywordBuf"/> value to try creating the associated buf instance for.</param>
+            <returns>A <see cref="T:BattleUnitBuf"/> instance of the type that would be created by AddKeywordBuf using <paramref name="keyword"/>, if any would be, and <see langword="null"/> otherwise.</returns>
+        </member>
+    </members>
+</doc>

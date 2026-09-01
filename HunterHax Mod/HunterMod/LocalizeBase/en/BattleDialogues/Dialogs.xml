@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleDialogRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Character ID="1">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="START_BATTLE_0">Keep them in your sights and fire at will.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_1">Don't let them get close. Keep the range advantage.</BattleDialog>
+      <BattleDialog ID="START_BATTLE_2">We got a job to do, everyone ready?</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="BATTLE_VICTORY_0">That's a wrap. Let's get those books and go.</BattleDialog>
+      <BattleDialog ID="BATTLE_VICTORY_1">Alright, let's regroup. We're done here.</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="DEATH_0">Ugh… they… got me.</BattleDialog>
+      <BattleDialog ID="DEATH_1">No… I can still…</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="COLLEAGUE_DEATH_0">Tch…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_1">We're losing ground…</BattleDialog>
+      <BattleDialog ID="COLLEAGUE_DEATH_2">Damn it… we have to turn this around!</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="KILLS_OPPONENT_0">One down. Let's keep going.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_1">This is the end for you. You're done.</BattleDialog>
+      <BattleDialog ID="KILLS_OPPONENT_2">We're not quite out of the waters yet. Focus.</BattleDialog>
+    </Type>
+	</Character>
+	<Character ID="2">
+    <Type ID="START_BATTLE">
+      <BattleDialog ID="0">Bring it!</BattleDialog>
+      <BattleDialog ID="1">Show me your power!</BattleDialog>
+      <BattleDialog ID="2">Hello...and Goodbye!</BattleDialog>
+    </Type>
+    <Type ID="BATTLE_VICTORY">
+      <BattleDialog ID="0">Is that all?</BattleDialog>
+      <BattleDialog ID="1">Too easy!</BattleDialog>
+    </Type>
+    <Type ID="DEATH">
+      <BattleDialog ID="0">I won't lose next time...</BattleDialog>
+      <BattleDialog ID="1">See you again...</BattleDialog>
+    </Type>
+    <Type ID="COLLEAGUE_DEATH">
+      <BattleDialog ID="0">WEAK!</BattleDialog>
+      <BattleDialog ID="1">Not bad...</BattleDialog>
+      <BattleDialog ID="2">You are good...</BattleDialog>
+    </Type>
+    <Type ID="KILLS_OPPONENT">
+      <BattleDialog ID="0">WEAK!</BattleDialog>
+      <BattleDialog ID="1">You are wasting my Time!</BattleDialog>
+      <BattleDialog ID="2">This is Disappointing...</BattleDialog>
+    </Type>
+  </Character>
+</BattleDialogRoot>

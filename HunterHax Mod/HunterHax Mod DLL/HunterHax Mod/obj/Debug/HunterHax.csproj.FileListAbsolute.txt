@@ -1,0 +1,4 @@
+C:\Visual Studios Codes\HunterHax Mod\New Mod\obj\Debug\HunterHax.csproj.AssemblyReference.cache
+C:\Visual Studios Codes\HunterHax Mod\New Mod\obj\Debug\HunterHax.csproj.CoreCompileInputs.cache
+C:\Visual Studios Codes\HunterHax Mod\New Mod\obj\Debug\New Mod.dll
+C:\Visual Studios Codes\HunterHax Mod\New Mod\obj\Debug\New Mod.pdb

@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B55D70D3-04CA-4DA6-8629-426A4C2EFAFC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>New_Mod</RootNamespace>
+    <AssemblyName>New Mod</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>D:\SteamLibrary\steamapps\workshop\content\1256670\NormalInvitation (2)\Assemblies\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="10EnumExtender, Version=2.1.0.0, Culture=neutral, PublicKeyToken=6813393d41beca33, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\workshop\content\1256670\NormalInvitation (2)\Assemblies\1FrameworkAssemblies\10EnumExtender.dll</HintPath>
+    </Reference>
+    <Reference Include="1FrameworkLoader">
+      <HintPath>D:\SteamLibrary\steamapps\workshop\content\1256670\BlackSilence\Assemblies\1FrameworkLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-nstrip">
+      <HintPath>D:\Downloads\Game Utility [DnSpy, etc]\LOR Mod Tools\Assembly-CSharp-nstrip\Assembly-CSharp-nstrip.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoKeywordUtil, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\workshop\content\1256670\NormalInvitation (2)\Assemblies\1FrameworkAssemblies\AutoKeywordUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="BaseBridge">
+      <HintPath>D:\SteamLibrary\steamapps\workshop\content\1256670\BlackSilence\Assemblies\1FrameworkAssemblies\BaseBridge.dll</HintPath>
+    </Reference>
+    <Reference Include="CustomMapUtility">
+      <HintPath>D:\SteamLibrary\steamapps\workshop\content\1256670\NormalInvitation (2)\Assemblies\CustomMapUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="ExtraBridgeLoader">
+      <HintPath>D:\SteamLibrary\steamapps\workshop\content\1256670\BlackSilence\Assemblies\1FrameworkAssemblies\ExtraBridgeLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="LoRLocalizationManager, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\steamapps\workshop\content\1256670\NormalInvitation (2)\Assemblies\1FrameworkAssemblies\LoRLocalizationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="TimelineUtil">
+      <HintPath>D:\SteamLibrary\steamapps\workshop\content\1256670\BlackSilence\Assemblies\1FrameworkAssemblies\TimelineUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HunterHax\Buffs\BattleUnitBuf_InvisReflectEnemy.cs" />
+    <Compile Include="HunterHax\Buffs\BattleUnitBuf_InvisReflect.cs" />
+    <Compile Include="HunterHax\Card\DiceCardAbility_drainEnergy2atk.cs" />
+    <Compile Include="HunterHax\Card\DiceCardAbility_ero6fee6bin6par6.cs" />
+    <Compile Include="HunterHax\Card\DiceCardAbility_escalateStrength.cs" />
+    <Compile Include="HunterHax\Card\DiceCardAbility_fullcounter.cs" />
+    <Compile Include="HunterHax\Card\DiceCardAbility_50percentSeal1.cs" />
+    <Compile Include="HunterHax\Card\DiceCardAbility_repeat4burn2.cs" />
+    <Compile Include="HunterHax\Card\DiceCardAbility_upgradeNext10pw.cs" />
+    <Compile Include="HunterHax\Card\DiceCardAbility_vul5atkupgradeNext10pw.cs" />
+    <Compile Include="HunterHax\Card\DiceCardSelfAbility_EditedKali.cs" />
+    <Compile Include="HunterHax\Card\DiceCardSelfAbility_powerup5highspeed.cs" />
+    <Compile Include="HunterHax\Buffs\BattleUnitBuf_HunterHaxPhase3.cs" />
+    <Compile Include="HunterHax\Buffs\BattleUnitBuf_Untargetable.cs" />
+    <Compile Include="HunterHax\Buffs\BattleUnitBuf_Seal1.cs" />
+    <Compile Include="HunterHax\Buffs\BattleUnitBuf_HaxArmor.cs" />
+    <Compile Include="HunterHax\EGOCards\DiceCardSelfAbility_Emotion3HaxArmor.cs" />
+    <Compile Include="HunterHax\EGOCards\DiceCardSelfAbility_Emotion4negatePower.cs" />
+    <Compile Include="HunterHax\Buffs\BattleUnitBuf_PurgeBuf.cs" />
+    <Compile Include="HunterHax\Fresh Copy - Copy %284%29.cs" />
+    <Compile Include="HunterHax\Fresh Copy - Copy %285%29.cs" />
+    <Compile Include="HunterHax\Fresh Copy - Copy %286%29.cs" />
+    <Compile Include="HunterHax\Fresh Copy - Copy %287%29.cs" />
+    <Compile Include="HunterHax\Fresh Copy - Copy %288%29.cs" />
+    <Compile Include="HunterHax\Fresh Copy - Copy.cs" />
+    <Compile Include="HunterHax\Passives\PassiveAbility_CounterAttack.cs" />
+    <Compile Include="HunterHax\Passives\PassiveAbility_RangeReflection50.cs" />
+    <Compile Include="HunterHax\Passives\PassiveAbility_SoulHarvest25.cs" />
+    <Compile Include="HunterHax\Buffs\BattleUnitBuf_ZeroPower.cs" />
+    <Compile Include="HunterHax\EGOCards\DiceCardSelfAbility_Emotion2ZeroPower.cs" />
+    <Compile Include="HunterHax\Buffs\BattleUnitBuf_Distortion.cs" />
+    <Compile Include="HunterHax\Passives\PassiveAbility_HunterHaxPhases.cs" />
+    <Compile Include="HunterHax\Buffs\BattleUnitBuf_InvisPhase.cs" />
+    <Compile Include="HunterHax\Card\DiceCardAbility_FatalResistMass.cs" />
+    <Compile Include="HunterHax\Fresh Copy.cs" />
+    <Compile Include="HunterHax\Passives\PassiveAbility_RangeReflection.cs" />
+    <Compile Include="HunterHax\StageManagers\EnemyTeamStageManager_HunterHaxBGM.cs" />
+    <Compile Include="HunterHax\Card\DiceCardSelfAbility_TestPhase3.cs" />
+    <Compile Include="HunterHax\Card\DiceCardAbility_DistortionBlade.cs" />
+    <Compile Include="HunterHax\StageManagers\HunterHaxPhase3MapManager.cs" />
+    <Compile Include="ModInitializer.cs" />
+    <Compile Include="HunterHax\Buffs\BattleUnitBuf_HunterHaxPhase2.cs" />
+    <Compile Include="HunterHax\Buffs\BattleUnitBuf_FatalResist.cs" />
+    <Compile Include="HunterHax\StageManagers\HunterHaxMapManager.cs" />
+    <Compile Include="HunterHax\Passives\PassiveAbility_RestorationCore.cs" />
+    <Compile Include="HunterHax\Passives\PassiveAbility_BlessingLight.cs" />
+    <Compile Include="HunterHax\Passives\PassiveAbility_FiredUp.cs" />
+    <Compile Include="HunterHax\Passives\PassiveAbility_Static_Regeneration.cs" />
+    <Compile Include="HunterHax\Passives\PassiveAbility_HunterHaxProwess.cs" />
+    <Compile Include="HunterHax\Passives\PassiveAbility_20020.cs" />
+    <Compile Include="HunterHax\Card\DiceCardAbility_drainBreak5atk.cs" />
+    <Compile Include="HunterHax\Passives\PassiveAbility_VowMod_TrunkPassive.cs" />
+    <Compile Include="HunterHax\Card\DiceCardSelfAbility_VowMod_CourierTrunk10.cs" />
+    <Compile Include="HunterHax\Buffs\MyKeywords.cs" />
+    <Compile Include="HunterHax\Buffs\BattleUnitBuf_VowMod_CourierTrunk.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="D:\Downloads\Game Utility [DnSpy, etc]\Current Mod\Mod 1\AutoKeywordUtil\1FrameworkAssemblies\AutoKeywordUtil.dll" />
+    <Analyzer Include="D:\Downloads\Game Utility [DnSpy, etc]\Current Mod\Mod 1\EnumExtenderV2\10EnumExtender.dll" />
+    <Analyzer Include="D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\Assembly-CSharp.dll" />
+    <Analyzer Include="D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\System.Core.dll" />
+    <Analyzer Include="D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\Unity.Mathematics.dll" />
+    <Analyzer Include="D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\Unity.TextMeshPro.dll" />
+    <Analyzer Include="D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.AnimationModule.dll" />
+    <Analyzer Include="D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.AudioModule.dll" />
+    <Analyzer Include="D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.CoreModule.dll" />
+    <Analyzer Include="D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.dll" />
+    <Analyzer Include="D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.ImageConversionModule.dll" />
+    <Analyzer Include="D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.InputLegacyModule.dll" />
+    <Analyzer Include="D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.UI.dll" />
+    <Analyzer Include="D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.UIModule.dll" />
+    <Analyzer Include="D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.UnityWebRequestAudioModule.dll" />
+    <Analyzer Include="D:\SteamLibrary\steamapps\common\Library Of Ruina\LibraryOfRuina_Data\Managed\UnityEngine.UnityWebRequestModule.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

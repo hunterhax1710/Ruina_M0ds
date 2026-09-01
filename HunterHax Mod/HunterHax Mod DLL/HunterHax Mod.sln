@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HunterHax", "HunterHax Mod\HunterHax.csproj", "{B55D70D3-04CA-4DA6-8629-426A4C2EFAFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B55D70D3-04CA-4DA6-8629-426A4C2EFAFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B55D70D3-04CA-4DA6-8629-426A4C2EFAFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B55D70D3-04CA-4DA6-8629-426A4C2EFAFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B55D70D3-04CA-4DA6-8629-426A4C2EFAFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC53679A-FAFA-43B8-94E1-8B1B1FAC846C}
+	EndGlobalSection
+EndGlobal

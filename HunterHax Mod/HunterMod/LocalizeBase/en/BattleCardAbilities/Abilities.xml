@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardAbilityDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BattleCardAbility ID="malkuthboss_emeraldstem">       <!-- Class name -->
+    <Desc>[On Hit] Inflict 2 Fragile next Scene</Desc>        <!-- Ablity -->
+  </BattleCardAbility>
+  <BattleCardAbility ID="redhood_powerup">       
+    <Desc>[On Hit] Gain 1 Strength next Scene for every target hit</Desc>        
+  </BattleCardAbility>
+  
+  
+  
+  
+  
+  <BattleCardAbility ID="VowMod_CourierTrunk10">       <!-- Class name -->
+    <Desc>[On Use] Gain 10 Courier Trunk</Desc>        <!-- Ablity -->
+  </BattleCardAbility>
+  <BattleCardAbility ID="EditedKali">
+    <Desc>[On Use] Gain 2 Strength this Scene. If target is defeated or Staggered, use this page again on a random enemy</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="fullcounter">
+    <Desc>[On Clash Win] Return blocked damage to the attacker</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="recoverBreak10atk">
+    <Desc>[On Hit] Recover 10 Stagger Resist</Desc> 
+  </BattleCardAbility>
+<BattleCardAbility ID="repeat4burn2">
+    <Desc>[On Hit] Inflict 2 Burn next Scene. This die is rolled 4 times</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="ero6fee6bin6par6">
+    <Desc>[On Hit] Inflict 6 Erosion, 6 Feeble, 6 Bind and 6 Paralysis this Scene and next Scene</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="upgradeNext10pw">
+    <Desc>[On Hit] Boost next die's max value by +10</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="vul5atkupgradeNext10pw">
+    <Desc>[On Hit] Inflict 5 Fragile this Scene and Boost next die's max value by +10</Desc>
+  </BattleCardAbility>
+<BattleCardAbility ID="escalateStrength">
+    <Desc>[On Hit] Boost last die's max value by +10; Deal 50% more damage against targets with 50% or less HP</Desc>
+</BattleCardAbility>
+<BattleCardAbility ID="FatalResistMass">
+    <Desc>[On Hit] Inflict 1 Omni-Vulnerable next Scene</Desc>
+</BattleCardAbility>
+<BattleCardAbility ID="30percentSeal1">       
+    <Desc>[On Hit] 30% chance to inflict 1 Strong Seal</Desc>
+</BattleCardAbility>
+<BattleCardAbility ID="Emotion2ZeroPower">       
+    <Desc>[On Play] Reduce all damage from enemies to 0. Reduce cost of all Pages by 1. Playable at Emotion Level 2 and above</Desc>
+</BattleCardAbility>
+<BattleCardAbility ID="Emotion3HaxArmor">       
+    <Desc>[On Play] Gain Hax Armor next Scene. Playable at Emotion Level 3 and above</Desc>
+</BattleCardAbility>
+<BattleCardAbility ID="Emotion4negatePower">       
+    <Desc>Dice on this page and the page clashing with it are unaffected by Power gain or loss. Playable at Emotion Level 4 and above</Desc>
+</BattleCardAbility>
+<BattleCardAbility ID="DistortionBlade">       
+    <Desc>[On Hit] Enemies become Uncontrollable and attacks allies.</Desc>
+</BattleCardAbility>
+
+
+
+
+
+
+
+<BattleCardAbility ID="TestPhase3">       <!-- Class name -->
+    <Desc>[On Use] Gain 3 Phase 3</Desc>
+</BattleCardAbility>
+</BattleCardAbilityDescRoot>

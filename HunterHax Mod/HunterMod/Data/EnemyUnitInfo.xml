@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EnemyUnitClassRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>
+  <Enemy ID="1">
+    <Name>Hunter</Name>
+    <FaceType>Skin</FaceType>
+    <NameID>-1</NameID>
+    <MinHeight>170</MinHeight>
+    <MaxHeight>170</MaxHeight>
+    <Unknown>false</Unknown>
+    <Gender>F</Gender>
+    <Retreat>false</Retreat>
+    <BookId>1</BookId>
+    <BodyId>0</BodyId>
+    <DropBonus>0</DropBonus>
+    <DropTable Level="0">
+      <DropItem Prob="1">1</DropItem>
+    </DropTable>
+    <AiScript />
+  </Enemy>
+  <Enemy ID="2">
+    <Name>HunterHax</Name>
+    <FaceType>Skin</FaceType>
+    <NameID>-1</NameID>
+    <MinHeight>170</MinHeight>
+    <MaxHeight>170</MaxHeight>
+    <Unknown>false</Unknown>
+    <Gender>F</Gender>
+    <Retreat>false</Retreat>
+    <BookId>2</BookId>
+    <BodyId>0</BodyId>
+    <DropBonus>0</DropBonus>
+    <DropTable Level="0">
+      <DropItem Prob="1">2</DropItem>
+    </DropTable>
+	<DropTable Level="1">
+    <DropItem Prob="1">2</DropItem>
+	</DropTable>
+    <AiScript />
+  </Enemy>
+</EnemyUnitClassRoot>

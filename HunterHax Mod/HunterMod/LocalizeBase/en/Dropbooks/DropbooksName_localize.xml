@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localize xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<text id="Reward">Book of Hunter</text>
+	<text id="BookofHunterHax">Book of HunterHax</text>
+	<text id="Silence">Book of Silence</text>
+	<text id="BlackSilence">Book of The Black Silence</text>
+</localize>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TimelineXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IconPath>Resource/StoryIcons</IconPath>
+  <IconPostfix></IconPostfix>
+  <IconPostfixGlow></IconPostfixGlow>
+  <Timeline>
+    <Name>NewMod2</Name>              <!-- Icon Picture -->
+  <ProgressIcon>
+	  <StoryType>NewMod2</StoryType>	
+	  <Grade>grade7</Grade>
+      <StageOverride>2</StageOverride>	  
+	  <Position x="-400" y="7195" />
+	  <ConnectingLine>
+	    <Start x="0" y="7340" />
+        <End x="-275" y="7340" />
+	  </ConnectingLine>
+  </ProgressIcon>
+  </Timeline>
+  </TimelineXmlRoot>

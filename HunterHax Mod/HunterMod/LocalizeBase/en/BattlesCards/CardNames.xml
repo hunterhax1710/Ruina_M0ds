@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleCardDescRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <cardDescList>
+    <BattleCardDesc ID="1">
+      <LocalizedName>Exchange</LocalizedName>
+    </BattleCardDesc>
+	<BattleCardDesc ID="405517">
+      <LocalizedName>Reverberate End</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="405518">
+      <LocalizedName>Infinite Slash</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="405519">
+      <LocalizedName>Full Reflection</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="405520">
+      <LocalizedName>Fatal Strike</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="405521">
+      <LocalizedName>Atomic Fall</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="405522">
+      <LocalizedName>Regain Composure</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="405523">
+      <LocalizedName>Trinity Shot</LocalizedName>
+    </BattleCardDesc>
+    <BattleCardDesc ID="405524">
+      <LocalizedName>Infinite Phantom Shot</LocalizedName>
+    </BattleCardDesc>
+	<BattleCardDesc ID="405525">
+      <LocalizedName>Counter Attack</LocalizedName>
+    </BattleCardDesc>
+  </cardDescList>
+</BattleCardDescRoot>

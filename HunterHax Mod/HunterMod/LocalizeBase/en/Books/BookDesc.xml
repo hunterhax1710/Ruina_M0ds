@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BookDescRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <bookDescList>
+    <BookDesc BookID="1">
+      <BookName>Hunter's Page</BookName>
+      <TextList>
+        <Desc>A Beta Version</Desc>
+      </TextList>
+    </BookDesc>
+	<BookDesc BookID="2">
+	<BookName>HunterHax's Page</BookName>
+      <TextList>
+        <Desc>The One and Only Evolving Hero</Desc>
+      </TextList>
+     </BookDesc>
+  </bookDescList>
+</BookDescRoot>

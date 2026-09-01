@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StageXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>
+  <Stage id="1">
+    <Name>Otherworld Knight</Name>
+    <Wave>
+      <Unit>1</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>1</AvailableUnit>
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>3</FloorNum>
+    <Chapter>7</Chapter>
+    <Invitation Combine="BookRecipe">
+      <Book Pid="@origin">31</Book>            <!-- Book of Something -->
+      <Book Pid="@origin">200002</Book>        <!-- Book of a Grade 9 Fixer -->
+	  <Value>0</Value>
+      <Num>0</Num>
+    </Invitation>
+	<StoryType>KnightSymbol</StoryType>               <!-- Stage Icon -->
+    <Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+  </Stage>
+  
+  
+  
+  <Stage id="2">
+    <Name>NewMod2</Name>
+    <Wave>
+      <Unit>2</Unit>
+      <Formation>41</Formation>
+      <FormationType>Default</FormationType>
+      <AvailableUnit>5</AvailableUnit>
+	  <ManagerScript>HunterHaxBGM</ManagerScript>
+      <emotionCardList />
+    </Wave>
+    <StageType>Invitation</StageType>
+    <FloorNum>4</FloorNum>
+    <Chapter>7</Chapter>
+    <Invitation Combine="BookRecipe">
+      <Book Pid="@origin">31</Book> <!-- Book of Something -->
+      <Book Pid="@origin">200002</Book> <!-- Book of a Grade 9 Fixer -->
+	  <Book Pid="@origin">200001 </Book> <!-- Book of a Rats -->
+	  <Value>0</Value>
+      <Num>0</Num>
+    </Invitation>
+	<StoryType>NewMod2</StoryType>               <!-- Stage Icon -->
+	<MapInfo>HunterHaxMap</MapInfo> 
+    <MapInfo>HunterHaxPhase3Map</MapInfo>	<!-- MapPicture -->
+	<Condition>
+      <Level>0</Level>
+    </Condition>
+    <Story Condition="Start">Button</Story>
+    <Story Condition="End" />
+    <IsChapterLast>false</IsChapterLast>
+    <invitationtype>false</invitationtype>
+  </Stage>
+</StageXmlRoot>

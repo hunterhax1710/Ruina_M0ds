@@ -1,0 +1,5 @@
+H - Slash
+J - Hit
+Z - Penetrate
+E - Evasion
+G - Guard

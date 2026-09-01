@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiceCardXmlRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version>1.1</Version>
+  <Card ID="1">
+    <Name>Exchange</Name>
+    <TextId>-1</TextId>
+    <Artwork>Clock 2.png</Artwork>
+    <Rarity>Uncommon</Rarity>
+    <Spec Range="Near" Cost="2" Affection="One" EmotionLimit="0" />
+    <Script>TestPhase3</Script>
+    <ScriptDesc />
+    <BehaviourList>
+      <Behaviour Min="3" Dice="8" Type="Atk" Detail="Slash" Motion="J" MotionDefault="N" EffectRes="Hook_H" Script="" ActionScript="" Desc="" />
+      <Behaviour Min="4" Dice="7" Type="Standby" Detail="Penetrate" Motion="Z" MotionDefault="N" EffectRes="Hook_Crazy_Tain_Z" Script="" ActionScript="" Desc="" />
+    </BehaviourList>
+    <Chapter>1</Chapter>
+  </Card>
+  
+  <Card ID="405517">
+    <Name>Reverberate End</Name>
+	<TextId>-1</TextId>
+    <Artwork>Roland2</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="Near" Cost="4"/>
+    <Script>EditedKali</Script>
+    <ScriptDesc>[On Use] Gain 2 Strength this Scene. If target is defeated or Staggered, use this page again on a random enemy</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Slash" Motion="S8" EffectRes="BlackSilence_Axe" Script="escalateStrength"  Desc="[On Hit] Boost last die's max value by +10; Deal 50% more damage against targets with 50% or less HP"/>
+      <Behaviour Min="5" Dice="10" Type="Atk" Detail="Penetrate" Motion="Z" EffectRes="BS4DurandalPene_Z" Script="escalateStrength"  Desc="[On Hit] Boost last die's max value by +10; Deal 50% more damage against targets with 50% or less HP"/>
+	  <Behaviour Min="12" Dice="20" Type="Atk" Detail="Hit" Motion="S10" EffectRes="FX_PC_RolRang_Greatsword" Script="bossBirdSecondEgoDice" ActionScript="" Desc="Deal 50% more damage against targets with 50% or less HP"/>
+    </BehaviourList>
+    <Chapter>4</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="405518">
+    <Name>Infinite Slash</Name>
+	<TextId>-1</TextId>
+    <Artwork>Argalia5</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarAreaEach" Cost="3" Affection ="Team"/>
+    <Script>drawCard2</Script>
+    <ScriptDesc>On Use Draw 2 pages</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="0" Dice="3" Type="Atk" Detail="Slash" Motion="S3" EffectRes="" Script="blackSwanEgoDice2" ActionScript="argalia_area" Desc="[On Hit] Target loses 3 Light next Scene" />
+      <Behaviour Min="1" Dice="4" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="malkuthboss_emeraldstem" ActionScript="argalia_area" Desc="[On Hit] Inflict 2 Fragile next Scene" />
+	  <Behaviour Min="2" Dice="6" Type="Atk" Detail="Hit" Motion="S4" EffectRes="" Script="redhood_powerup" ActionScript="argalia_area" Desc="[On Hit] Gain 1 Strength next Scene for every target hit" />
+    </BehaviourList>
+    <Chapter>4</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="405519">
+    <Name>Full Reflection</Name>
+	<TextId>-1</TextId>
+    <Artwork>CryPhilip_Parry</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script>drawAndEnergy</Script>
+    <ScriptDesc>On Use Restore 1 Light and draw 1 page</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="2" Dice="5" Type="Standby" Detail="Guard" Motion="G" EffectRes="ThePurpleTear_G" Script="fullcounter" Desc="On Clash Win Return blocked damage to the attacker" />
+      <Behaviour Min="5" Dice="8" Type="Standby" Detail="Guard" Motion="G" EffectRes="ThePurpleTear_G" Script="fullcounter" Desc="On Clash Win Return blocked damage to the attacker" />
+    </BehaviourList>
+    <Chapter>4</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="405520">
+    <Name>Fatal Strike</Name>
+	<TextId>-1</TextId>
+    <Artwork>Seven_Fleche</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="2" />
+    <Script>tanyaSpeed</Script>
+    <ScriptDesc>On Use If Speed is higher than the target's, all dice on this page gain +6 Power</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="5" Type="Atk" Detail="Penetrate" Motion="H" EffectRes="" Script="vul5atkupgradeNext10pw" Desc="[On Hit] Inflict 5 Fragile this Scene and Boost next die's max value by +10" />
+      <Behaviour Min="5" Dice="9" Type="Atk" Detail="Slash" Motion="S8" EffectRes="BlackSilence_Axe" Script="myoDice2" Desc="[On Hit] Deal 15 bonus damage against the manually selected target" />
+      <Behaviour Min="3" Dice="6" Type="Standby" Detail="Penetrate" Motion="Z" EffectRes="BS4DurandalPene_Z" Script="vulnerable5atk" Desc="[On Hit] Inflict 5 Fragile next Scene" />
+    </BehaviourList>
+    <Chapter>4</Chapter>
+    <Priority>0</Priority>
+  </Card>
+   
+   <Card ID="405521">
+    <Name>Atomic Fall</Name>
+	<TextId>-1</TextId>
+    <Artwork>Yan1</Artwork>
+    <Rarity>Unique</Rarity>
+    <Spec Range="FarArea" Cost="7" Affection="Team" />
+    <Script>slashUp3thisRound</Script>
+    <ScriptDesc>Combat Start Boost Slash dice Power by +3 for this Scene</ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="25" Dice="40" Type="Atk" Detail="Slash" Motion="H" EffectRes="" Script="FatalResistMass" ActionScript="Yan_GreatSword" Desc="[On Hit] Inflict 1 Omni-Vulnerable next Scene" />
+	  <Behaviour Min="2" Dice="7" Type="Standby" Detail="Hit" Motion="S10" EffectRes="FX_PC_RolRang_Greatsword" Script="sealTargetAtk" Desc="[On Hit] Seal a Speed die of target for the next Scene"/>
+    </BehaviourList>
+    <Chapter>4</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+    <Card ID="405522">
+    <Name>Regain Composure</Name>
+	<TextId>-1</TextId>
+    <Artwork>TheIndex4</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="3" Dice="5" Type="Standby" Detail="Slash" Motion="S8" EffectRes="BlackSilence_Axe" Script="30percentSeal1" Desc="[On Hit] 30% chance to inflict 1 Strong Seal" />
+      <Behaviour Min="5" Dice="10" Type="Standby" Detail="Penetrate" Motion="Z" EffectRes="BlackSilence_Z" Script="greta_mealAtk" Desc="[On Hit] Recover 20 HP" />
+    </BehaviourList>
+    <Chapter>4</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+ 
+  <Card ID="405523">
+    <Name>Trinity Shot</Name>
+	<TextId>-1</TextId>
+    <Artwork>Matan_Request</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="2" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="BlackSilence_Revolver" Script="upgradeNext10pw" ActionScript="" Desc="On Hit Boost next die's max value by +10"/>
+      <Behaviour Min="4" Dice="8" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="BlackSilence_Revolver" Script="ero6fee6bin6par6" ActionScript="" Desc="On Hit Inflict 6 Erosion, 6 Feeble, 6 Bind and 6 Paralysis this Scene and next Scene"/>
+    </BehaviourList>
+    <Chapter>4</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="405524">
+    <Name>Infinite Phantom Shot</Name>
+	<TextId>-1</TextId>
+    <Artwork>Roland8</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Far" Cost="4" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="1" Dice="5" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="repeat4burn2" ActionScript="butterflyAction" Desc="[On Hit] Inflict 2 Burn next Scene. This die is rolled 4 times"/>
+      <Behaviour Min="1" Dice="5" Type="Atk" Detail="Penetrate" Motion="S1" EffectRes="" Script="repeat4burn2" ActionScript="butterflyAction" Desc="[On Hit] Inflict 2 Burn next Scene. This die is rolled 4 times"/>
+    </BehaviourList>
+    <Chapter>4</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="405525">
+    <Name>Counter Attack</Name>
+	<TextId>-1</TextId>
+    <Artwork>Roland5</Artwork>
+    <Rarity>Rare</Rarity>
+    <Spec Range="Near" Cost="1" />
+    <Script></Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="4" Dice="8" Type="Standby" Detail="Slash" Motion="S4" EffectRes="" Script="50percentSeal1" ActionScript="BlackSilence_LongSword" Desc="[On Hit] 50% chance to inflict 1 Strong Seal" />
+    </BehaviourList>
+    <Chapter>4</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  
+  <Card ID="405526">
+    <Name>Zero</Name>
+	<TextId>-1</TextId>
+    <Artwork>ZeroDamage.png</Artwork>
+    <Rarity>Unique</Rarity>
+	<Option>EgoPersonal</Option>
+    <Spec Range="Instance" Cost="0" />
+    <Script>Emotion2ZeroPower</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+    </BehaviourList>
+    <Chapter>4</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="405527">
+    <Name>Hax Armor</Name>
+	<TextId>-1</TextId>
+    <Artwork>HaxArmor.png</Artwork>
+    <Rarity>Unique</Rarity>
+	<Option>EgoPersonal</Option>
+    <Spec Range="Instance" Cost="3" />
+    <Script>Emotion3HaxArmor</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+    </BehaviourList>
+    <Chapter>4</Chapter>
+    <Priority>0</Priority>
+  </Card>
+  <Card ID="405528">
+    <Name>Distortion Blade</Name>
+	<TextId>-1</TextId>
+    <Artwork>DistortionBlade.png</Artwork>
+    <Rarity>Unique</Rarity>
+	<Option>EgoPersonal</Option>
+    <Spec Range="FarArea" Cost="6" Affection="Team" />
+    <Script>Emotion4negatePower</Script>
+    <ScriptDesc></ScriptDesc>
+    <BehaviourList>
+      <Behaviour Min="25" Dice="40" Type="Atk" Detail="Slash" Motion="J" EffectRes="" Script="DistortionBlade" ActionScript="RedMist_BigSeveringHori" Desc="" />
+    </BehaviourList>
+    <Chapter>4</Chapter>
+    <Priority>0</Priority>
+  </Card>
+
+
+
+
+
+
+
+</DiceCardXmlRoot>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BattleEffectTextRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <effectTextList>
+    
+    <BattleEffectText ID="VowMod_CourierTrunk">
+      <Name>Courier Trunk</Name>
+      <Desc>Stacks up to 30. Take {0} damage at the end of the Scene.</Desc>
+    </BattleEffectText>
+
+    <BattleEffectText ID="VowMod_CourierTrunk_Keyword">
+      <Name>Courier Trunk X</Name>
+      <Desc>Stacks up to 30. Take X/2 damage at the end of the Scene.</Desc>
+    </BattleEffectText>
+	<BattleEffectText ID="Untargetable">
+      <Name>Untargetable</Name>
+      <Desc>For this Scene, cannot be targeted; cannot clash against enemies</Desc>
+    </BattleEffectText>
+	<BattleEffectText ID="FatalResist">
+      <Name>Omni-Vulnerable</Name>
+      <Desc>All resistances change to "Fatal" for this Scene. Next Scene, a Speed dice is sealed</Desc>
+    </BattleEffectText>
+	<BattleEffectText ID="ZeroPower">
+      <Name>Nullified</Name>
+      <Desc>All units except yourself have a [dice minimum] of 1 this Scene and are not affected by the [power increase/decrease nullification] effect for 1 Scenes.</Desc>
+	</BattleEffectText>
+	<BattleEffectText ID="HunterHaxPhase2">
+      <Name>Phase 2</Name>
+      <Desc>All dice power +3, Damage resistance +3, Stagger resistance +3. Immune to Status Ailments</Desc>
+    </BattleEffectText>
+	<BattleEffectText ID="HunterHaxPhase3">
+      <Name>Phase 3</Name>
+      <Desc>Next {0} Scenes, Gain 1 Untargetable, 3 Strength and Inflict 1 Omni-Vulnerable to all Enemies</Desc>
+    </BattleEffectText>
+	<BattleEffectText ID="HaxArmor">
+      <Name>Hax Armor</Name>
+      <Desc>For {0} Scenes, this character can only take up to 5% of their maximum HP as damage in a single attack. At the start of the Scene, set a random resistance to Immune</Desc>
+    </BattleEffectText>
+	<BattleEffectText ID="Distortion">
+      <Name>Distortion</Name>
+      <Desc>For {0} Scenes, this character is Uncontrollable and attacks allies. All dice gain +10 Power, +10 Stagger damage to allies. If staggered buff does not decrease.</Desc>
+    </BattleEffectText>
+<BattleEffectText ID="PurgeBuf">
+      <Name>Purge Buffs</Name>
+      <Desc>At the end of the Scene, destroy all buffs</Desc>
+    </BattleEffectText>
+
+
+	
+	<BattleEffectText ID="Seal1">
+      <Name>Strong Seal</Name>
+      <Desc>{0} Speed dice become unusable; Nullify power-related effects</Desc>
+    </BattleEffectText>
+	<BattleEffectText ID="Seal1_Keyword">
+      <Name>Strong Seal X</Name>
+      <Desc>X Speed dice become unusable; Nullify power-related effects</Desc>   	
+    </BattleEffectText>
+	
+	
+	
+</effectTextList>
+</BattleEffectTextRoot>
